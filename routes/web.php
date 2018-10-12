@@ -11,6 +11,23 @@
 |
 */
 
+Route::get('/string', function(){
+
+   return 'Hello World';
+});
+
 Route::get('/', function () {
+
+    // phpinfo();
     return view('welcome');
 });
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+// COMMAND: (php artisan make:controller ExampleController)
+// Makes file at HTTP/controllers/ExampleController.php
+Route::get('/example', 'ExampleController@list');
