@@ -14,7 +14,7 @@ class GenreTable extends Migration
     public function up()
     {
         Schema::create('genre', function (Blueprint $table) {
-            $table->string('id')->index();
+            $table->string('id')->unique();
             $table->string('name');
             $table->longText('description')->nullable();
         });
