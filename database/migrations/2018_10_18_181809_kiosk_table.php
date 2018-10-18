@@ -16,7 +16,7 @@ class KioskTable extends Migration
         Schema::create('customers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('location');
-            $table->string('adress');
+            $table->string('address');
         });
     }
 
