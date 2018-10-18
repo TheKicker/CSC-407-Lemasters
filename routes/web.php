@@ -34,17 +34,17 @@ Route::get('/about', function () {
 // Contact Page
 Route::get('/contact', function () {
     return view('contact');
-});
+})->name('contact');
 
 //// Login Page
-//Route::get('/login', function () {
-//    return view('auth/login');
-//});
-//
-//// Register Page
-//Route::get('/register', function () {
-//    return view('auth/register');
-//});
+Route::get('/login', function () {
+    return view('auth/login');
+});
+
+// Register Page
+Route::get('/register', function () {
+    return view('auth/register');
+});
 
 Auth::routes();
 
