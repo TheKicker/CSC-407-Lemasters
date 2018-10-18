@@ -22,6 +22,11 @@ Route::get('/', function () {
 });
 
 // About Us Page
+Route::get('/library', function () {
+    return view('library');
+});
+
+// About Us Page
 Route::get('/about', function () {
     return view('about');
 });
