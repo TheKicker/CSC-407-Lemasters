@@ -13,7 +13,11 @@ class KioskTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('customers', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('location');
+            $table->string('adress');
+        });
     }
 
     /**
