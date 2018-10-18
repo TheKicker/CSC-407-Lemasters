@@ -24,27 +24,27 @@ Route::get('/', function () {
 // About Us Page
 Route::get('/library', function () {
     return view('library');
-});
+})->name('library');
 
 // About Us Page
 Route::get('/about', function () {
     return view('about');
-});
+})->name('about');
 
 // Contact Page
 Route::get('/contact', function () {
     return view('contact');
 });
 
-// Login Page
-Route::get('/login', function () {
-    return view('auth/login');
-});
-
-// Register Page
-Route::get('/register', function () {
-    return view('auth/register');
-});
+//// Login Page
+//Route::get('/login', function () {
+//    return view('auth/login');
+//});
+//
+//// Register Page
+//Route::get('/register', function () {
+//    return view('auth/register');
+//});
 
 Auth::routes();
 
