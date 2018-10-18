@@ -14,7 +14,7 @@ class MoviesTable extends Migration
     public function up()
     {
         Schema::create('movies', function (Blueprint $table) {
-            $table->string('id')->unique();
+            $table->increments('id');
             $table->string('title');
             $table->string('genreID');
             $table->integer('length');
