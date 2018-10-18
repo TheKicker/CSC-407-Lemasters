@@ -4,6 +4,9 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
+// Uncomment this if error exists in the future + line 19
+use Illuminate\Support\Facades\Schema;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -14,7 +17,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //  Uncomment this if error exist in future
-        // Schema::defaultStringLength(191);
+        Schema::defaultStringLength(191);
     }
 
     /**
