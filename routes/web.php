@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/string', function(){
-
-   return 'Hello World';
+// To check on functional status of website
+Route::get('/status', function(){
+   return '<div align="center"><h1>Website is functional</h1><br><img src="https://www.bing.com/th?id=OGC.4378089454e64eed28535feddb548cbf&pid=1.7&rurl=https%3a%2f%2fmedia.giphy.com%2fmedia%2fbTzFnjHPuVvva%2fgiphy.gif&ehk=5JHq8PHHOxaWwy33mfTEoQ"></div>';
 });
 
 // Home Page
