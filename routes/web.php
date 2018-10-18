@@ -16,18 +16,29 @@ Route::get('/string', function(){
    return 'Hello World';
 });
 
+// Home Page
 Route::get('/', function () {
-
-    // phpinfo();
     return view('welcome');
 });
 
+// About Us Page
 Route::get('/about', function () {
     return view('about');
 });
 
+// Contact Page
 Route::get('/contact', function () {
     return view('contact');
+});
+
+// Login Page
+Route::get('/login', function () {
+    return view('auth/login');
+});
+
+// Register Page
+Route::get('/register', function () {
+    return view('auth/register');
 });
 
 Auth::routes();
