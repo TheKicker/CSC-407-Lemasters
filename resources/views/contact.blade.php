@@ -4,7 +4,8 @@
 
 @section('content')
 
+    <h1>Contact Us</h1>
 
-    <h1>Hello World, Welcome to My Laravel App</h1>
+
 
 @endsection
