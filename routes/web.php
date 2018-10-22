@@ -21,7 +21,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// About Us Page
+// Library Page
 Route::get('/library', function () {
     return view('library');
 })->name('library');
@@ -47,6 +47,9 @@ Route::get('/register', function () {
 });
 
 Auth::routes();
+
+// Example from class using
+// Route::resource('/people' , 'PersonController');
 
 Route::get('/home', 'HomeController@index')->name('home');
 

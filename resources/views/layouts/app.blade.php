@@ -18,6 +18,30 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+<!--    --><?php
+//
+//        // Set default timezone to Eastern Standard Time
+//        date_default_timezone_set('EST');
+//        // H = 24 hour time WHEREAS h = 12 hour time
+//        // if time is less than 12 hours, 18, else(up to 24)
+//        // display appropriate saying and users name if identified
+//
+//        if (date('H', time()) < 12)
+//        {
+//            $text = 'Good Morning, ';
+//        }
+//        elseif (date('H', time()) < 18)
+//        {
+//            $text = 'Good Afternoon, ';
+//        }
+//        else
+//        {
+//            $text = 'Good Evening, ';
+//        }
+//
+//    ?>
+
 </head>
 <body>
     <div id="app">
@@ -59,7 +83,7 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                      {{ Auth::user()-> firstName }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -90,4 +114,27 @@
         </main>
     </div>
 </body>
+
+
+<script>
+
+    {{-- Ask Cav }}
+
+    {{--var text = {{ Auth::user()-> firstName }};--}}
+
+    {{--if (hour < 12)--}}
+    {{--{--}}
+        {{--document.getElementById("navbarDropdown").innerHTML = "Good morning, " + text;--}}
+    {{--}--}}
+    {{--else if (hour < 18)--}}
+    {{--{--}}
+        {{--document.getElementById("navbarDropdown").innerHTML = "Good afternoon, " + text;--}}
+    {{--}--}}
+    {{--else--}}
+    {{--{--}}
+        {{--document.getElementById("navbarDropdown").innerHTML = "Good night, " + text;--}}
+    {{--}--}}
+
+</script>
+
 </html>
