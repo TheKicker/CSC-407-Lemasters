@@ -36,6 +36,11 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
+// Project Page
+Route::get('/project', function () {
+    return view('project');
+})->name('project');
+
 //// Login Page
 Route::get('/login', function () {
     return view('auth/login');

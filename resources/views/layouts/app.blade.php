@@ -18,9 +18,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>#indentSoft{text-indent: 20px;} #indentHard{text-indent:35px;}</style>
 
 <!--    --><?php
-//
+        // Line 86 in this file --  Ask Cav
+
 //        // Set default timezone to Eastern Standard Time
 //        date_default_timezone_set('EST');
 //        // H = 24 hour time WHEREAS h = 12 hour time
