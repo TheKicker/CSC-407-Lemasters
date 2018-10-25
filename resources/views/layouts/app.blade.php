@@ -18,31 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <style>#indentSoft{text-indent: 20px;} #indentHard{text-indent:35px;}</style>
-
-<!--    --><?php
-        // Line 86 in this file --  Ask Cav
-
-//        // Set default timezone to Eastern Standard Time
-//        date_default_timezone_set('EST');
-//        // H = 24 hour time WHEREAS h = 12 hour time
-//        // if time is less than 12 hours, 18, else(up to 24)
-//        // display appropriate saying and users name if identified
-//
-//        if (date('H', time()) < 12)
-//        {
-//            $text = 'Good Morning, ';
-//        }
-//        elseif (date('H', time()) < 18)
-//        {
-//            $text = 'Good Afternoon, ';
-//        }
-//        else
-//        {
-//            $text = 'Good Evening, ';
-//        }
-//
-//    ?>
+    <style>#indentSoft{text-indent: 25px;} #indentHard{text-indent:40px;}</style>
 
 </head>
 <body>
@@ -116,27 +92,12 @@
         </main>
     </div>
 </body>
+        <footer class="card-footer">
 
-
-<script>
-
-    {{-- Ask Cav }}
-
-    {{--var text = {{ Auth::user()-> firstName }};--}}
-
-    {{--if (hour < 12)--}}
-    {{--{--}}
-        {{--document.getElementById("navbarDropdown").innerHTML = "Good morning, " + text;--}}
-    {{--}--}}
-    {{--else if (hour < 18)--}}
-    {{--{--}}
-        {{--document.getElementById("navbarDropdown").innerHTML = "Good afternoon, " + text;--}}
-    {{--}--}}
-    {{--else--}}
-    {{--{--}}
-        {{--document.getElementById("navbarDropdown").innerHTML = "Good night, " + text;--}}
-    {{--}--}}
-
-</script>
-
+                <div class="container">
+                    <div align="right">
+                        <a href="/project">Project Developed </a> by Team Cav-Haylee-Spencer &copy; Geneva College 2018
+                    </div>
+                </div>
+        </footer>
 </html>
