@@ -61,7 +61,7 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                      {{ Auth::user()-> firstName }} <span class="caret"></span>
+                                     Hello, {{ Auth::user()-> firstName }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -84,6 +84,7 @@
 
         <main class="py-4">
             <div class="container">
+                @include('layouts.error')
 
                 @yield('content')
 
@@ -98,6 +99,7 @@
                     <div align="right">
                         <a href="/project">Project Developed </a> by Team Cav-Haylee-Spencer &copy; Geneva College 2018
                     </div>
+
                 </div>
         </footer>
 </html>

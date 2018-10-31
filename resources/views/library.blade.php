@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h2> Explore Whole New Worlds </h2>
+    <h2> Explore Whole New Worlds on DVD</h2>
     <hr>
     <p><strong> This is example text until we work on the page </strong> </p>
     <div align="center">
