@@ -31,6 +31,26 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
+// Add Movie Page
+Route::get('addMovie', function () {
+    return view('movies/addMovie');
+})->name('addMovie');
+
+// Movie Index Page
+Route::get('indexMovie', function () {
+    return view('movies/indexMovie');
+})->name('indexMovie');
+
+// Add Kiosk Page
+Route::get('addKiosk', function () {
+    return view('kiosks/addKiosk');
+})->name('addKiosk');
+
+// Kiosk Index Page
+Route::get('indexKiosk', function () {
+    return view('kiosks/indexKiosk');
+})->name('indexKiosk');
+
 // Contact Page
 Route::get('/contact', function () {
     return view('contact');

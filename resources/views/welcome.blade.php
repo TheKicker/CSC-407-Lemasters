@@ -14,6 +14,11 @@
     <div>
     <h2> Recommended Titles</h2>
         <hr>
+        <div align="right">
         <a href="/library">Browse More ></a>
+
+
+        </div>
+
     </div>
 @endsection
