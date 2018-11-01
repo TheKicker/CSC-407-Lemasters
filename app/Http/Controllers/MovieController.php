@@ -15,7 +15,7 @@ class MovieController extends Controller
     public function index()
     {
         //
-        $movies= Movie::get();
+        $movies=Movie::get();
         dd($movies);
     }
 
@@ -27,6 +27,7 @@ class MovieController extends Controller
     public function create()
     {
         //
+
     }
 
     /**
@@ -38,6 +39,7 @@ class MovieController extends Controller
     public function store(Request $request)
     {
         //
+
     }
 
     /**
@@ -49,7 +51,9 @@ class MovieController extends Controller
     public function show(Movie $movie)
     {
         //
+
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -72,6 +76,7 @@ class MovieController extends Controller
     public function update(Request $request, Movie $movie)
     {
         //
+
     }
 
     /**
@@ -83,5 +88,6 @@ class MovieController extends Controller
     public function destroy(Movie $movie)
     {
         //
+
     }
 }
