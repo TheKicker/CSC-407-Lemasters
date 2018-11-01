@@ -9,10 +9,6 @@
                 <!-- Form Name -->
                 <legend><h2>Add a Movie</h2></legend>
 
-                <div align="right">
-                    <a href="{{ route('indexMovie') }}"> Current Movie Library > </a>
-                </div>
-
                 <hr>
 
                 <!-- Text input-->
@@ -28,7 +24,8 @@
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="genreID">Genre ID</label>
                     <div class="col-md-4">
-                        <input id="genreID" name="genreID" type="text" placeholder="Comedy" class="form-control input-md" required="">
+
+                        <input id="genreID" name="genreID" type="text" placeholder="03" class="form-control input-md" required="">
 
                     </div>
                 </div>

@@ -10,10 +10,6 @@
                 <!-- Form Name -->
                 <legend><h2>Add a Kiosk</h2></legend>
 
-                <div align="right">
-                    <a href="{{ route('indexKiosk') }}"> Current Kiosk Locations > </a>
-                </div>
-
                 <hr>
 
                 <!-- Text input-->

@@ -13,18 +13,23 @@
 
 // To check on functional status of website
 Route::get('/status', function(){
-    return '<div align="center"><h1>Website is functional</h1><br><img src="https://www.bing.com/th?id=OGC.4378089454e64eed28535feddb548cbf&pid=1.7&rurl=https%3a%2f%2fmedia.giphy.com%2fmedia%2fbTzFnjHPuVvva%2fgiphy.gif&ehk=5JHq8PHHOxaWwy33mfTEoQ"></div>';
-});
+    return '<div align="center"><h1>This is working (for now)</h1><br><img src="https://www.bing.com/th?id=OGC.4378089454e64eed28535feddb548cbf&pid=1.7&rurl=https%3a%2f%2fmedia.giphy.com%2fmedia%2fbTzFnjHPuVvva%2fgiphy.gif&ehk=5JHq8PHHOxaWwy33mfTEoQ"></div>';
+})->name('status');
 
 // Home Page
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 // Library Page
 Route::get('/library', function () {
     return view('library');
 })->name('library');
+
+// Admin Panel Page
+Route::get('adminPanel', function () {
+    return view('adminPanel');
+})->name('adminPanel');
 
 // About Us Page
 Route::get('/about', function () {
@@ -70,6 +75,9 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('auth/register');
 });
+
+// Movie Page
+Route::resource('/movie', 'MovieController');
 
 
 
