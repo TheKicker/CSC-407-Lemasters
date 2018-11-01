@@ -19,6 +19,7 @@ class MoviesTable extends Migration
             $table->string('genreID');
             $table->integer('length');
             $table->longText('description')->nullable();
+            $table->longText('cover')->nullable();
             $table->boolean('isDISC');
             $table->boolean('isBLURAY');
         });
