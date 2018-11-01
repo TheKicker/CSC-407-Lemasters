@@ -16,12 +16,13 @@ class MoviesTable extends Migration
         Schema::create('movies', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->string('genreID');
+            $table->integer('genreID')->unsigned();
             $table->integer('length');
             $table->longText('description')->nullable();
             $table->longText('cover')->nullable();
             $table->boolean('isDISC');
             $table->boolean('isBLURAY');
+            $table->timestamps();
         });
     }
 
@@ -32,6 +33,6 @@ class MoviesTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('movies');
     }
 }

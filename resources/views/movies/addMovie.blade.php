@@ -28,7 +28,7 @@
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="genreID">Genre ID</label>
                     <div class="col-md-4">
-                        <input id="genreID" name="genreID" type="text" placeholder="Comedy" class="form-control input-md" required="">
+                        <input id="genreID" name="genreID" type="text" placeholder="Tragedy" class="form-control input-md" required="">
 
                     </div>
                 </div>

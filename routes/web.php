@@ -71,6 +71,9 @@ Route::get('/register', function () {
     return view('auth/register');
 });
 
+// Movie Page
+Route::resource('/movie', 'MovieController');
+
 
 
 Auth::routes();
