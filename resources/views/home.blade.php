@@ -16,10 +16,7 @@
 
                     Welcome back {{ Auth::user()-> firstName }}, you are logged in!
                     <br>
-                        <div align="right">
-                            <a href="/welcome" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Home</a>
-                        </div>
-                </div>
+
             </div>
         </div>
     </div>
