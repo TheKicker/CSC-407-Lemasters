@@ -27,6 +27,6 @@ class GenreTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('genre');
     }
 }

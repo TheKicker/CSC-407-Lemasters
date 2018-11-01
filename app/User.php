@@ -1,4 +1,7 @@
 <?php
+/**
+ * Registering Users Controller
+ */
 
 namespace App;
 
