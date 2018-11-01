@@ -9,10 +9,6 @@
                 <!-- Form Name -->
                 <legend><h2>Add a Movie</h2></legend>
 
-                <div align="right">
-                    <a href="{{ route('indexMovie') }}"> Current Movie Library > </a>
-                </div>
-
                 <hr>
 
                 <!-- Text input-->
