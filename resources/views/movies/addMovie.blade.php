@@ -1,82 +1,101 @@
 @extends('layouts.app')
 
 @section('content')
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="card-header">{{ __('Add a Movie') }}</div>
 
-    <form method="POST" action="{{route('addMovie')}}">
-        <fieldset>
-            @csrf
-            <div class="card-body">
-                <!-- Form Name -->
-                <legend><h2>Add a Movie</h2></legend>
+                    <div class="card-body">
+                        <form method="POST" action="{{ route('addMovie') }}">
+                            @csrf
 
-                <hr>
 
-                <!-- Text input-->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="title">Movie Title</label>
-                    <div class="col-md-4">
-                        <input id="title" name="title" type="text" placeholder="The Life of Cav" class="form-control input-md" required="">
 
-                    </div>
-                </div>
+                            <div class="form-group row" style="margin:25px;">
+                                <label for="title" class="col-md-2 col-form-label text-md-right">{{ __('Title') }}</label>
 
-                <!-- Text input-->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="genreID">Genre ID</label>
-                    <div class="col-md-4">
+                                <div class="col-md-8">
+                                    <input id="title" type="text" class="form-control{{ $errors->has('title') ? ' is-invalid' : '' }}" name="title" value="{{ old('title') }}" placeholder="Shawshank Redemption" required autofocus>
 
-                        <input id="genreID" name="genreID" type="text" placeholder="03" class="form-control input-md" required="">
+                                    @if ($errors->has('title'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('title') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
 
-                    </div>
-                </div>
+                            <div class="form-group row" style="margin:25px;">
+                                <label for="genreID" class="col-md-2 col-form-label text-md-right">{{ __('Genre ID') }}</label>
 
-                <!-- Text input-->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="length">Length </label>
-                    <div class="col-md-4">
-                        <input id="length" name="length" type="text" placeholder="120 min" class="form-control input-md" required="">
+                                <div class="col-md-3">
+                                    <input id="genreID" type="text" class="form-control{{ $errors->has('genreID') ? ' is-invalid' : '' }}" name="genreID" value="{{ old('genreID') }}" placeholder="01" required autofocus>
 
-                    </div>
-                </div>
+                                    @if ($errors->has('genreID'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('genreID') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
 
-                <!-- Textarea -->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="description">Description</label>
-                    <div class="col-md-4">
-                        <textarea class="form-control" id="description" name="description">Once upon a time...</textarea>
-                    </div>
-                </div>
+                                <label for="length" class="col-md-2 col-form-label text-md-right">{{ __('Length (min)') }}</label>
 
-                <!-- Multiple Checkboxes -->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="checkboxes">Availability </label>
-                    <div class="col-md-4">
-                        <div class="checkbox">
-                            <label for="isDISC">
-                                <input type="checkbox" name="checkboxes" id="isDISC" value="1">
-                                DVD
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label for="isBLURAY">
-                                <input type="checkbox" name="checkboxes" id="isBLURAY" value="1">
-                                BluRay
-                            </label>
-                        </div>
-                    </div>
-                </div>
+                                <div class="col-md-3">
+                                    <input id="length" type="text" class="form-control{{ $errors->has('length') ? ' is-invalid' : '' }}" name="length" value="{{ old('length') }}" placeholder="120" required autofocus>
 
-                <!-- Button (Double) -->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="button1id"></label>
-                    <div class="col-md-8">
-                        <button id="button1id" name="button1id" class="btn btn-success">Submit</button>
-                        <button id="button2id" name="button2id" class="btn btn-danger">Cancel</button>
+                                    @if ($errors->has('length'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('length') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group row" style="margin:25px;">
+                                <label for="description" class="col-md-2 col-form-label text-md-right">{{ __('Description') }}</label>
+
+                                <div class="col-md-8">
+                                    <input id="description" type="text" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" name="description" value="{{ old('description') }}" placeholder="A great movie..." required autofocus>
+
+                                    @if ($errors->has('description'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('description') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group row" style="margin:25px;">
+                                {{-- This is where the image upload will go --}}
+                            </div>
+
+                            <div class="form-group row" style="margin:25px;">
+                                {{-- This is where the isDISC & isBLURAY will go --}}
+                            </div>
+
+                            <div align="right" style="margin:25px;">
+                                <div class="form-group row mb-0">
+                                    <div class="col-md-6 offset-md-4">
+                                        <button type="submit" class="btn btn-success">
+                                            {{ __('Add Movie') }}
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </form>
                     </div>
                 </div>
             </div>
-        </fieldset>
-    </form>
-
-
+        </div>
+    </div>
+    </div>
 @endsection
