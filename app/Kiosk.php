@@ -12,7 +12,7 @@ class Kiosk extends Model
     protected $table='kiosks';
 
     protected $fillable = ['location', 'address'];
-    protected $dates = ['deleted_at'];
+//    protected $dates = ['deleted_at'];
     protected $guarded = [];
 
 }
