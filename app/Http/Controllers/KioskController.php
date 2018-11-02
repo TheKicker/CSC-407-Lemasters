@@ -14,7 +14,9 @@ class KioskController extends Controller
      */
     public function index()
     {
-        //
+      //
+      $kiosks = Kiosk::get()->toArray();
+      return view('kiosks.indexKiosk')->with('kiosks',$kiosks);
 
     }
 

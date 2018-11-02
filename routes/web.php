@@ -39,15 +39,15 @@ Route::get('/about', function () {
 // Movie Routes
 Route::resource('/movies', 'MovieController');
 
-// // Add Movie Page
-// Route::get('addMovie', function () {
-//     return view('movies/addMovie');
-// })->name('addMovie');
-//
-// // Movie Index Page
-// Route::get('indexMovie', function () {
-//     return view('movies/indexMovie');
-// })->name('indexMovie');
+ // Add Movie Page
+ Route::get('addMovie', function () {
+     return view('movies/addMovie');
+ })->name('addMovie');
+
+ // Movie Index Page
+ Route::get('indexMovie', function () {
+     return view('movies/indexMovie');
+ })->name('indexMovie');
 
 // Add Kiosk Page
 Route::resource('kiosks', 'KioskController');
@@ -56,6 +56,11 @@ Route::resource('kiosks', 'KioskController');
 Route::get('indexKiosk', function () {
     return view('kiosks/indexKiosk');
 })->name('indexKiosk');
+
+// Add Kiosk Page
+Route::get('addKiosk', function () {
+    return view('kiosks/addKiosk');
+})->name('addKiosk');
 
 // Contact Page
 Route::get('/contact', function () {

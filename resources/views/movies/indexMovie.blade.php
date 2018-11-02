@@ -5,9 +5,8 @@
 @section('content')
     <div class="container">
         <h1>Movie List</h1>
-        <hr>
         <div class="pb-1 text-right">
-          <a href="#" class="btn btn-small btn-success">Add</a>
+          <a href="addMovie.blade.php" class="btn btn-small btn-success">Add</a>
         </div>
 
         <table class="table">
@@ -42,6 +41,7 @@
 
 
         <div align="right">
+            <hr>
             <a href="{{ route('adminPanel') }}"> Back to Admin Panel </a>
         </div>
 
