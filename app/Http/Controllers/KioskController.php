@@ -27,7 +27,7 @@ class KioskController extends Controller
      */
     public function create()
     {
-        //
+        return view('kiosks.addKiosk')->with('kiosks');
 
     }
 

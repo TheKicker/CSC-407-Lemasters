@@ -4,7 +4,7 @@
 <div class="container">
     <h1>Kiosk List</h1>
     <div class="pb-1 text-right">
-      <a href="addKiosk.blade.php" class="btn btn-small btn-success">Add Kiosk</a>
+      <a href="addKiosk" class="btn btn-small btn-success">Add Kiosk</a>
     </div>
 
     <table class="table">

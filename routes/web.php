@@ -49,18 +49,18 @@ Route::resource('/movies', 'MovieController');
      return view('movies/indexMovie');
  })->name('indexMovie');
 
-// Add Kiosk Page
-Route::resource('kiosks', 'KioskController');
-
 // Kiosk Index Page
-Route::get('indexKiosk', function () {
-    return view('kiosks/indexKiosk');
-})->name('indexKiosk');
+Route::resource('/kiosks', 'KioskController');
+
+// Add Kiosk Page
+Route::resource('/addKiosk', 'KioskController');
 
 // Add Kiosk Page
 Route::get('addKiosk', function () {
-    return view('kiosks/addKiosk');
+  return view('kiosks/addKiosk');
 })->name('addKiosk');
+
+
 
 // Contact Page
 Route::get('/contact', function () {

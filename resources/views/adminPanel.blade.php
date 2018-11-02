@@ -27,7 +27,7 @@
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><a href="kiosks" class="#">List of Kiosks</a></li>
-                <li class="list-group-item"><a href="{{ route('addKiosk') }}" class="#">Add a Kiosk</a></li>
+                <li class="list-group-item"><a href="addKiosk" class="#">Add a Kiosk</a></li>
                 <li class="list-group-item"><a href="{{ route('status') }}" class="#">Update Kiosk</a></li>
                 <li class="list-group-item"><a href="{{ route('status') }}" class="#">Remove a Kiosk</a></li>
             </ul>
