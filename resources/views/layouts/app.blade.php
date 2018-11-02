@@ -18,7 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <style>#indentSoft{text-indent: 25px;} #indentHard{text-indent:40px;}</style>
+    <style>#indentSoft{text-indent: 25px;} #indentHard{text-indent:40px;} .footer{position: fixed; right: 0; bottom: 0; left: 0; padding: 1rem; background-color: #efefef; text-align: right;}</style>
 
 </head>
 <body>
@@ -95,11 +95,11 @@
         </main>
     </div>
 </body>
-        <footer class="card-footer">
+        <footer class="footer">
 
                 <div class="container">
                     <div align="right">
-                        <a href="/project">Project Developed </a> by Team Cav-Haylee-Spencer &copy; Geneva College 2018
+                        <a href="{{ route('project') }}">Project Developed </a> by Team Cav-Haylee-Spencer &copy; Geneva College 2018
                     </div>
 
                 </div>
