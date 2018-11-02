@@ -13,13 +13,13 @@
           <thead>
           <tr>
             <th>ID</th>
-            <th>Title</th>
-            <th>Genre ID</th>
-            <th>Length</th>
-            <th>Description</th>
-            <th>Cover</th>
-            <th>Is Disc</th>
-            <th>Is Blueray</th>
+              <th>Cover</th>
+              <th>Title</th>
+              <th>Length</th>
+              <th>Genre ID</th>
+              <th>Description</th>
+              <th>Is Disc</th>
+              <th>Is Blueray</th>
           </tr>
           </thead>
           <tbody>
@@ -27,13 +27,13 @@
 
               <tr>
                 <td>{{ $movie['id'] }}</td>
-                <td>{{ $movie['title'] }}</td>
-                <td>{{ $movie['genreID'] }}</td>
-                <td>{{ $movie['length'] }}</td>
-                <td>{{ $movie['description'] }}</td>
-                <td>{{ $movie['cover'] }}</td>
-                <td>{{ $movie['isDISC'] }}</td>
-                <td>{{ $movie['isBLURAY'] }}</td>
+                  <td>{{ $movie['cover'] }}</td>
+                  <td><strong>{{ $movie['title'] }}</strong></td>
+                  <td>{{ $movie['length'] }}</td>
+                  <td>{{ $movie['genreID'] }}</td>
+                  <td>{{ $movie['description'] }}</td>
+                  <td>{{ $movie['isDISC'] }}</td>
+                  <td>{{ $movie['isBLURAY'] }}</td>
               </tr>
           @endforeach
         </tbody>
