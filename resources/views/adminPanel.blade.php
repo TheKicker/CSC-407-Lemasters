@@ -38,8 +38,8 @@
                 Inventory Management
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item"><a href="{{ route('indexKiosk') }}" class="#">List of Inventory</a></li>
-                <li class="list-group-item"><a href="{{ route('addKiosk') }}" class="#">Add Inventory</a></li>
+                <li class="list-group-item"><a href="{{ route('status') }}" class="#">List of Inventory</a></li>
+                <li class="list-group-item"><a href="{{ route('status') }}" class="#">Add Inventory</a></li>
                 <li class="list-group-item"><a href="{{ route('status') }}" class="#">Update Inventory</a></li>
                 <li class="list-group-item"><a href="{{ route('status') }}" class="#">Remove Inventory</a></li>
             </ul>
