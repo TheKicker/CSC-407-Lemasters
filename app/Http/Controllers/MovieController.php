@@ -15,8 +15,8 @@ class MovieController extends Controller
     public function index()
     {
         //
-        $movies=Movie::get();
-        dd($movies);
+        $movies = Movie::get()->toArray();
+        return view('movies.indexMovie')->with('movies',$movies);
     }
 
     /**
