@@ -14,6 +14,13 @@ class RentalTable extends Migration
     public function up()
     {
         //
+        Schema::create('rentals', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('userID');
+            $table->integer('movieID');
+            $table->dateTime('rentalDate');
+            $table->dateTime('returnDate');
+        });
     }
 
     /**
@@ -23,6 +30,6 @@ class RentalTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('rentals');
     }
 }
