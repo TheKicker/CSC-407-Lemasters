@@ -8,7 +8,7 @@
                     <div class="card-header">{{ __('Add a Movie') }}</div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{ route('addMovie') }}">
+                        <form method="POST" action="{{ route('movie.store') }}" enctype="multipart/form-data">
                             @csrf
 
 
@@ -72,17 +72,36 @@
 
 
                             <div class="form-group row" style="margin:25px;">
-                                {{-- This is where the image upload will go --}}
+                                <div class="form-group row">
+                                    <label class="col-md-4 col-form-label text-md-right" for="image">Upload image</label>
+                                    <div class="col-md-4">
+                                        <input id="image" name="image" class="input-file" type="file">
+                                    </div>
+                                </div>
+
+
+                                <label class="col-md-2 col-form-label text-md-right" for="checkboxes">Format</label>
+                                <div class="col-md-2">
+                                    <div class="checkbox">
+                                        <label for="checkboxes-0">
+                                            <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+                                            DVD
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="checkboxes-1">
+                                            <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+                                            BluRay
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="form-group row" style="margin:25px;">
-                                {{-- This is where the isDISC & isBLURAY will go --}}
-                            </div>
 
                             <div align="right" style="margin:25px;">
                                 <div class="form-group row mb-0">
                                     <div class="col-md-6 offset-md-4">
-                                        <button type="submit" class="btn btn-success">
+                                        <button type="submit" class="btn btn-primary">
                                             {{ __('Add Movie') }}
                                         </button>
                                     </div>
