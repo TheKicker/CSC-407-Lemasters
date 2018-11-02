@@ -37,8 +37,9 @@ Route::get('/about', function () {
 })->name('about');
 
 // Movie Routes
-Route::resource('movies', 'MovieController');
-// Add Movie Page
+Route::resource('/movies', 'MovieController');
+
+// // Add Movie Page
 // Route::get('addMovie', function () {
 //     return view('movies/addMovie');
 // })->name('addMovie');
