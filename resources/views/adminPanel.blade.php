@@ -27,7 +27,7 @@
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><a href="kiosks" class="#">List of Kiosks</a></li>
-                <li class="list-group-item"><a href="addKiosk" class="#">Add a Kiosk</a></li>
+                <li class="list-group-item"><a href="{{ route('addKiosk') }}" class="#">Add a Kiosk</a></li>
                 <li class="list-group-item"><a href="{{ route('status') }}" class="#">Update Kiosk</a></li>
                 <li class="list-group-item"><a href="{{ route('status') }}" class="#">Remove a Kiosk</a></li>
             </ul>
@@ -38,8 +38,8 @@
                 Inventory Management
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item"><a href="{{ route('status') }}" class="#">List of Inventory</a></li>
-                <li class="list-group-item"><a href="{{ route('status') }}" class="#">Add Inventory</a></li>
+                <li class="list-group-item"><a href="{{ route('indexInventory') }}" class="#">List of Inventory</a></li>
+                <li class="list-group-item"><a href="{{ route('addInventory') }}" class="#">Add Inventory</a></li>
                 <li class="list-group-item"><a href="{{ route('status') }}" class="#">Update Inventory</a></li>
                 <li class="list-group-item"><a href="{{ route('status') }}" class="#">Remove Inventory</a></li>
             </ul>

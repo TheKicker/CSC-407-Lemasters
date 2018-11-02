@@ -41,7 +41,7 @@
 
                     <div class="form-group row" align="right">
                         <div class="col-md-6 offset-md-4">
-                            <button name="submit" type="submit" class="btn btn-primary">Add Kiosk</button>
+                            <button name="submit" type="submit" class="btn btn-primary">{{__('Add Kiosk')}}</button>
                         </div>
                     </div>
 

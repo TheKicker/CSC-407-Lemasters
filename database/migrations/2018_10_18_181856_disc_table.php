@@ -13,7 +13,14 @@ class DiscTable extends Migration
      */
     public function up()
     {
-        //
+         Schema::create('disc_inventory', function (Blueprint $table) {
+                    $table->increments('id');
+                    $table->string('movieID');
+                    $table->integer('dvdInventory');
+                    $table->integer('blurayInventory');
+                    $table->timestamp('created_at')->nullable();
+                    $table->timestamp('updated_at')->nullable();
+                });
     }
 
     /**
@@ -24,5 +31,6 @@ class DiscTable extends Migration
     public function down()
     {
         //
+        Schema::dropIfExists('disc_inventory');
     }
 }

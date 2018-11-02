@@ -60,7 +60,15 @@ Route::get('addKiosk', function () {
   return view('kiosks/addKiosk');
 })->name('addKiosk');
 
+// Add Inventory Page
+Route::get('addInventory', function () {
+    return view('inventory/addInventory');
+})->name('addInventory');
 
+// Inventory Index Page
+Route::get('indexInventory', function () {
+    return view('inventory/indexInventory');
+})->name('indexInventory');
 
 // Contact Page
 Route::get('/contact', function () {
