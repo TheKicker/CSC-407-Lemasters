@@ -49,9 +49,7 @@ Route::resource('movies', 'MovieController');
 // })->name('indexMovie');
 
 // Add Kiosk Page
-Route::get('addKiosk', function () {
-    return view('kiosks/addKiosk');
-})->name('addKiosk');
+Route::resource('kiosks', 'KioskController');
 
 // Kiosk Index Page
 Route::get('indexKiosk', function () {
