@@ -13,7 +13,7 @@
 
 // To check on functional status of website
 Route::get('/status', function(){
-    return '<div align="center"><h1>This is working (for now)</h1><br><img src="https://www.bing.com/th?id=OGC.4378089454e64eed28535feddb548cbf&pid=1.7&rurl=https%3a%2f%2fmedia.giphy.com%2fmedia%2fbTzFnjHPuVvva%2fgiphy.gif&ehk=5JHq8PHHOxaWwy33mfTEoQ"></div>';
+    return '<div align="center"><h1>Well, your site works but this aint it chief. </h1><br><img src="https://media.giphy.com/media/tLql6mMHC6wvK/giphy.gif">';
 })->name('status');
 
 // Home Page

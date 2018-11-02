@@ -28,7 +28,7 @@
               <tr>
                 <td>{{ $movie['id'] }}</td>
                   <td>{{ $movie['cover'] }}</td>
-                  <td><strong>{{ $movie['title'] }}</strong></td>
+                  <td>{{ $movie['title'] }}</td>
                   <td>{{ $movie['length'] }}</td>
                   <td>{{ $movie['genreID'] }}</td>
                   <td>{{ $movie['description'] }}</td>
