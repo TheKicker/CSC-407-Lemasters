@@ -17,6 +17,8 @@ class KioskTable extends Migration
             $table->increments('id');
             $table->string('location');
             $table->string('address');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
         });
     }
 
