@@ -4,7 +4,7 @@
 <div class="container">
     <h1>Kiosk List</h1>
     <div class="pb-1 text-right">
-      <a href="#" class="btn btn-small btn-success">Add</a>
+      <a href="addKiosk.blade.php" class="btn btn-small btn-success">Add Kiosk</a>
     </div>
 
     <table class="table">
@@ -29,6 +29,7 @@
 
 
     <div align="right">
+        <hr>
         <a href="{{ route('adminPanel') }}"> Back to Admin Panel </a>
     </div>
 

@@ -14,8 +14,8 @@
                 Movie Management
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item"><a href="{{ route('indexMovie') }}" class="#">List of Movies</a></li>
-                <li class="list-group-item"><a href="{{ route('addMovie') }}" class="#">Add a Movie</a></li>
+                <li class="list-group-item"><a href="movies" class="#">List of Movies</a></li>
+                <li class="list-group-item"><a href="{{route('addMovie')}}" class="#">Add a Movie</a></li>
                 <li class="list-group-item"><a href="{{ route('status') }}" class="#">Update Movie</a></li>
                 <li class="list-group-item"><a href="{{ route('status') }}" class="#">Remove a Movie</a></li>
             </ul>
@@ -26,7 +26,7 @@
                 Kiosk Management
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item"><a href="{{ route('indexKiosk') }}" class="#">List of Kiosks</a></li>
+                <li class="list-group-item"><a href="kiosks" class="#">List of Kiosks</a></li>
                 <li class="list-group-item"><a href="{{ route('addKiosk') }}" class="#">Add a Kiosk</a></li>
                 <li class="list-group-item"><a href="{{ route('status') }}" class="#">Update Kiosk</a></li>
                 <li class="list-group-item"><a href="{{ route('status') }}" class="#">Remove a Kiosk</a></li>
