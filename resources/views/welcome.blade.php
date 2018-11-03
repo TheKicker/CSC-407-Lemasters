@@ -12,11 +12,12 @@
     <p>Vitae congue eu consequat ac felis donec. Enim facilisis gravida neque convallis a cras semper auctor neque. Facilisis volutpat est velit egestas dui. Enim diam vulputate ut pharetra sit amet aliquam id. Lacus sed turpis tincidunt id aliquet risus feugiat in ante. <strong> This is example text until we work on the page </strong> </p>
 
     <div>
-    <h2> Recommended Titles</h2>
-        <hr>
-        <div align="right">
-        <a href="{{ route('library') }}">Browse More ></a>
-
+        <div style="margin-top: 48px;">
+            <h2> Recommended Titles</h2>
+                <hr>
+                <div align="right">
+                <a href="{{ route('library') }}">Browse More ></a>
+        </div>
 
         </div>
 

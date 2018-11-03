@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Movie extends Model
 {
-
     //use SoftDeletes;
     //protected $table='movies';
 
@@ -22,5 +21,4 @@ class Movie extends Model
     //{
        //return $this->hasMany('\App\Review');
     //}
-
 }

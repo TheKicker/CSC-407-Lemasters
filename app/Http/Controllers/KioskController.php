@@ -31,6 +31,7 @@ class KioskController extends Controller
     {
         return view('kiosks.addKiosk')->with('kiosks');
 
+
     }
 
     /**
