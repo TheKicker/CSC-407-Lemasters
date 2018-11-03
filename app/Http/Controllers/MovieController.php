@@ -60,7 +60,7 @@ class MovieController extends Controller
     public function show(Movie $movie)
     {
         //
-
+        return view('updateMovie')->with('movies', $movie[0]);
     }
 
 
@@ -73,6 +73,7 @@ class MovieController extends Controller
     public function edit(Movie $movie)
     {
         //
+        return view('updateMovie')->with('movies', $movie);
     }
 
     /**
@@ -85,7 +86,18 @@ class MovieController extends Controller
     public function update(Request $request, Movie $movie)
     {
         //
-
+        $movie->title = $reqest['title'];
+        $movie->length = $request['length'];
+        $movie->description = $request['description'];
+//        if (array_key_exists('onBlueRay', $request)) {
+//            $movie->onBlueRay = $request['onBlueRay'];
+//        }
+//        if (array_key_exists('onDVD', $request)) {
+//            $movie->onDVD = $request['onDVD'];
+//        }
+        $movie->coverPhoto = $request['coverPhoto'];
+        $movie->save();
+        return redirect()->route('movie.index');
     }
 
     /**
@@ -94,9 +106,12 @@ class MovieController extends Controller
      * @param  \App\Movie  $movie
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Movie $movie)
-    {
-        //
-
-    }
+//    public function destroy(Movie $movie)
+//    {
+//        //
+//        $selectedDelete = Movie::findOrFail($Movie['id']);
+//        if($selectedDelete->delete()){
+//            return redirect()->route('movie.index');
+//
+//    }
 }

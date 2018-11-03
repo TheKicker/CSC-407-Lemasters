@@ -38,7 +38,10 @@
                   <td>{{ $movie['description'] }}</td>
                   <td>{{ $movie['isDISC'] }}</td>
                   <td>{{ $movie['isBLURAY'] }}</td>
-                  <td><button class="alert-dark" style="margin:5px;">Update</button><button class="alert-danger" style="margin:5px;">Delete</button></td>
+                  <td>
+                      <button class="alert-dark" style="margin:5px;"><a href="updateMovie">Update</a></button>
+                      <button class="alert-danger" style="margin:5px;">Delete</button>
+                  </td>
               </tr>
           @endforeach
         </tbody>

@@ -97,7 +97,7 @@ Route::get('/register', function () {
 
 // Movie Page
 Route::resource('/movie', 'MovieController');
-
+Route::resource('/updateMovie', 'MovieController');
 
 
 Auth::routes();
