@@ -10,18 +10,21 @@
     <table class="table">
       <thead>
       <tr>
-        <th>ID</th>
-        <th>Location</th>
-        <th>Address</th>
+            <th>ID</th>
+            <th>Location</th>
+            <th>Address</th>
+            <th>Functions</th>
       </tr>
       </thead>
       <tbody>
         @foreach($kiosks as $kiosk)
 
           <tr>
-            <td>{{ $kiosk['id'] }}</td>
-            <td>{{ $kiosk['location'] }}</td>
-            <td>{{ $kiosk['address'] }}</td>
+                <td>{{ $kiosk['id'] }}</td>
+                <td>{{ $kiosk['location'] }}</td>
+                <td>{{ $kiosk['address'] }}</td>
+                <td><button class="alert-dark" style="margin:5px;">Update</button><button class="alert-danger" style="margin:5px;">Delete</button></td>
+
           </tr>
       @endforeach
     </tbody>

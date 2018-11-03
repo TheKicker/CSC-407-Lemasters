@@ -8,7 +8,7 @@
         <div class="pb-1 text-right">
 
           <a href="{{ route('addMovie') }}" class="btn btn-small btn-success">Add a Movie</a>
-            
+
 
         </div>
 
@@ -23,6 +23,7 @@
               <th>Description</th>
               <th>Is Disc</th>
               <th>Is Blueray</th>
+              <th>Functions</th>
           </tr>
           </thead>
           <tbody>
@@ -37,6 +38,7 @@
                   <td>{{ $movie['description'] }}</td>
                   <td>{{ $movie['isDISC'] }}</td>
                   <td>{{ $movie['isBLURAY'] }}</td>
+                  <td><button class="alert-dark" style="margin:5px;">Update</button><button class="alert-danger" style="margin:5px;">Delete</button></td>
               </tr>
           @endforeach
         </tbody>

@@ -15,6 +15,7 @@
                 <th>DVD Inventory</th>
                 <th>BluRay Inventory</th>
                 <th>Created At: </th>
+                <th>Functions</th>
             </tr>
             </thead>
             <tbody>
@@ -26,6 +27,7 @@
                     {{--<td>{{ $disc['dvdInventory'] }}</td>--}}
                     {{--<td>{{ $disc['blurayInventory'] }}</td>--}}
                     {{--<td>{{ $disc['created_at'] }}</td>--}}
+                    {{--<td><button class="alert-dark" style="margin:5px;">Update</button><button class="alert-danger" style="margin:5px;">Delete</button></td>--}}
                 {{--</tr>--}}
             {{--@endforeach--}}
             </tbody>
