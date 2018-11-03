@@ -27,7 +27,10 @@ class MovieController extends Controller
     public function create()
     {
         //
+        return view ('addMovie');
 
+        //$movies = Movie::get()->toArray();
+        //return view('movies.indexMovie')->with('movies', $movies);
     }
 
     /**
@@ -39,6 +42,12 @@ class MovieController extends Controller
     public function store(Request $request)
     {
         //
+        $input=$request->all();
+
+        $movie = new Movie($input);
+        $movie->save();
+
+        return redirect()->route('movie.index');
 
     }
 

@@ -41,18 +41,18 @@ class UserTableSeeder extends Seeder
             'zip' => '43968'
         ]);
 
-        User::create([
-            'firstName' => 'Haylee',
-            'middleName' => 'Nicole',
-            'lastName' => 'Heaton',
-            'email' => 'Haylee.Heaton@geneva.edu',
-            'cellNumber' => '8143309180',
-            'password' => bcrypt('Geneva2019'),
-            'street' => '215 Juniata Valley Rd' ,
-            'city' => 'Hollidaysburg',
-            'state' => 'PA',
-            'zip' => '16648'
-        ]);
+        //User::create(
+            //'firstName' => 'Haylee',
+            //'middleName' => 'Nicole',
+            //'lastName' => 'Heaton',
+            //'email' => 'Haylee.Heaton@geneva.edu',
+            //'cellNumber' => '8143309180',
+            //'password' => bcrypt('Geneva2019'),
+            //'street' => '215 Juniata Valley Rd' ,
+            //'city' => 'Hollidaysburg',
+            //'state' => 'PA',
+            //'zip' => '16648'
+        //]);
 
         User::create([
             'firstName' => 'Spencer',

@@ -104,17 +104,17 @@
                                         <button type="submit" class="btn btn-primary">
                                             {{ __('Add Movie') }}
                                         </button>
+                                        <a href="{{route('movie.index')}}" id="movieCancelButton" name="movieCancelButton" class="btn btn-danger">Cancel</a>
+
                                     </div>
                                 </div>
                             </div>
-
-
-
                         </form>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
+
 @endsection
