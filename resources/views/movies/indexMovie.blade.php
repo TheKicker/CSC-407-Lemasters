@@ -6,7 +6,11 @@
     <div class="container">
         <h1>Movie List</h1>
         <div class="pb-1 text-right">
+<<<<<<< HEAD
           <a href="{{ route('addMovie') }}" class="btn btn-small btn-success">Add</a>
+=======
+          <a href="{{route('addMovie')}}" class="btn btn-small btn-success">Add</a>
+>>>>>>> cf3d5ae7ad3b02fb6f3de51051bb0ce5be49f8a5
         </div>
 
         <table class="table">
