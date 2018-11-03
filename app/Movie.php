@@ -8,10 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Movie extends Model
 {
 
-//    use SoftDeletes;
+    // use SoftDeletes;
     protected $table='movies';
 
-    protected $fillable = ['title', 'length', 'description', 'genreID', 'isDVD', 'isBluRay'];
+    protected $fillable = ['title', 'length', 'description', 'genreID', 'isDISC', 'isBLURAY'];
     protected $dates = ['deleted_at'];
     protected $guarded = [];
     public function genre()
