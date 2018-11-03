@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Kiosk;
 
 class KioskTableSeeder extends Seeder
 {
@@ -48,6 +49,23 @@ class KioskTableSeeder extends Seeder
             'location' => 'Cranberry Field & Stream',
             'address' => '1000 Cranberry Square Drive, Cranberry Township PA 16066',
         ));
+
+        Kiosk::create(array(
+            'location' => 'Boardman Barnes & Noble',
+            'address' => '381 Boardman Poland Road, Youngstown Ohio 44512',
+        ));
+
+        Kiosk::create(array(
+            'location' => 'Narcisi Winery',
+            'address' => '4578 Gibsonia Road, Gibsonia PA 15044',
+        ));
+
+        Kiosk::create(array(
+            'location' => 'Wheeling Cabelas',
+            'address' => '1 Cabela Drive, Triadelphia WV 26059',
+        ));
+
+
 
     }
 }

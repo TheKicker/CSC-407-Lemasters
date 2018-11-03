@@ -17,7 +17,7 @@
                     Welcome back {{ Auth::user()-> firstName }}, you are logged in!
                     <br>
                         <div align="right">
-                            <a href="{{ route('welcome') }}" class="btn-primary">Return to Homepage</a>
+                            <a href="{{ route('welcome') }}"> Return to Homepage > </a>
                         </div>
             </div>
         </div>

@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">
@@ -42,11 +41,12 @@
                     <div class="form-group row" align="right">
                         <div class="col-md-6 offset-md-4">
                             <button name="submit" type="submit" class="btn btn-primary">{{__('Add Kiosk')}}</button>
+                            <a href="{{ route('kiosks.index') }}" id="kioskCancelButton" name="kioskCancelButton" class="btn btn-danger">Cancel</a>
                         </div>
                     </div>
 
                 </div>
-                
+
     </form>
 </div>
 @endsection

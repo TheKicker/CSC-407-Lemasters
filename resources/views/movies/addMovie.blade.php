@@ -101,9 +101,7 @@
                             <div align="right" style="margin:25px;">
                                 <div class="form-group row mb-0">
                                     <div class="col-md-6 offset-md-4">
-                                        <button type="submit" class="btn btn-primary">
-                                            {{ __('Add Movie') }}
-                                        </button>
+                                        <button name="submit" type="submit" class="btn btn-primary">{{ __('Add Movie') }}</button>
                                         <a href="{{route('movie.index')}}" id="movieCancelButton" name="movieCancelButton" class="btn btn-danger">Cancel</a>
 
                                     </div>
