@@ -97,8 +97,12 @@ Route::get('/register', function () {
 
 // Movie Page
 Route::resource('/movie', 'MovieController');
-Route::resource('/updateMovie', 'MovieController');
+//Route::resource('/updateMovie', 'MovieController');
 
+//Update Movie Page
+Route::get('updateMovie', function () {
+    return view('movie/updateMovie');
+})->name('updateMovie');
 
 Auth::routes();
 

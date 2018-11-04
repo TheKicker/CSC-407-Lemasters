@@ -9,7 +9,7 @@
                     <div class="card-header">{{ __('Update a Movie') }}</div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{ route('movie.update', $movie['id']) }}" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('updateMovie', $movie['id']) }}" enctype="multipart/form-data">
                             @method('PUT')
                             @csrf
 
@@ -104,7 +104,7 @@
                                 <div class="form-group row mb-0">
                                     <div class="col-md-6 offset-md-4">
                                         <button type="submit" class="btn btn-primary">
-                                            {{ __('Add Movie') }}
+                                            {{ __('Update Movie') }}
                                         </button>
                                         <a href="{{route('movie.index')}}" id="movieCancelButton" name="movieCancelButton" class="btn btn-danger">Cancel</a>
 

@@ -60,7 +60,7 @@ class MovieController extends Controller
     public function show(Movie $movie)
     {
         //
-        return view('updateMovie')->with('movies', $movie[0]);
+        return view('updateMovie')->with('movie', $movie[0]);
     }
 
 
@@ -73,7 +73,7 @@ class MovieController extends Controller
     public function edit(Movie $movie)
     {
         //
-        return view('updateMovie')->with('movies', $movie);
+        return view('updateMovie')->with('movie', $movie);
     }
 
     /**
