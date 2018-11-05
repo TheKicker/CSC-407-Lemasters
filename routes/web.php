@@ -40,18 +40,6 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
-// Movie Routes
-Route::resource('/movies', 'MovieController');
-
-// // Add Movie Page
-// Route::get('addMovie', function () {
-//     return view('movies/addMovie');
-// })->name('addMovie');
-//
-// // Movie Index Page
-// Route::get('indexMovie', function () {
-//     return view('movies/indexMovie');
-// })->name('indexMovie');
 
 // Kiosk Index Page
 Route::resource('/kiosks', 'KioskController');

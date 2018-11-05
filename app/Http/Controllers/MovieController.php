@@ -73,7 +73,8 @@ class MovieController extends Controller
     public function edit(Movie $movies)
     {
         //
-        return view('updateMovie')->with('movies', $movies);
+
+        return view('movies/updateMovie')->with('movies', $movies);
     }
 
     /**
@@ -87,6 +88,7 @@ class MovieController extends Controller
     {
         //
         $movies->title = $request['title'];
+        $movies->genreID = $request['genreID'];
         $movies->length = $request['length'];
         $movies->description = $request['description'];
 //        if (array_key_exists('onBlueRay', $request)) {

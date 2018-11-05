@@ -19,11 +19,9 @@
                                 <label for="title" class="col-md-2 col-form-label text-md-right">{{ __('Title') }}</label>
 
                                 <div class="col-md-8">
-<<<<<<< HEAD:resources/views/updateMovie.blade.php
-                                    <input id="title" type="text" class="form-control{{ $errors->has('title') ? ' is-invalid' : '' }}" name="title" value="{{ $movies('title') }}" placeholder="Shawshank Redemption" required autofocus>
-=======
+
                                     <input id="title" type="text" class="form-control{{ $errors->has('title') ? ' is-invalid' : '' }}" name="title" value="title" placeholder="Toy Story" required autofocus>
->>>>>>> 028bc6f318b793b4a35f0539a604dc88ce02f72d:resources/views/movies/updateMovie.blade.php
+
 
                                     @if ($errors->has('title'))
                                         <span class="invalid-feedback" role="alert">
