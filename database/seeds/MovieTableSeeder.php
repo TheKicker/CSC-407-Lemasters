@@ -94,5 +94,15 @@ class MovieTableSeeder extends Seeder
             'isBLURAY' => rand(1,1),
         ));
 
+        Movie::create(array(
+            'title' => 'Hunger Games (2012)',
+            'length' => 142,
+            'description' => ' A science fiction-adventure film directed by Gary Ross and based on Suzanne Collins’ 2008 novel of the same name. It is from the perspective of the voice of 16-year-old Katniss Everdeen, who lives in the future, post-apocalyptic nation of Panem in North America. The Capitol, a highly advanced metropolis, exercises political control over the rest of the nation. The Hunger Games is an annual event in which one boy and one girl aged 12–18 from each of the twelve districts surrounding the Capitol are selected by lottery to compete in a televised battle to the death.',
+            'genreID' => 8,
+            'cover' => 'Hunger_Games.jpg',
+            'isDISC' => rand(1,1),
+            'isBLURAY' => rand(1,1),
+        ));
+
     }
 }
