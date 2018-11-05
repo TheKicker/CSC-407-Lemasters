@@ -13,7 +13,8 @@
             <th>ID</th>
             <th>Location</th>
             <th>Address</th>
-            <th>Functions</th>
+            <th></th>
+            <th></th>
       </tr>
       </thead>
       <tbody>
@@ -23,7 +24,8 @@
                 <td>{{ $kiosk['id'] }}</td>
                 <td>{{ $kiosk['location'] }}</td>
                 <td>{{ $kiosk['address'] }}</td>
-                <td><button class="alert-dark" style="margin:5px;">Update</button><button class="alert-danger" style="margin:5px;">Delete</button></td>
+              <td><button class="alert-dark" style="margin:5px;">Update</button></td>
+                    <td><button class="alert-danger" style="margin:5px;">Delete</button></td>
 
           </tr>
       @endforeach

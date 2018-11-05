@@ -11,14 +11,27 @@
 |
 */
 
-
-// Movie Page
-Route::resource('/movie', 'MovieController');
-
-// To check on functional status of website
+// To be used as a placeholder on site
 Route::get('/status', function(){
     return '<div align="center"><h1>Well, your site works but this aint it chief. </h1><br><img src="https://media.giphy.com/media/tLql6mMHC6wvK/giphy.gif">';
 })->name('status');
+
+//******************* STATIC PAGES *************************//
+
+// About Us Page
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+
+// Admin Panel Page
+Route::get('adminPanel', function () {
+    return view('adminPanel');
+})->name('adminPanel');
+
+// Contact Page
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
 
 // Home Page
 Route::get('/', function () {
@@ -30,54 +43,40 @@ Route::get('/library', function () {
     return view('library');
 })->name('library');
 
-// Admin Panel Page
-Route::get('adminPanel', function () {
-    return view('adminPanel');
-})->name('adminPanel');
-
-// About Us Page
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
-
-
-// Kiosk Index Page
-Route::resource('/kiosks', 'KioskController');
-
-// Index Kiosk Page
-Route::get('indexKiosk', function () {
-    return view('kiosks/indexKiosk');
-})->name('indexKiosk');
-
-// Add Kiosk Page
-Route::get('addKiosk', function () {
-    return view('kiosks/addKiosk');
-})->name('addKiosk');
-
-//// Add Kiosk Page
-//Route::get('addKiosk', function () {
-//  return view('kiosks/addKiosk');
-//})->name('addKiosk');
-
-// Add Inventory Page
-Route::get('addInventory', function () {
-    return view('inventory/addInventory');
-})->name('addInventory');
-
-// Inventory Index Page
-Route::get('indexInventory', function () {
-    return view('inventory/indexInventory');
-})->name('indexInventory');
-
-// Contact Page
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
-
 // Project Page
 Route::get('/project', function () {
     return view('project');
 })->name('project');
+
+//******************* MOVIE PAGES *************************//
+
+Route::resource('/movie', 'MovieController');
+
+//******************* KIOSK PAGES *************************//
+
+Route::resource('/kiosks', 'KioskController');
+
+Route::get('indexKiosk', function () {
+    return view('indexKiosk');
+})->name('indexKiosk');
+
+Route::get('addKiosk', function () {
+    return view('addKiosk');
+})->name('addKiosk');
+
+//******************* INVENTORY PAGES *************************//
+
+Route::resource('/inventory', 'InventoryController');
+
+Route::get('indexInventory', function () {
+    return view('indexInventory');
+})->name('indexInventory');
+
+Route::get('addInventory', function () {
+    return view('addInventory');
+})->name('addInventory');
+
+//******************* AUTH PAGES *************************//
 
 //// Login Page
 Route::get('/login', function () {
@@ -89,19 +88,7 @@ Route::get('/register', function () {
     return view('auth/register');
 });
 
-
-//Route::resource('/updateMovie', 'MovieController');
-
-//Update Movie Page
-//Route::get('updateMovie', function () {
-//    return view('movie/updateMovie');
-//})->name('updateMovie');
-
-////Delete Movie Page
-//Route::get('deleteMovie', function () {
-//    return view('movie/deleteMovie');
-//})->name('Movie');
-
+//*****************************************************//
 
 Auth::routes();
 

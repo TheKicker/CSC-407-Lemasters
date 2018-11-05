@@ -112,8 +112,8 @@ dd($movies);
     public function destroy(Movie $movies)
     {
         //
-        $movies = Movie::find($id);
-        if ( $movies->delete($id) ) {
+        $selected = Movie::find($movies['id']);
+        if ( $selected->delete()) {
             $this->setMessage('Successfully deleted the movie!');
         } else {
             $this->setMessage('Could not delete the movie!', 'error');
