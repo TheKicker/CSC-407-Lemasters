@@ -9,7 +9,7 @@
 
             {{-- action is pointed to the named route people.store which translates to a POST to /people --}}
                 <div class="card-body">
-                    <form method="POST" action="{{ route('kiosks.store') }}" enctype="multipart/form-data">
+                    <form method="POST" action="{{ route('kiosk.store') }}" enctype="multipart/form-data">
                     @csrf
 
                     <div class="form-group row" style="margin:25px;">
@@ -41,7 +41,7 @@
                     <div class="form-group row" align="right">
                         <div class="col-md-6 offset-md-4">
                             <button name="submit" type="submit" class="btn btn-primary">{{__('Add Kiosk')}}</button>
-                            <a href="{{ route('kiosks.index') }}" id="kioskCancelButton" name="kioskCancelButton" class="btn btn-danger">Cancel</a>
+                            <a href="{{ route('kiosk.index') }}" id="kioskCancelButton" name="kioskCancelButton" class="btn btn-danger">Cancel</a>
                         </div>
                     </div>
     </form>

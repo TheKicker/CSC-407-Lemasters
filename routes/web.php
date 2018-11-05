@@ -56,7 +56,6 @@ Route::resource('/movie', 'MovieController');
 
 Route::resource('/kiosk', 'KioskController');
 
-
 //******************* INVENTORY PAGES *************************//
 
 Route::resource('/inventory', 'InventoryController');
@@ -70,8 +69,6 @@ Route::get('addInventory', function () {
 })->name('addInventory');
 
 //******************* AUTH PAGES *************************//
-
-
 
 // Login Page
 Route::get('/login', function () {

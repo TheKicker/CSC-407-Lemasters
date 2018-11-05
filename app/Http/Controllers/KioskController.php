@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Kiosk;
 use Illuminate\Http\Request;
 
@@ -15,8 +14,8 @@ class KioskController extends Controller
     public function index()
     {
       //
-      $kiosks = Kiosk::get()->toArray();
-      return view('kiosk/indexKiosk')->with('kiosks',$kiosks);
+        $kiosks = Kiosk::get()->toArray();
+        return view('kiosks/indexKiosk')->with('kiosks', $kiosks);
 
 
 
@@ -44,22 +43,22 @@ class KioskController extends Controller
         //
         $input = $request->all();
 
-        $kiosk = new Kiosk($input);
-        $kiosk->save();
+        $kiosks = new Kiosk($input);
+        $kiosks->save();
 
-        return redirect()->route('kiosk.index');
+        return redirect()->route('kiosks.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Kiosk  $kiosk
+     * @param  \App\Kiosk  $kiosks
      * @return \Illuminate\Http\Response
      */
-    public function show(Kiosk $kiosk)
+    public function show(Kiosk $kiosks)
     {
         //
-        return view('kiosk/updateKiosk')->with('kiosks', $kiosk);
+        return view('kiosk/updateKiosk')->with('kiosks', $kiosks);
 
     }
 
