@@ -70,7 +70,7 @@ class MovieController extends Controller
      */
     public function edit(Movie $movies)
     {
-        //
+        dd($movies->toArray());
         return view('movies/updateMovie')->with('movies', $movies);
     }
 

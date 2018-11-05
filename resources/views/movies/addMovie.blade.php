@@ -84,13 +84,13 @@
                                 <div class="col-md-2">
                                     <div class="checkbox">
                                         <label for="checkboxes-0">
-                                            <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+                                            <input type="checkbox" name="checkboxes" id="checkboxes-0" value="0">
                                             DVD
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label for="checkboxes-1">
-                                            <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+                                            <input type="checkbox" name="checkboxes" id="checkboxes-1" value="0">
                                             BluRay
                                         </label>
                                     </div>
