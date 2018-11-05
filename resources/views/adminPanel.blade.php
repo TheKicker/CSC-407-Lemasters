@@ -3,9 +3,10 @@
 @section('content')
 
     <div>
+
     <h2>Administrator Dashboard</h2>
         <hr>
-        <p><strong> Welcome to the Administrator Dashboard. </strong>  Here you can use a variety of tools and options to manage your Yellow Bucket System &copy;. Deus meus, recorder in gratiarum actione tibi et confitear misericordias tuas super me. perfundantur ossa mea dilectione tua et dicant: 'domine, quis similis tibi?' dirupisti vincula mea: sacrificem tibi sacrificium laudis. quomodo dirupisti ea narrabo, et dicent omnes qui adorant te, cum audiunt haec, 'benedictus dominus in caelo et in terra; magnum et mirabile nomen eius.  </p>
+        <p><strong> Welcome to the Administrator Dashboard. </strong>  Here you can use a variety of tools and options to manage your Yellow Bucket System &copy;.  Deus meus, recorder in gratiarum actione tibi et confitear misericordias tuas super me. perfundantur ossa mea dilectione tua et dicant: 'domine, quis similis tibi?' dirupisti vincula mea: sacrificem tibi sacrificium laudis. quomodo dirupisti ea narrabo, et dicent omnes qui adorant te, cum audiunt haec, 'benedictus dominus in caelo et in terra; magnum et mirabile nomen eius.  </p>
 
     <div class="container row">
 

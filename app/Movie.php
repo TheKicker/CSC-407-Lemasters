@@ -10,7 +10,7 @@ class Movie extends Model
     //use SoftDeletes;
     protected $table='movies';
 
-    protected $fillable = ['title', 'length', 'description', 'genreID', 'isDisc', 'isBluRay', 'coverPhoto',];
+    protected $fillable = ['title', 'length', 'description', 'genreID', 'isDisc', 'isBluRay', 'cover',];
     protected $dates = ['deleted_at'];
     protected $guarded = [];
     public function genre()
