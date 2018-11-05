@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container">
+<div class="container" style="margin-bottom: 96px;">
    <div>
        <h3><strong>Cav Lemasters</strong></h3>
             <h5 id="indentSoft"> Deliverable 1 </h5>
@@ -18,7 +18,7 @@
                     <p id="indentHard"> Created create(movie/kiosk) forms, added necessary routing, created Admin Dashboard, created files for adding movie/kiosk and indexing movie/kiosk</p>
 
             <h5 id="indentSoft"> Deliverable 5 </h5>
-                    <p id="indentHard"> Lorem Ipsum...</p>
+                    <p id="indentHard"> Created inventory CRUD functions and web routing.</p>
 
    </div>
         <hr>
@@ -54,10 +54,11 @@
                     <p id="indentHard"> Lorem Ipsum...</p>
 
             <h5 id="indentSoft"> Deliverable 4 </h5>
-                    <p id="indentHard"> Made files for adding movie/kiosk and indexing movie/kiosk functional</p>
+                    <p id="indentHard"> Lorem ipsum...</p>
 
             <h5 id="indentSoft"> Deliverable 5 </h5>
                     <p id="indentHard"> Lorem Ipsum...</p>
+
 
     </div>
 </div>
