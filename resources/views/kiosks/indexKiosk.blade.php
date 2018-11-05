@@ -24,8 +24,14 @@
                 <td>{{ $kiosk['id'] }}</td>
                 <td>{{ $kiosk['location'] }}</td>
                 <td>{{ $kiosk['address'] }}</td>
-              <td><button class="alert-dark" style="margin:5px;">Update</button></td>
-                    <td><button class="alert-danger" style="margin:5px;">Delete</button></td>
+              <td><button class="alert-dark" style="margin:5px;"><a href="{{ route('kiosk.edit', $kiosk['id']) }}">Update</a></button></td>
+                    <td><form method="POST" action="{{route('kiosk.destroy' , $kiosk['id'])}}">
+                            @method('DELETE')
+                            @csrf
+                            <fieldset>
+                                <button class="alert-danger" style="margin:5px;">Delete</button>
+                            </fieldset>
+                        </form></td>
 
           </tr>
       @endforeach

@@ -29,8 +29,6 @@ class MovieController extends Controller
         //
         return view('movies/addMovie');
 
-        //$movies = Movie::get()->toArray();
-        //return view('movies.indexMovie')->with('movies', $movies);
     }
 
     /**
@@ -73,7 +71,6 @@ class MovieController extends Controller
     public function edit(Movie $movies)
     {
         //
-        //dd($movies);
         return view('movies/updateMovie')->with('movies', $movies);
     }
 

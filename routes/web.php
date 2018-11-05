@@ -54,7 +54,7 @@ Route::resource('/movie', 'MovieController');
 
 //******************* KIOSK PAGES *************************//
 
-Route::resource('/kiosks', 'KioskController');
+Route::resource('/kiosk', 'KioskController');
 
 
 //******************* INVENTORY PAGES *************************//

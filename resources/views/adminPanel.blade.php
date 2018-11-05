@@ -27,8 +27,13 @@
                 <strong>Kiosk Management</strong>
             </div>
             <ul class="list-group list-group-flush">
+<<<<<<< HEAD
                 <li class="list-group-item"><a href="{{route('kiosks.index') }}" class="#">List of Kiosks</a></li>
                 <li class="list-group-item"><a href="{{ route('kiosks.create') }}" class="#">Add a Kiosk</a></li>
+=======
+                <li class="list-group-item"><a href="{{ route('kiosk.index') }}" class="#">List of Kiosks</a></li>
+                <li class="list-group-item"><a href="{{ route('kiosk.create') }}" class="#">Add a Kiosk</a></li>
+>>>>>>> 46deaeb29faf53518dc5d036c6d108894b1d42c8
                 <li class="list-group-item" style="height:48px;"><a href="{{ route('status') }}" class="#"></a></li>
 
             </ul>
