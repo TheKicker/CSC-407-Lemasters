@@ -44,9 +44,6 @@
                             <a href="{{ route('kiosks.index') }}" id="kioskCancelButton" name="kioskCancelButton" class="btn btn-danger">Cancel</a>
                         </div>
                     </div>
-
-                </div>
-
     </form>
 </div>
 @endsection

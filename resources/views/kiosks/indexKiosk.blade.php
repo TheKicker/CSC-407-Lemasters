@@ -4,7 +4,7 @@
 <div class="container">
     <h2>Kiosk List</h2>
     <div class="pb-1 text-right">
-      <a href="{{ route('addKiosk') }}" class="btn btn-small btn-success" style="margin: 25px;">Add Kiosk</a>
+        <a href="{{ route('kiosks.create') }}" class="btn btn-small btn-success" style="margin: 25px;">Add Kiosk</a>
     </div>
 
     <table class="table">
