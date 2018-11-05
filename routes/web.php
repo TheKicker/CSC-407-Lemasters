@@ -78,19 +78,22 @@ Route::get('addInventory', function () {
 
 //******************* AUTH PAGES *************************//
 
-//// Login Page
+
+
+// Login Page
 Route::get('/login', function () {
     return view('auth/login');
-});
+})->name('login');
 
 // Register Page
 Route::get('/register', function () {
     return view('auth/register');
 });
 
+Auth::routes();
+
 //*****************************************************//
 
-Auth::routes();
 
 // Example from class using
 // Route::resource('/people' , 'PersonController');
