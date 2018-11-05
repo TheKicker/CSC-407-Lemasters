@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+<div class="container" style="margin-bottom: 96px;">
     <h2> Explore Whole New Worlds on DVD or BluRay</h2>
     <hr>
     <p><strong> This is example text until we work on the page </strong> </p>
@@ -10,5 +10,5 @@
 
     </div>
 
-
+</div>
 @endsection

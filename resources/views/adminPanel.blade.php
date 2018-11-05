@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div>
+    <div style="margin-bottom: 96px;">
 
     <h2>Administrator Dashboard</h2>
         <hr>

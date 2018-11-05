@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container" style="margin-bottom: 96px;">
         <h2>Movie List</h2>
         <div class="pb-1 text-right">
 

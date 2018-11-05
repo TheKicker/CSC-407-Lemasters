@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container" style="margin-bottom: 96px;">
     <h2>Kiosk List</h2>
     <div class="pb-1 text-right">
         <a href="{{ route('kiosk.create') }}" class="btn btn-small btn-success" style="margin: 25px;">Add Kiosk</a>
