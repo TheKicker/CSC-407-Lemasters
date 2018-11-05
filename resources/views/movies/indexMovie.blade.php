@@ -22,7 +22,8 @@
               <th>Description</th>
               <th>Is Disc</th>
               <th>Is Blueray</th>
-              <th>Functions</th>
+              <th>Functions 1</th>
+              <th>Functions 2</th>
           </tr>
           </thead>
           <tbody>
@@ -39,6 +40,8 @@
                   <td>{{ $movie['isBLURAY'] }}</td>
                   <td>
                       <button class="alert-dark" style="margin:5px;"><a href="{{ route('movie.edit', $movie['id']) }}">Update</a></button>
+                  </td>
+                  <td>
                       <button class="alert-danger" style="margin:5px;">Delete</button>
                   </td>
               </tr>

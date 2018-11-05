@@ -73,7 +73,7 @@ class MovieController extends Controller
     public function edit(Movie $movies)
     {
         //
-
+dd($movies);
         return view('movies/updateMovie')->with('movies', $movies);
     }
 
@@ -87,6 +87,7 @@ class MovieController extends Controller
     public function update(Request $request, Movie $movies)
     {
         //
+        // $movies = movie::findorFail($request['id']);
         $movies->title = $request['title'];
         $movies->genreID = $request['genreID'];
         $movies->length = $request['length'];
