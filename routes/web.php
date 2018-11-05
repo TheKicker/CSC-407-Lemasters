@@ -1,5 +1,5 @@
 
-<<<<<<< HEAD
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -126,5 +126,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 // COMMAND: (php artisan make:controller ExampleController)
 // Makes file at HTTP/controllers/ExampleController.php
 Route::get('/example', 'ExampleController@list');
-=======
->>>>>>> 028bc6f318b793b4a35f0539a604dc88ce02f72d
+
