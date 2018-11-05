@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 
 namespace App\Http\Controllers;
@@ -87,7 +86,7 @@ class MovieController extends Controller
     public function update(Request $request, Movie $movies)
     {
         //
-        $movies->title = $reqest['title'];
+        $movies->title = $request['title'];
         $movies->length = $request['length'];
         $movies->description = $request['description'];
 //        if (array_key_exists('onBlueRay', $request)) {
@@ -117,5 +116,4 @@ class MovieController extends Controller
         }
     }
 }
-=======
->>>>>>> 028bc6f318b793b4a35f0539a604dc88ce02f72d
+
