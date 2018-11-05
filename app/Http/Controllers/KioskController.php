@@ -16,7 +16,7 @@ class KioskController extends Controller
     {
       //
       $kiosks = Kiosk::get()->toArray();
-      return view('kiosks.indexKiosk')->with('kiosks',$kiosks);
+      return view('kiosk/indexKiosk')->with('kiosks',$kiosks);
 
 
 
@@ -29,7 +29,7 @@ class KioskController extends Controller
      */
     public function create()
     {
-        return view('addKiosk');
+        return view('kiosks/addKiosk');
 
     }
 
@@ -47,19 +47,19 @@ class KioskController extends Controller
         $kiosk = new Kiosk($input);
         $kiosk->save();
 
-        return redirect()->route('indexKiosk');
+        return redirect()->route('kiosk.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Movie  $movie
+     * @param  \App\Kiosk  $kiosk
      * @return \Illuminate\Http\Response
      */
     public function show(Kiosk $kiosk)
     {
         //
-        //return view('updateMovie')->with('movie', $movie[0]);
+        return view('kiosk/updateKiosk')->with('kiosks', $kiosk);
 
     }
 
@@ -67,36 +67,50 @@ class KioskController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Movie  $movie
+     * @param  \App\Kiosk  $kiosks
      * @return \Illuminate\Http\Response
      */
-    public function edit(Kiosk $kiosk)
+    public function edit(Kiosk $kiosks)
     {
         //
+        dd($kiosks);
+        return view('kiosk/updateKiosk')->with('kiosks', $kiosks);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Movie  $movie
+     * @param  \App\Kiosk  $kiosks
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Kiosk $kiosk)
+    public function update(Request $request, Kiosk $kiosks)
     {
         //
+        $kiosks->location = $request['location'];
+        $kiosks->address = $request['address'];
+
+
+        $kiosks->save();
+        return redirect()->route('kiosk.index');
 
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Movie  $movie
+     * @param  \App\Kiosk  $kiosks
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Kiosk $kiosk)
+    public function destroy(Kiosk $kiosks)
     {
         //
-
+        $selected = Kiosk::find($kiosks['id']);
+        if ( $selected->delete()) {
+            $this->setMessage('Successfully deleted the kiosk!');
+        } else {
+            $this->setMessage('Could not delete the kiosk!', 'error');
+        }
+        return redirect()->route('kiosk.index');
     }
 }
