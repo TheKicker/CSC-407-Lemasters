@@ -19,7 +19,11 @@
                                 <label for="title" class="col-md-2 col-form-label text-md-right">{{ __('Title') }}</label>
 
                                 <div class="col-md-8">
+<<<<<<< HEAD:resources/views/updateMovie.blade.php
                                     <input id="title" type="text" class="form-control{{ $errors->has('title') ? ' is-invalid' : '' }}" name="title" value="{{ $movies('title') }}" placeholder="Shawshank Redemption" required autofocus>
+=======
+                                    <input id="title" type="text" class="form-control{{ $errors->has('title') ? ' is-invalid' : '' }}" name="title" value="title" placeholder="Toy Story" required autofocus>
+>>>>>>> 028bc6f318b793b4a35f0539a604dc88ce02f72d:resources/views/movies/updateMovie.blade.php
 
                                     @if ($errors->has('title'))
                                         <span class="invalid-feedback" role="alert">
@@ -73,31 +77,31 @@
 
 
 
-                            <div class="form-group row" style="margin:25px;">
-                                <div class="form-group row">
-                                    <label class="col-md-4 col-form-label text-md-right" for="image">Upload image</label>
-                                    <div class="col-md-4">
-                                        <input id="image" name="image" class="input-file" type="file">
-                                    </div>
-                                </div>
+                            {{--<div class="form-group row" style="margin:25px;">--}}
+                                {{--<div class="form-group row">--}}
+                                    {{--<label class="col-md-4 col-form-label text-md-right" for="image">Upload image</label>--}}
+                                    {{--<div class="col-md-4">--}}
+                                        {{--<input id="image" name="image" class="input-file" type="file">--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
 
 
-                                <label class="col-md-2 col-form-label text-md-right" for="checkboxes">Format</label>
-                                <div class="col-md-2">
-                                    <div class="checkbox">
-                                        <label for="checkboxes-0">
-                                            <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
-                                            DVD
-                                        </label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label for="checkboxes-1">
-                                            <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
-                                            BluRay
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
+                                {{--<label class="col-md-2 col-form-label text-md-right" for="checkboxes">Format</label>--}}
+                                {{--<div class="col-md-2">--}}
+                                    {{--<div class="checkbox">--}}
+                                        {{--<label for="checkboxes-0">--}}
+                                            {{--<input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">--}}
+                                            {{--DVD--}}
+                                        {{--</label>--}}
+                                    {{--</div>--}}
+                                    {{--<div class="checkbox">--}}
+                                        {{--<label for="checkboxes-1">--}}
+                                            {{--<input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">--}}
+                                            {{--BluRay--}}
+                                        {{--</label>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
 
 
                             <div align="right" style="margin:25px;">

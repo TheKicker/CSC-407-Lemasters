@@ -2,9 +2,9 @@
 
 @section('content')
 <div class="container">
-    <h1>Kiosk List</h1>
+    <h2>Kiosk List</h2>
     <div class="pb-1 text-right">
-      <a href="{{ route('addKiosk') }}" class="btn btn-small btn-success">Add Kiosk</a>
+      <a href="{{ route('addKiosk') }}" class="btn btn-small btn-success" style="margin: 25px;">Add Kiosk</a>
     </div>
 
     <table class="table">

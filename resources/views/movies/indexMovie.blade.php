@@ -1,13 +1,17 @@
 
 @extends('layouts.app')
 
-
 @section('content')
+
     <div class="container">
-        <h1>Movie List</h1>
+        <h2>Movie List</h2>
         <div class="pb-1 text-right">
 
+<<<<<<< HEAD
           <a href="{{ route('movie.create') }}" class="btn btn-small btn-success">Add a Movie</a>
+=======
+          <a href="{{ route('addMovie') }}" class="btn btn-small btn-success" style="margin: 25px;">Add a Movie</a>
+>>>>>>> 028bc6f318b793b4a35f0539a604dc88ce02f72d
 
 
         </div>
