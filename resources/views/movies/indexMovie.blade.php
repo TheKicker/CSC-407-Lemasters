@@ -7,7 +7,7 @@
         <h2>Movie List</h2>
         <div class="pb-1 text-right">
 
-          <a href="{{ route('movie.create') }}" class="btn btn-small btn-success">Add a Movie</a>
+          <a href="{{ route('movie.create') }}" class="btn btn-small btn-success" style="margin:30px;">Add a Movie</a>
 
         </div>
 
@@ -18,31 +18,37 @@
               <th>Cover</th>
               <th>Title</th>
               <th>Length</th>
-              <th>Genre ID</th>
+              <th>GenreID</th>
               <th>Description</th>
-              <th>Is Disc</th>
-              <th>Is Blueray</th>
+              <th>DVD</th>
+              <th>BluRay</th>
               <th></th>
               <th></th>
           </tr>
           </thead>
           <tbody>
-            @foreach($movies as $movies)
+            @foreach($movies as $movie)
 
               <tr>
-                <td>{{ $movies['id'] }}</td>
-                  <td>{{ $movies['cover'] }}</td>
-                  <td>{{ $movies['title'] }}</td>
-                  <td>{{ $movies['length'] }}</td>
-                  <td>{{ $movies['genreID'] }}</td>
-                  <td>{{ $movies['description'] }}</td>
-                  <td>{{ $movies['isDISC'] }}</td>
-                  <td>{{ $movies['isBLURAY'] }}</td>
+                <td>{{ $movie['id'] }}</td>
+                  <td>{{ $movie['cover'] }}</td>
+                  <td>{{ $movie['title'] }}</td>
+                  <td>{{ $movie['length'] }}</td>
+                  <td>{{ $movie['genreID'] }}</td>
+                  <td>{{ $movie['description'] }}</td>
+                  <td>{{ $movie['isDISC'] }}</td>
+                  <td>{{ $movie['isBLURAY'] }}</td>
                   <td>
-                      <button class="alert-dark" style="margin:5px;"><a href="{{ route('movie.edit', $movies['id']) }}">Update</a></button>
+                      <button class="alert-dark" style="margin:5px;"><a href="{{ route('movie.edit', $movie['id']) }}">Update</a></button>
                   </td>
                   <td>
-                      <button class="alert-danger" style="margin:5px;"><a href="{{route('movie.destroy', $movies['id'])}}">Delete</button>
+                      <form method="POST" action="{{route('movie.destroy' , $movie['id'])}}">
+                          @method('DELETE')
+                          @csrf
+                          <fieldset>
+                                <button class="alert-danger" style="margin:5px;">Delete</button>
+                          </fieldset>
+                      </form>
                   </td>
               </tr>
           @endforeach
