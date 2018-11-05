@@ -22,27 +22,27 @@
               <th>Description</th>
               <th>Is Disc</th>
               <th>Is Blueray</th>
-              <th>Functions 1</th>
-              <th>Functions 2</th>
+              <th></th>
+              <th></th>
           </tr>
           </thead>
           <tbody>
-            @foreach($movies as $movie)
+            @foreach($movies as $movies)
 
               <tr>
-                <td>{{ $movie['id'] }}</td>
-                  <td>{{ $movie['cover'] }}</td>
-                  <td>{{ $movie['title'] }}</td>
-                  <td>{{ $movie['length'] }}</td>
-                  <td>{{ $movie['genreID'] }}</td>
-                  <td>{{ $movie['description'] }}</td>
-                  <td>{{ $movie['isDISC'] }}</td>
-                  <td>{{ $movie['isBLURAY'] }}</td>
+                <td>{{ $movies['id'] }}</td>
+                  <td>{{ $movies['cover'] }}</td>
+                  <td>{{ $movies['title'] }}</td>
+                  <td>{{ $movies['length'] }}</td>
+                  <td>{{ $movies['genreID'] }}</td>
+                  <td>{{ $movies['description'] }}</td>
+                  <td>{{ $movies['isDISC'] }}</td>
+                  <td>{{ $movies['isBLURAY'] }}</td>
                   <td>
-                      <button class="alert-dark" style="margin:5px;"><a href="{{ route('movie.edit', $movie['id']) }}">Update</a></button>
+                      <button class="alert-dark" style="margin:5px;"><a href="{{ route('movie.edit', $movies['id']) }}">Update</a></button>
                   </td>
                   <td>
-                      <button class="alert-danger" style="margin:5px;">Delete</button>
+                      <button class="alert-danger" style="margin:5px;"><a href="{{route('movie.destroy', $movies['id'])}}">Delete</button>
                   </td>
               </tr>
           @endforeach

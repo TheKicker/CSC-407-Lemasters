@@ -60,7 +60,7 @@ class MovieController extends Controller
     public function show(Movie $movies)
     {
         //
-        return view('updateMovie')->with('movies', $movies);
+        return view('movies/updateMovie')->with('movies', $movies);
     }
 
 
@@ -112,11 +112,18 @@ dd($movies);
     public function destroy(Movie $movies)
     {
         //
-        $selectedDelete = Movie::findOrFail($movies['id']);
-        if ($selectedDelete->delete()) {
-            return redirect()->route('movie.index');
-
+        $movies = Movie::find($id);
+        if ( $movies->delete($id) ) {
+            $this->setMessage('Successfully deleted the movie!');
+        } else {
+            $this->setMessage('Could not delete the movie!', 'error');
         }
+        return redirect()->route('movie.index');
+//        $selectedDelete = Movie::findOrFail($movies['id']);
+//        if ($selectedDelete->delete()) {
+//            return redirect()->route('movie.index');
+//
+//        }
     }
 }
 
