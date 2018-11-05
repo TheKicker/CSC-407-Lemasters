@@ -73,7 +73,7 @@ class MovieController extends Controller
     public function edit(Movie $movies)
     {
         //
-dd($movies);
+        //dd($movies);
         return view('movies/updateMovie')->with('movies', $movies);
     }
 
@@ -84,23 +84,29 @@ dd($movies);
      * @param  \App\Movie $movies
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Movie $movies)
+    public function update($request, $id)
     {
         //
-        // $movies = movie::findorFail($request['id']);
-        $movies->title = $request['title'];
-        $movies->genreID = $request['genreID'];
-        $movies->length = $request['length'];
-        $movies->description = $request['description'];
-//        if (array_key_exists('onBlueRay', $request)) {
-//            $movies->onBlueRay = $request['onBlueRay'];
-//        }
-//        if (array_key_exists('onDVD', $request)) {
-//            $movies->onDVD = $request['onDVD'];
-//        }
-        $movies->coverPhoto = $request['coverPhoto'];
-        $movies->save();
-        return redirect()->route('movie.index');
+        $input = $request-> all();
+
+        $movies = Movie::find($id);
+        $movies->fill($input);
+
+        return redirect('movie.index');
+//        $movies = movie::findorFail($request['id']);
+//        $movies->title = $request['title'];
+//        $movies->genreID = $request['genreID'];
+//        $movies->length = $request['length'];
+//        $movies->description = $request['description'];
+////        if (array_key_exists('onBlueRay', $request)) {
+////            $movies->onBlueRay = $request['onBlueRay'];
+////        }
+////        if (array_key_exists('onDVD', $request)) {
+////            $movies->onDVD = $request['onDVD'];
+////        }
+//        $movies->coverPhoto = $request['coverPhoto'];
+//        $movies->save();
+//        return redirect()->route('movie.index');
     }
 
     /**

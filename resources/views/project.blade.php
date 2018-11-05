@@ -31,7 +31,8 @@
                     <p id="indentHard"> DB implement  </p>
 
             <h5 id="indentSoft"> Deliverable 3 </h5>
-                    <p id="indentHard"> Prepared migrations for kiosks, rental and review tables.</p>
+            <p id="indentHard"> Prepared migrations for kiosks, rental and review tables.  Created seeding for users.  Built functionality for Adding a movie.
+                <br>Helped with functionality for updating and deleting movies.  Added the correct routing. </p>
 
             <h5 id="indentSoft"> Deliverable 4 </h5>
                     <p id="indentHard"> Lorem Ipsum...</p>
