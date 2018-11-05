@@ -11,6 +11,10 @@
 |
 */
 
+
+// Movie Page
+Route::resource('/movie', 'MovieController');
+
 // To check on functional status of website
 Route::get('/status', function(){
     return '<div align="center"><h1>Well, your site works but this aint it chief. </h1><br><img src="https://media.giphy.com/media/tLql6mMHC6wvK/giphy.gif">';
@@ -39,15 +43,15 @@ Route::get('/about', function () {
 // Movie Routes
 Route::resource('/movies', 'MovieController');
 
- // Add Movie Page
- Route::get('addMovie', function () {
-     return view('movies/addMovie');
- })->name('addMovie');
-
- // Movie Index Page
- Route::get('indexMovie', function () {
-     return view('movies/indexMovie');
- })->name('indexMovie');
+// // Add Movie Page
+// Route::get('addMovie', function () {
+//     return view('movies/addMovie');
+// })->name('addMovie');
+//
+// // Movie Index Page
+// Route::get('indexMovie', function () {
+//     return view('movies/indexMovie');
+// })->name('indexMovie');
 
 // Kiosk Index Page
 Route::resource('/kiosks', 'KioskController');
@@ -58,12 +62,14 @@ Route::get('indexKiosk', function () {
 })->name('indexKiosk');
 
 // Add Kiosk Page
-Route::resource('/addKiosk', 'KioskController');
-
-// Add Kiosk Page
 Route::get('addKiosk', function () {
-  return view('kiosks/addKiosk');
+    return view('kiosks/addKiosk');
 })->name('addKiosk');
+
+//// Add Kiosk Page
+//Route::get('addKiosk', function () {
+//  return view('kiosks/addKiosk');
+//})->name('addKiosk');
 
 // Add Inventory Page
 Route::get('addInventory', function () {
@@ -95,14 +101,19 @@ Route::get('/register', function () {
     return view('auth/register');
 });
 
-// Movie Page
-Route::resource('/movie', 'MovieController');
+
 //Route::resource('/updateMovie', 'MovieController');
 
 //Update Movie Page
-Route::get('updateMovie', function () {
-    return view('movie/updateMovie');
-})->name('updateMovie');
+//Route::get('updateMovie', function () {
+//    return view('movie/updateMovie');
+//})->name('updateMovie');
+
+////Delete Movie Page
+//Route::get('deleteMovie', function () {
+//    return view('movie/deleteMovie');
+//})->name('Movie');
+
 
 Auth::routes();
 

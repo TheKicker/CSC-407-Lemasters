@@ -29,8 +29,7 @@ class KioskController extends Controller
      */
     public function create()
     {
-        return view('kiosks.addKiosk')->with('kiosks');
-
+        return view('addKiosk');
 
     }
 
@@ -43,7 +42,12 @@ class KioskController extends Controller
     public function store(Request $request)
     {
         //
+        $input = $request->all();
 
+        $kiosk = new Kiosk($input);
+        $kiosk->save();
+
+        return redirect()->route('indexKiosk');
     }
 
     /**
@@ -55,6 +59,7 @@ class KioskController extends Controller
     public function show(Kiosk $kiosk)
     {
         //
+        //return view('updateMovie')->with('movie', $movie[0]);
 
     }
 

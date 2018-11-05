@@ -14,8 +14,8 @@
                 <strong>Movie Management</strong>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item"><a href="movies" class="#">List of Movies</a></li>
-                <li class="list-group-item"><a href="{{route('addMovie')}}" class="#">Add a Movie</a></li>
+                <li class="list-group-item"><a href="{{route('movie.index')}}" class="#">List of Movies</a></li>
+                <li class="list-group-item"><a href="{{route('movie.create')}}" class="#">Add a Movie</a></li>
                 <li class="list-group-item" style="height:48px;"><a href="{{ route('status') }}" class="#"></a></li>
 
             </ul>

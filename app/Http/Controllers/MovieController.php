@@ -16,7 +16,7 @@ class MovieController extends Controller
     {
         //
         $movies = Movie::get()->toArray();
-        return view('movies.indexMovie')->with('movies',$movies);
+        return view('movies/indexMovie')->with('movies', $movies);
     }
 
     /**
@@ -27,7 +27,7 @@ class MovieController extends Controller
     public function create()
     {
         //
-        return view ('addMovie');
+        return view('movies/addMovie');
 
         //$movies = Movie::get()->toArray();
         //return view('movies.indexMovie')->with('movies', $movies);
@@ -36,16 +36,16 @@ class MovieController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
         //
-        $input=$request->all();
+        $input = $request->all();
 
-        $movie = new Movie($input);
-        $movie->save();
+        $movies = new Movie($input);
+        $movies->save();
 
         return redirect()->route('movie.index');
 
@@ -54,64 +54,65 @@ class MovieController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Movie  $movie
+     * @param  \App\Movie $movies
      * @return \Illuminate\Http\Response
      */
-    public function show(Movie $movie)
+    public function show(Movie $movies)
     {
         //
-        return view('updateMovie')->with('movie', $movie[0]);
+        return view('updateMovie')->with('movies', $movies);
     }
 
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Movie  $movie
+     * @param  \App\Movie $movies
      * @return \Illuminate\Http\Response
      */
-    public function edit(Movie $movie)
+    public function edit(Movie $movies)
     {
         //
-        return view('updateMovie')->with('movie', $movie);
+        return view('updateMovie')->with('movies', $movies);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Movie  $movie
+     * @param  \Illuminate\Http\Request $request
+     * @param  \App\Movie $movies
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Movie $movie)
+    public function update(Request $request, Movie $movies)
     {
         //
-        $movie->title = $reqest['title'];
-        $movie->length = $request['length'];
-        $movie->description = $request['description'];
+        $movies->title = $reqest['title'];
+        $movies->length = $request['length'];
+        $movies->description = $request['description'];
 //        if (array_key_exists('onBlueRay', $request)) {
-//            $movie->onBlueRay = $request['onBlueRay'];
+//            $movies->onBlueRay = $request['onBlueRay'];
 //        }
 //        if (array_key_exists('onDVD', $request)) {
-//            $movie->onDVD = $request['onDVD'];
+//            $movies->onDVD = $request['onDVD'];
 //        }
-        $movie->coverPhoto = $request['coverPhoto'];
-        $movie->save();
+        $movies->coverPhoto = $request['coverPhoto'];
+        $movies->save();
         return redirect()->route('movie.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Movie  $movie
+     * @param  \App\Movie $movies
      * @return \Illuminate\Http\Response
      */
-//    public function destroy(Movie $movie)
-//    {
-//        //
-//        $selectedDelete = Movie::findOrFail($Movie['id']);
-//        if($selectedDelete->delete()){
-//            return redirect()->route('movie.index');
-//
-//    }
+    public function destroy(Movie $movies)
+    {
+        //
+        $selectedDelete = Movie::findOrFail($movies['id']);
+        if ($selectedDelete->delete()) {
+            return redirect()->route('movie.index');
+
+        }
+    }
 }

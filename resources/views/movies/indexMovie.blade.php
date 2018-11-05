@@ -7,7 +7,7 @@
         <h1>Movie List</h1>
         <div class="pb-1 text-right">
 
-          <a href="{{ route('addMovie') }}" class="btn btn-small btn-success">Add a Movie</a>
+          <a href="{{ route('movie.create') }}" class="btn btn-small btn-success">Add a Movie</a>
 
 
         </div>
@@ -39,7 +39,7 @@
                   <td>{{ $movie['isDISC'] }}</td>
                   <td>{{ $movie['isBLURAY'] }}</td>
                   <td>
-                      <button class="alert-dark" style="margin:5px;"><a href="updateMovie">Update</a></button>
+                      <button class="alert-dark" style="margin:5px;"><a href="{{ route('movie.edit', $movie['id']) }}">Update</a></button>
                       <button class="alert-danger" style="margin:5px;">Delete</button>
                   </td>
               </tr>
