@@ -52,13 +52,14 @@ class MovieController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Movie $movie
+     * @param  \App\Movie $Movie
      * @return \Illuminate\Http\Response
      */
     public function show(Movie $Movie)
     {
         //
-        return view('movies.updateMovie')->with('movies', $Movie);
+        return view('movies.updateMovie');
+            //->with('movies', $Movie);
     }
 
 
@@ -70,8 +71,8 @@ class MovieController extends Controller
      */
     public function edit(Movie $Movie)
     {
-//        dd($Movie->toArray());
-        return view('movies.updateMovie')->with('movies' , $Movie);
+        //dd($Movie->toArray());
+        return view('movies.updateMovie')->with('movie', $Movie);
     }
 
     /**
@@ -83,19 +84,19 @@ class MovieController extends Controller
      */
     public function update(Request $request, Movie $Movie)
     {
-//        dd($Movie->toArray());
-        $Movie = Movie::findorFail($request['id']);
+        //$Movie = Movie::findorFail('id');
         $Movie->title = $request['title'];
         $Movie->length = $request['length'];
         $Movie->description = $request['description'];
-//        if(array_key_exists('onBlueRay', $request)){
-//            $Movie->onBlueRay = $request['onBlueRay'];
-//        }
-//        if(array_key_exists('onDVD', $request)){
-//            $Movie->onDVD = $request['onDVD'];
-//        }
-//        $Movie->coverPhoto = $request['coverPhoto'];
+        if(array_key_exists('onBluRay', $request)){
+            $Movie->onBluRay = $request['onBluRay'];
+        }
+        if(array_key_exists('isDisc', $request)){
+            $Movie->isDisc = $request['isDisc'];
+        }
+        $Movie->coverPhoto = $request['coverPhoto'];
         $Movie->save();
+        session()->flash('success', 'Film wurde erfolgreich Editiert!');
         return redirect()->route('movie.index');
     }
 
