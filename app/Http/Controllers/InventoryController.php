@@ -16,8 +16,8 @@ class InventoryController extends Controller
     public function index()
     {
         //
-        $inventory = Inventory::get()->toArray();
-        return view('inventory.indexInventory')->with('inventory', $inventory);
+        $Inventory = Inventory::get()->toArray();
+        return view('inventory.indexInventory')->with('inventory', $Inventory);
     }
 
     /**
@@ -43,8 +43,8 @@ class InventoryController extends Controller
         //
         $input = $request->all();
 
-        $inventory = new Inventory($input);
-        $inventory->save();
+        $Inventory = new Inventory($input);
+        $Inventory->save();
 
         return redirect()->route('inventory.index');
 
@@ -53,42 +53,43 @@ class InventoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Inventory $inventory
+     * @param  \App\Inventory $Inventory
      * @return \Illuminate\Http\Response
      */
-    public function show(Inventory $inventory)
+    public function show(Inventory $Inventory)
     {
         //
-        return view('inventory.updateInventory')->with('inventory', $inventory);
+        return view('inventory.updateInventory')->with('inventory', $Inventory);
     }
 
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Inventory $inventory
+     * @param  \App\Inventory $Inventory
      * @return \Illuminate\Http\Response
      */
-    public function edit(Inventory $inventory)
+    public function edit(Inventory $Inventory)
     {
-        dd($inventory->toArray());
-        return view('inventory.updateInventory')->with('inventory', $inventory);
+        dd($Inventory->toArray());
+        return view('inventory.updateInventory')->with('inventory', $Inventory);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param  \App\Inventory  $inventory
+     * @param  \App\Inventory  $Inventory
      * @return \Illuminate\Http\Response
      */
-    public function update($request, $id)
+    public function update($request, Inventory $Inventory)
     {
-        $input = $request-> all();
+        $Inventory = Inventory::findorFail($request['id']);
+        $Inventory->movieID = $request['movieID'];
+        $Inventory->dvdInventory = $request['dvdInventory'];
+        $Inventory->blurayInventory = $request['blurayInventory'];
 
-        $inventory = Inventory::find($id);
-        $inventory->fill($input);
-
+        $Inventory->save();
         return redirect()->route('inventory.index');
 
     }

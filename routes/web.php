@@ -60,13 +60,13 @@ Route::resource('/kiosk', 'KioskController');
 
 Route::resource('/inventory', 'InventoryController');
 
-Route::get('indexInventory', function () {
-    return view('indexInventory');
-})->name('indexInventory');
-
-Route::get('addInventory', function () {
-    return view('addInventory');
-})->name('addInventory');
+//Route::get('indexInventory', function () {
+//    return view('indexInventory');
+//})->name('indexInventory');
+//
+//Route::get('addInventory', function () {
+//    return view('addInventory');
+//})->name('addInventory');
 
 //******************* AUTH PAGES *************************//
 

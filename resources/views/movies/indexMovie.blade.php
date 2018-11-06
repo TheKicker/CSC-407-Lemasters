@@ -27,6 +27,8 @@
           </tr>
           </thead>
           <tbody>
+
+
             @foreach($movies as $movie)
 
               <tr>
