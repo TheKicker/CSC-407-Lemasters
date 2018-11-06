@@ -78,33 +78,23 @@ class MovieController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param  \App\Movie  $Movie
+     * @param  \App\Movie $Movie
      * @return \Illuminate\Http\Response
      */
-    public function update($request, $id)
+    public function update(Request $request, Movie $Movie)
     {
-        //
-//        $input = $request-> all();
-//
-//        $movies = Movie::find($id);
-//        $movies->fill($input);
-//
-//        return redirect('movie.index');
-
-
-        $movie = movie::findorFail($request['id']);
-        $movie->title = $request['title'];
-        $movie->genreID = $request['genreID'];
-        $movie->length = $request['length'];
-        $movie->description = $request['description'];
-        if (array_key_exists('onBlueRay', $request)) {
-            $movie->onBlueRay = $request['onBlueRay'];
+        $Movie = Movie::findorFail($request['id']);
+        $Movie->title = $request['title'];
+        $Movie->length = $request['length'];
+        $Movie->description = $request['description'];
+        if(array_key_exists('onBlueRay', $request)){
+            $Movie->onBlueRay = $request['onBlueRay'];
         }
-        if (array_key_exists('onDVD', $request)) {
-            $movie->onDVD = $request['onDVD'];
+        if(array_key_exists('onDVD', $request)){
+            $Movie->onDVD = $request['onDVD'];
         }
-        $movie->coverPhoto = $request['coverPhoto'];
-        $movie->save();
+        $Movie->coverPhoto = $request['coverPhoto'];
+        $Movie->save();
         return redirect()->route('movie.index');
     }
 
@@ -127,4 +117,3 @@ class MovieController extends Controller
 
     }
 }
-

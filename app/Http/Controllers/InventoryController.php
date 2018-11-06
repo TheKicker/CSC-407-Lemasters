@@ -16,8 +16,8 @@ class InventoryController extends Controller
     public function index()
     {
         //
-        $inventorys = Inventory::get()->toArray();
-        return view('inventory/indexInventory')->with('inventorys', $inventorys);
+        $inventory = Inventory::get()->toArray();
+        return view('inventory.indexInventory')->with('inventory', $inventory);
     }
 
     /**
@@ -28,7 +28,7 @@ class InventoryController extends Controller
     public function create()
     {
         //
-        return view('inventory/addInventory');
+        return view('inventory.addInventory');
 
     }
 
@@ -43,8 +43,8 @@ class InventoryController extends Controller
         //
         $input = $request->all();
 
-        $inventorys = new Inventory($input);
-        $inventorys->save();
+        $inventory = new Inventory($input);
+        $inventory->save();
 
         return redirect()->route('inventory.index');
 
@@ -53,13 +53,13 @@ class InventoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Inventory $inventorys
+     * @param  \App\Inventory $inventory
      * @return \Illuminate\Http\Response
      */
-    public function show(Inventory $inventorys)
+    public function show(Inventory $inventory)
     {
         //
-        return view('inventory/updateInventory')->with('inventory', $inventorys);
+        return view('inventory.updateInventory')->with('inventory', $inventory);
     }
 
 
@@ -71,8 +71,8 @@ class InventoryController extends Controller
      */
     public function edit(Inventory $inventory)
     {
-        //
-        return view('inventory/updateInventory')->with('inventory', $inventory);
+        dd($inventory->toArray());
+        return view('inventory.updateInventory')->with('inventory', $inventory);
     }
 
     /**
@@ -84,7 +84,6 @@ class InventoryController extends Controller
      */
     public function update($request, $id)
     {
-        //
         $input = $request-> all();
 
         $inventory = Inventory::find($id);

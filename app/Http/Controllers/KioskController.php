@@ -71,26 +71,26 @@ class KioskController extends Controller
      */
     public function edit(Kiosk $kiosks)
     {
-        //
-        dd($kiosks);
-        return view('kiosk/updateKiosk')->with('kiosks', $kiosks);
+
+//        dd($kiosk->toArray());
+        return view('kiosk.updateKiosk')->with('kiosks', $kiosks);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Kiosk  $kiosks
+     * @param  \App\Kiosk  $kiosk
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Kiosk $kiosks)
+    public function update(Request $request, Kiosk $kiosk)
     {
         //
-        $kiosks->location = $request['location'];
-        $kiosks->address = $request['address'];
+        $kiosk->location = $request['location'];
+        $kiosk->address = $request['address'];
 
 
-        $kiosks->save();
+        $kiosk->save();
         return redirect()->route('kiosk.index');
 
     }
