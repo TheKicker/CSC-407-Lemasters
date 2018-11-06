@@ -10,7 +10,7 @@
 
                     {{-- action is pointed to the named route people.store which translates to a POST to /people --}}
                     <div class="card-body">
-                        <form method="POST" action="{{ route('addInventory') }}" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('inventory.store') }}" enctype="multipart/form-data">
                             @csrf
 
                             <div class="form-group row" style="margin:25px;">

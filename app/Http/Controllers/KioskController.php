@@ -15,7 +15,7 @@ class KioskController extends Controller
     {
       //
         $kiosks = Kiosk::get()->toArray();
-        return view('kiosks/indexKiosk')->with('kiosks', $kiosks);
+        return view('kiosks.indexKiosk')->with('kiosks', $kiosks);
 
 
 
@@ -28,7 +28,7 @@ class KioskController extends Controller
      */
     public function create()
     {
-        return view('kiosks/addKiosk');
+        return view('kiosks.addKiosk');
 
     }
 
@@ -46,7 +46,7 @@ class KioskController extends Controller
         $kiosks = new Kiosk($input);
         $kiosks->save();
 
-        return redirect()->route('kiosks.index');
+        return redirect()->route('kiosk.index');
     }
 
     /**
@@ -58,7 +58,7 @@ class KioskController extends Controller
     public function show(Kiosk $kiosks)
     {
         //
-        return view('kiosk/updateKiosk')->with('kiosks', $kiosks);
+        return view('kiosks.updateKiosk')->with('kiosks', $kiosks);
 
     }
 
@@ -71,26 +71,26 @@ class KioskController extends Controller
      */
     public function edit(Kiosk $kiosks)
     {
-        //
-        dd($kiosks);
-        return view('kiosk/updateKiosk')->with('kiosks', $kiosks);
+
+//        dd($kiosk->toArray());
+        return view('kiosks.updateKiosk')->with('kiosks', $kiosks);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Kiosk  $kiosks
+     * @param  \App\Kiosk  $kiosk
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Kiosk $kiosks)
+    public function update(Request $request, Kiosk $kiosk)
     {
         //
-        $kiosks->location = $request['location'];
-        $kiosks->address = $request['address'];
+        $kiosk->location = $request['location'];
+        $kiosk->address = $request['address'];
 
 
-        $kiosks->save();
+        $kiosk->save();
         return redirect()->route('kiosk.index');
 
     }
@@ -103,13 +103,12 @@ class KioskController extends Controller
      */
     public function destroy(Kiosk $kiosk)
     {
-        //
         $selected = Kiosk::find($kiosk['id']);
         if ( $selected->delete()) {
-            echo('Successfully deleted the kiosk!');
-        } else {
-            echo('Could not delete the kiosk!');
+            return redirect()->route('kiosk.index');
         }
-        return redirect()->route('kiosk.index');
+        else {
+            return redirect()->route('status');
+        }
     }
 }

@@ -16,8 +16,8 @@ class InventoryController extends Controller
     public function index()
     {
         //
-        $inventorys = Inventory::get()->toArray();
-        return view('inventory/indexInventory')->with('inventorys', $inventorys);
+        $Inventory = Inventory::get()->toArray();
+        return view('inventory.indexInventory')->with('inventory', $Inventory);
     }
 
     /**
@@ -28,7 +28,7 @@ class InventoryController extends Controller
     public function create()
     {
         //
-        return view('inventory/addInventory');
+        return view('inventory.addInventory');
 
     }
 
@@ -43,8 +43,8 @@ class InventoryController extends Controller
         //
         $input = $request->all();
 
-        $inventorys = new Inventory($input);
-        $inventorys->save();
+        $Inventory = new Inventory($input);
+        $Inventory->save();
 
         return redirect()->route('inventory.index');
 
@@ -53,43 +53,43 @@ class InventoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Inventory $inventorys
+     * @param  \App\Inventory $Inventory
      * @return \Illuminate\Http\Response
      */
-    public function show(Inventory $inventorys)
+    public function show(Inventory $Inventory)
     {
         //
-        return view('inventory/updateInventory')->with('inventory', $inventorys);
+        return view('inventory.updateInventory')->with('inventory', $Inventory);
     }
 
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Inventory $inventory
+     * @param  \App\Inventory $Inventory
      * @return \Illuminate\Http\Response
      */
-    public function edit(Inventory $inventory)
+    public function edit(Inventory $Inventory)
     {
-        //
-        return view('inventory/updateInventory')->with('inventory', $inventory);
+        dd($Inventory->toArray());
+        return view('inventory.updateInventory')->with('inventory', $Inventory);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param  \App\Inventory  $inventory
+     * @param  \App\Inventory  $Inventory
      * @return \Illuminate\Http\Response
      */
-    public function update($request, $id)
+    public function update($request, Inventory $Inventory)
     {
-        //
-        $input = $request-> all();
+        $Inventory = Inventory::findorFail($request['id']);
+        $Inventory->movieID = $request['movieID'];
+        $Inventory->dvdInventory = $request['dvdInventory'];
+        $Inventory->blurayInventory = $request['blurayInventory'];
 
-        $inventory = Inventory::find($id);
-        $inventory->fill($input);
-
+        $Inventory->save();
         return redirect()->route('inventory.index');
 
     }
@@ -105,13 +105,11 @@ class InventoryController extends Controller
 
         $selected = Inventory::find($inventory['id']);
         if ( $selected->delete()) {
-            echo('Successfully deleted the inventory!');
-        } else {
-            echo('Could not delete the inventory!');
+            return redirect()->route('inventory.index');
         }
-        return redirect()->route('inventory.index');
-//
-//        }
+        else {
+            return redirect()->route('status');
+        }
     }
 }
 

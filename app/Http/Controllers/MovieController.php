@@ -15,8 +15,8 @@ class MovieController extends Controller
     public function index()
     {
         //
-        $movie = Movie::get()->toArray();
-        return view('movies.indexMovie')->with('movies', $movie);
+        $Movie = Movie::get()->toArray();
+        return view('movies.indexMovie')->with('movies', $Movie);
     }
 
     /**
@@ -42,8 +42,8 @@ class MovieController extends Controller
         //
         $input = $request->all();
 
-        $movie = new Movie($input);
-        $movie->save();
+        $Movie = new Movie($input);
+        $Movie->save();
 
         return redirect()->route('movie.index');
 
@@ -55,76 +55,67 @@ class MovieController extends Controller
      * @param  \App\Movie $movie
      * @return \Illuminate\Http\Response
      */
-    public function show(Movie $movie)
+    public function show(Movie $Movie)
     {
         //
-        return view('movies.updateMovie')->with('movies', $movie);
+        return view('movies.updateMovie')->with('movies', $Movie);
     }
 
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Movie $movie
+     * @param  \App\Movie $Movie
      * @return \Illuminate\Http\Response
      */
-    public function edit(Movie $movie)
+    public function edit(Movie $Movie)
     {
-        // dd($movie->toArray());
-        return view('movies.updateMovie')->with('movies', $movie);
+//        dd($Movie->toArray());
+        return view('movies.updateMovie')->with('movies' , $Movie);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param  \App\Movie  $Movie
+     * @param  \App\Movie $Movie
      * @return \Illuminate\Http\Response
      */
-    public function update($request, $id)
+    public function update(Request $request, Movie $Movie)
     {
-        //
-//        $input = $request-> all();
-//
-//        $movies = Movie::find($id);
-//        $movies->fill($input);
-//
-//        return redirect('movie.index');
-
-
-        $movie = movie::findorFail($request['id']);
-        $movie->title = $request['title'];
-        $movie->genreID = $request['genreID'];
-        $movie->length = $request['length'];
-        $movie->description = $request['description'];
-        if (array_key_exists('onBlueRay', $request)) {
-            $movie->onBlueRay = $request['onBlueRay'];
-        }
-        if (array_key_exists('onDVD', $request)) {
-            $movie->onDVD = $request['onDVD'];
-        }
-        $movie->coverPhoto = $request['coverPhoto'];
-        $movie->save();
+//        dd($Movie->toArray());
+        $Movie = Movie::findorFail($request['id']);
+        $Movie->title = $request['title'];
+        $Movie->length = $request['length'];
+        $Movie->description = $request['description'];
+//        if(array_key_exists('onBlueRay', $request)){
+//            $Movie->onBlueRay = $request['onBlueRay'];
+//        }
+//        if(array_key_exists('onDVD', $request)){
+//            $Movie->onDVD = $request['onDVD'];
+//        }
+//        $Movie->coverPhoto = $request['coverPhoto'];
+        $Movie->save();
         return redirect()->route('movie.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Movie $movie
+     * @param  \App\Movie $Movie
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Movie $movie)
+    public function destroy(Movie $Movie)
     {
 
-        $selected = Movie::find($movie['id']);
+        $selected = Movie::find($Movie['id']);
         if ( $selected->delete()) {
-            echo('Successfully deleted the movie!');
-        } else {
-            echo('Could not delete the movie!');
+            return redirect()->route('movie.index');
         }
-        return redirect()->route('movie.index');
+        else {
+            return redirect()->route('status');
+        }
+
 
     }
 }
-

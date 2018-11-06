@@ -21,7 +21,7 @@
             </tr>
             </thead>
             <tbody>
-                @foreach($inventorys as $inventory)
+                @foreach($inventory as $inventory)
                     <tr>
                         <th>{{ $inventory['id'] }}</th>
                         <th>{{ $inventory['movieID'] }}</th>

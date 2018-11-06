@@ -9,7 +9,7 @@
                     <div class="card-header">{{ __('Update a Movie') }}</div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{ route('movie.update', $movies['id']) }}" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('movie.update', $Movie['id']) }}" enctype="multipart/form-data">
                             @method('PUT')
                             @csrf
 
@@ -20,7 +20,7 @@
 
                                 <div class="col-md-8">
 
-                                    <input id="title" type="text" class="form-control{{ $errors->has('title') ? ' is-invalid' : '' }}" name="title" value="{{ $movies('title') }}" placeholder="Toy Story" required autofocus>
+                                    <input id="title" name="title" type="text" placeholder="" class="form-control input-md" value="{{ $Movie['title'] }}" required="">
 
 
                                     @if ($errors->has('title'))
@@ -35,7 +35,7 @@
                                 <label for="genreID" class="col-md-2 col-form-label text-md-right">{{ __('Genre ID') }}</label>
 
                                 <div class="col-md-3">
-                                    <input id="genreID" type="text" class="form-control{{ $errors->has('genreID') ? ' is-invalid' : '' }}" name="genreID" value="{{ $movies('genreID') }}" placeholder="01" required autofocus>
+                                    <input id="genreID" type="text" class="form-control{{ $errors->has('genreID') ? ' is-invalid' : '' }}" name="genreID" value="{{ $Movie('genreID') }}" placeholder="01" required autofocus>
 
                                     @if ($errors->has('genreID'))
                                         <span class="invalid-feedback" role="alert">
@@ -47,7 +47,7 @@
                                 <label for="length" class="col-md-2 col-form-label text-md-right">{{ __('Length (min)') }}</label>
 
                                 <div class="col-md-3">
-                                    <input id="length" type="text" class="form-control{{ $errors->has('length') ? ' is-invalid' : '' }}" name="length" value="{{ $movies('length') }}" placeholder="120" required autofocus>
+                                    <input id="length" type="text" class="form-control{{ $errors->has('length') ? ' is-invalid' : '' }}" name="length" value="{{ $Movie('length') }}" placeholder="120" required autofocus>
 
                                     @if ($errors->has('length'))
                                         <span class="invalid-feedback" role="alert">
@@ -63,7 +63,7 @@
                                 <label for="description" class="col-md-2 col-form-label text-md-right">{{ __('Description') }}</label>
 
                                 <div class="col-md-8">
-                                    <input id="description" type="text" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" name="description" value="{{ $movies('description') }}" placeholder="A great movie..." required autofocus>
+                                    <input id="description" type="text" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" name="description" value="{{ $Movie('description') }}" placeholder="A great movie..." required autofocus>
 
                                     @if ($errors->has('description'))
                                         <span class="invalid-feedback" role="alert">

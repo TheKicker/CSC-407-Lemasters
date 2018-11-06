@@ -18,7 +18,10 @@
                     <p id="indentHard"> Created create(movie/kiosk) forms, added necessary routing, created Admin Dashboard, created files for adding movie/kiosk and indexing movie/kiosk</p>
 
             <h5 id="indentSoft"> Deliverable 5 </h5>
-                    <p id="indentHard"> Created inventory CRUD functions and web routing.</p>
+                    <p id="indentHard"> Created inventory CRD functions and web routing. Update is not yet functional but working on it. </p>
+
+            <h5 id="indentSoft"> Deliverable 6 </h5>
+                    <p id="indentHard"> Installed Image Intervention framework -- working on functionality. </p>
 
    </div>
         <hr>
@@ -40,6 +43,9 @@
             <h5 id="indentSoft"> Deliverable 5 </h5>
                     <p id="indentHard"> Lorem Ipsum...</p>
 
+            <h5 id="indentSoft"> Deliverable 6 </h5>
+                    <p id="indentHard"> Lorem Ipsum... </p>
+
     </div>
         <hr>
     <div>
@@ -58,6 +64,9 @@
 
             <h5 id="indentSoft"> Deliverable 5 </h5>
                     <p id="indentHard"> Lorem Ipsum...</p>
+
+            <h5 id="indentSoft"> Deliverable 6 </h5>
+                    <p id="indentHard"> Lorem Ipsum... </p>
 
 
     </div>
