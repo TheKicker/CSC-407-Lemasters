@@ -98,17 +98,17 @@ class KioskController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Kiosk  $kiosks
+     * @param  \App\Kiosk  $kiosk
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Kiosk $kiosks)
+    public function destroy(Kiosk $kiosk)
     {
         //
-        $selected = Kiosk::find($kiosks['id']);
+        $selected = Kiosk::find($kiosk['id']);
         if ( $selected->delete()) {
-            $this->setMessage('Successfully deleted the kiosk!');
+            echo('Successfully deleted the kiosk!');
         } else {
-            $this->setMessage('Could not delete the kiosk!', 'error');
+            echo('Could not delete the kiosk!');
         }
         return redirect()->route('kiosk.index');
     }

@@ -20,7 +20,7 @@
 
                                 <div class="col-md-8">
 
-                                    <input id="title" type="text" class="form-control{{ $errors->has('title') ? ' is-invalid' : '' }}" name="title" value="title" placeholder="Toy Story" required autofocus>
+                                    <input id="title" type="text" class="form-control{{ $errors->has('title') ? ' is-invalid' : '' }}" name="title" value="{{ $movies('title') }}" placeholder="Toy Story" required autofocus>
 
 
                                     @if ($errors->has('title'))

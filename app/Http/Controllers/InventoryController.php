@@ -66,20 +66,20 @@ class InventoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Inventory $inventorys
+     * @param  \App\Inventory $inventory
      * @return \Illuminate\Http\Response
      */
-    public function edit(Inventory $inventorys)
+    public function edit(Inventory $inventory)
     {
         //
-        return view('inventory/updateInventory')->with('inventory', $inventorys);
+        return view('inventory/updateInventory')->with('inventory', $inventory);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param  \App\Inventory $inventorys
+     * @param  \App\Inventory  $inventory
      * @return \Illuminate\Http\Response
      */
     public function update($request, $id)
@@ -87,10 +87,10 @@ class InventoryController extends Controller
         //
         $input = $request-> all();
 
-        $inventorys = Inventory::find($id);
-        $inventorys->fill($input);
+        $inventory = Inventory::find($id);
+        $inventory->fill($input);
 
-        return redirect('inventory.index');
+        return redirect()->route('inventory.index');
 
     }
 
@@ -102,17 +102,14 @@ class InventoryController extends Controller
      */
     public function destroy(inventory $inventory)
     {
-        //
-        $selected = inventory::find($inventory['id']);
+
+        $selected = Inventory::find($inventory['id']);
         if ( $selected->delete()) {
-            $this->setMessage('Successfully deleted the inventory!');
+            echo('Successfully deleted the inventory!');
         } else {
-            $this->setMessage('Could not delete the inventory!', 'error');
+            echo('Could not delete the inventory!');
         }
         return redirect()->route('inventory.index');
-//        $selectedDelete = inventory::findOrFail($inventory['id']);
-//        if ($selectedDelete->delete()) {
-//            return redirect()->route('inventory.index');
 //
 //        }
     }
