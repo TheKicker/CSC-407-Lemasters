@@ -2,12 +2,12 @@
 
 namespace App;
 
-//use Illunminate\Database\Eloquent\SoftDeletes;
+// use Illunminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 
 class Movie extends Model
 {
-    //use SoftDeletes;
+    // use SoftDeletes;
     protected $table='movies';
 
     protected $fillable = ['title', 'length', 'description', 'genreID', 'isDisc', 'isBluRay', 'cover',];

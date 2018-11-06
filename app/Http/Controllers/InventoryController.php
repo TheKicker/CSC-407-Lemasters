@@ -104,13 +104,11 @@ class InventoryController extends Controller
 
         $selected = Inventory::find($inventory['id']);
         if ( $selected->delete()) {
-            echo('Successfully deleted the inventory!');
-        } else {
-            echo('Could not delete the inventory!');
+            return redirect()->route('inventory.index');
         }
-        return redirect()->route('inventory.index');
-//
-//        }
+        else {
+            return redirect()->route('status');
+        }
     }
 }
 

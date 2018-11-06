@@ -15,7 +15,7 @@ class KioskController extends Controller
     {
       //
         $kiosks = Kiosk::get()->toArray();
-        return view('kiosks/indexKiosk')->with('kiosks', $kiosks);
+        return view('kiosks.indexKiosk')->with('kiosks', $kiosks);
 
 
 
@@ -28,7 +28,7 @@ class KioskController extends Controller
      */
     public function create()
     {
-        return view('kiosks/addKiosk');
+        return view('kiosks.addKiosk');
 
     }
 
@@ -46,7 +46,7 @@ class KioskController extends Controller
         $kiosks = new Kiosk($input);
         $kiosks->save();
 
-        return redirect()->route('kiosks.index');
+        return redirect()->route('kiosk.index');
     }
 
     /**
@@ -58,7 +58,7 @@ class KioskController extends Controller
     public function show(Kiosk $kiosks)
     {
         //
-        return view('kiosk/updateKiosk')->with('kiosks', $kiosks);
+        return view('kiosks.updateKiosk')->with('kiosks', $kiosks);
 
     }
 
@@ -73,7 +73,7 @@ class KioskController extends Controller
     {
 
 //        dd($kiosk->toArray());
-        return view('kiosk.updateKiosk')->with('kiosks', $kiosks);
+        return view('kiosks.updateKiosk')->with('kiosks', $kiosks);
     }
 
     /**
@@ -103,13 +103,12 @@ class KioskController extends Controller
      */
     public function destroy(Kiosk $kiosk)
     {
-        //
         $selected = Kiosk::find($kiosk['id']);
         if ( $selected->delete()) {
-            echo('Successfully deleted the kiosk!');
-        } else {
-            echo('Could not delete the kiosk!');
+            return redirect()->route('kiosk.index');
         }
-        return redirect()->route('kiosk.index');
+        else {
+            return redirect()->route('status');
+        }
     }
 }
