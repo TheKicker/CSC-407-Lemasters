@@ -53,12 +53,10 @@
                             <div class="form-group row" align="right">
                                 <div class="col-md-6 offset-md-4">
                                     <button name="submit" type="submit" class="btn btn-primary">{{__('Update Inventory')}}</button>
-                                </div>
-                                <div class="col-md-6 offset-md-4" align="right">
                                     <a href="{{route('inventory.index')}}" id="movieCancelButton" name="movieCancelButton" class="btn btn-danger">Cancel</a>
-                            </div>
+                                </div>
 
-                    </div>
+                            </div>
                     </form>
                 </div>
 @endsection
