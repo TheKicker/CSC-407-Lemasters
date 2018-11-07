@@ -94,7 +94,7 @@
                                     </div>
                                     <div class="checkbox">
                                         <label for="checkboxes-1">
-                                            <input type="checkbox" name="onBLuRay" id="onBluRay" value="2">
+                                            <input type="checkbox" name="onBLuRay" id="onBluRay" value="1">
                                             BluRay
                                         </label>
                                     </div>

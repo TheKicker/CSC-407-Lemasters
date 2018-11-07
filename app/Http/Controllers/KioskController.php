@@ -69,11 +69,11 @@ class KioskController extends Controller
      * @param  \App\Kiosk  $kiosks
      * @return \Illuminate\Http\Response
      */
-    public function edit(Kiosk $kiosks)
+    public function edit(Kiosk $kiosk)
     {
 
 //        dd($kiosk->toArray());
-        return view('kiosks.updateKiosk')->with('kiosks', $kiosks);
+        return view('kiosks.updateKiosk')->with('kiosk', $kiosk);
     }
 
     /**
