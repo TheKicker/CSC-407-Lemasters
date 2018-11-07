@@ -30,7 +30,7 @@
                         <th>{{ $inventory['created_at'] }}</th>
                         <th>{{ $inventory['updated_at'] }}</th>
                         <td>
-                            <button class="alert-dark" style="margin:5px;"><a href="{{ route('inventory.edit', $inventory['id']) }}">Update</a></button>
+                            <button class="alert-dark" style="margin:5px;"><a href="{{ route('inventory.update', $inventory['id']) }}">Update</a></button>
                         </td>
                         <td>
                             <form method="POST" action="{{route('inventory.destroy' , $inventory['id'])}}">

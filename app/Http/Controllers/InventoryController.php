@@ -69,27 +69,27 @@ class InventoryController extends Controller
      * @param  \App\Inventory $Inventory
      * @return \Illuminate\Http\Response
      */
-    public function edit(Inventory $Inventory)
+    public function edit(Inventory $inventory)
     {
-        dd($Inventory->toArray());
-        return view('inventory.updateInventory')->with('inventory', $Inventory);
+        //dd($Inventory->toArray());
+        return view('inventory.updateInventory')->with('inventory', $inventory);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param  \App\Inventory  $Inventory
+     * @param  \App\Inventory  $inventory
      * @return \Illuminate\Http\Response
      */
-    public function update($request, Inventory $Inventory)
+    public function update($request, Inventory $inventory)
     {
-        $Inventory = Inventory::findorFail($request['id']);
-        $Inventory->movieID = $request['movieID'];
-        $Inventory->dvdInventory = $request['dvdInventory'];
-        $Inventory->blurayInventory = $request['blurayInventory'];
+        //$inventory = Inventory::findorFail($request['id']);
+        $inventory->movieID = $request['movieID'];
+        $inventory->dvdInventory = $request['dvdInventory'];
+        $inventory->blurayInventory = $request['blurayInventory'];
 
-        $Inventory->save();
+        $inventory->save();
         return redirect()->route('inventory.index');
 
     }
