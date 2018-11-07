@@ -91,7 +91,7 @@ class MovieTableSeeder extends Seeder
             'genreID' => 6,
             'cover' => 'October_Baby.jpg',
             'isDISC' => rand(0,1),
-            'isBLURAY' => rand(1,1),
+            'isBLURAY' => rand(0,1),
         ));
 
         Movie::create(array(
@@ -100,6 +100,26 @@ class MovieTableSeeder extends Seeder
             'description' => ' A science fiction-adventure film directed by Gary Ross and based on Suzanne Collins’ 2008 novel of the same name. It is from the perspective of the voice of 16-year-old Katniss Everdeen, who lives in the future, post-apocalyptic nation of Panem in North America. The Capitol, a highly advanced metropolis, exercises political control over the rest of the nation. The Hunger Games is an annual event in which one boy and one girl aged 12–18 from each of the twelve districts surrounding the Capitol are selected by lottery to compete in a televised battle to the death.',
             'genreID' => 8,
             'cover' => 'Hunger_Games.jpg',
+            'isDISC' => rand(1,1),
+            'isBLURAY' => rand(1,1),
+        ));
+
+        Movie::create(array(
+            'title' => 'Harry Potter & Sorcerers Stone (2001)',
+            'length' => 152,
+            'description' => 'An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world.',
+            'genreID' => 6,
+            'cover' => 'Harry_Potter.jpg',
+            'isDISC' => rand(1,1),
+            'isBLURAY' => rand(1,1),
+        ));
+
+        Movie::create(array(
+            'title' => 'The Godfather (1972)',
+            'length' => 177,
+            'description' => 'Starring Marlon Brando and Al Pacino as the leaders of a fictional New York crime family -- the story spanning 1945 to 1955, chronicles the family under the patriarch Vito Corleone (Brando), focusing on the transformation of Michael Corleone (Pacino) from reluctant family outsider to ruthless mafia boss.',
+            'genreID' => 4,
+            'cover' => 'The_Godfather.jpeg',
             'isDISC' => rand(1,1),
             'isBLURAY' => rand(1,1),
         ));
