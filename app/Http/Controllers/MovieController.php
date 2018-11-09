@@ -19,6 +19,12 @@ class MovieController extends Controller
         return view('movies.indexMovie')->with('movies', $Movie);
     }
 
+    public function library()
+    {
+      $Movie = Movie::get()->toArray();
+      return view('library')->with('movies', $Movie);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
