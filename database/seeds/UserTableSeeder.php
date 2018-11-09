@@ -106,5 +106,43 @@ class UserTableSeeder extends Seeder
             'zip' => '91302'
         ]);
 
+        User::create([
+            'firstName' => 'Aurelius',
+            'middleName' => 'Augustine',
+            'lastName' => 'Hipponensis',
+            'email' => 'Confessions@GodsPlan.com',
+            'cellNumber' => '0000000000',
+            'password' => bcrypt('CityOfGod'),
+            'street' => '1st Avenue' ,
+            'city' => 'Thagaste',
+            'state' => 'Algeria',
+            'zip' => '15010'
+        ]);
+
+        User::create([
+            'firstName' => 'Gaius',
+            'middleName' => 'Julius',
+            'lastName' => 'Caesar',
+            'email' => 'Caesar@HolyRomanEmpire.com',
+            'cellNumber' => '1002003000',
+            'password' => bcrypt('HelpIveBeenStabbed'),
+            'street' => 'Emperors Village',
+            'city' => 'Rome',
+            'state' => 'The Holy Roman Empire',
+            'zip' => '1'
+        ]);
+
+        User::create([
+            'firstName' => 'Ryad',
+            'middleName' => 'Ramírez',
+            'lastName' => 'Al-Hassar',
+            'email' => 'Jackal@Rainbow.com',
+            'cellNumber' => '1032013002',
+            'password' => bcrypt('LemmeGetThisAce'),
+            'street' => '1 Jackal Drive',
+            'city' => 'Ceuta',
+            'state' => 'Spain',
+            'zip' => '12345'
+        ]);
     }
 }
