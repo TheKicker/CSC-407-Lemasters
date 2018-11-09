@@ -8,6 +8,8 @@
     <div>
 
         {{--begin the at for each statement--}}
+@foreach($movies as $movie)
+
 <div class="grid-container" style="display: grid; grid-template-columns: auto auto auto auto; padding: 10px;">
                 <!-- individual movie card -->
 
@@ -23,13 +25,13 @@
                                 <!-- Card content -->
                                 <div class="card-body">
                                     <!-- Title -->
-                                    <h4 class="card-title"><a>The Chronicles of Narnia : Part One</a></h4>
+                                    <h4 class="card-title"><a>{{ $movie['title'] }}</a></h4>
                                     <!-- Length & Genre -->
                                     <div>
                                         <h6>
-                                        <i>135 Min.</i>
+                                        <i>({{ $movie['length'] }} )</i>
                                         <strong> &nbsp; | &nbsp; </strong>
-                                        <i>Action </i>
+                                        <i>Action</i>
                                         </h6>
                                     </div>
 
@@ -38,7 +40,7 @@
                                 </div>
                             </div>
                     </div>
-
+@endforeach
                     <!-- End Card -->
 
 </div>

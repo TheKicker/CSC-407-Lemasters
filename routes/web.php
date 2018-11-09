@@ -39,9 +39,7 @@ Route::get('/', function () {
 })->name('welcome');
 
 // Library Page
-Route::get('/library', function () {
-    return view('library');
-})->name('library');
+Route::resource('/library', 'MovieController');
 
 // Project Page
 Route::get('/project', function () {
@@ -94,4 +92,3 @@ Route::get('/home', 'HomeController@index')->name('home');
 // COMMAND: (php artisan make:controller ExampleController)
 // Makes file at HTTP/controllers/ExampleController.php
 Route::get('/example', 'ExampleController@list');
-
