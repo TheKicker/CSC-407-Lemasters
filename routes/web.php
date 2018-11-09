@@ -49,8 +49,8 @@ Route::get('/project', function () {
 })->name('project');
 
 // User Profile Page
-Route::get('/userProfile', function () {
-    return view('userProfile');
+Route::get('User/userProfile', function () {
+    return view('User/userProfile');
 })->name('userProfile');
 
 //******************* MOVIE PAGES *************************//
