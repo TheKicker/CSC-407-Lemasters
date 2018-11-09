@@ -7,10 +7,13 @@
         <div class="row">
             <h2> <strong>{{ Auth::user()-> firstName }} {{ Auth::user()-> middleName }} {{ Auth::user()-> lastName }} </strong></h2>
         </div>
-    
-        <hr>
 
-        <div>
+        <hr>
+    <div class="row">
+        <div class="profileBox" align="center">
+            <img src="http://drhrlaw.com/wp-content/uploads/2015/02/profile-placeholder.jpg">
+        </div>
+        <div class="profileBox">
             <div>
                 <h4><strong>Email Address:</strong></h4>
                 <h3 id="indentHard">{{ Auth::user()-> email }}</h3>
@@ -32,6 +35,8 @@
                 <h3 id="indentHard"> {{ Auth::user()-> state }}, {{ Auth::user()-> zip }}</h3>
             </div>
         </div>
+    </div>
+
 </div>
 
 @endsection
