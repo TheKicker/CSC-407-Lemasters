@@ -48,6 +48,11 @@ Route::get('/project', function () {
     return view('project');
 })->name('project');
 
+// User Profile Page
+Route::get('/userProfile', function () {
+    return view('userProfile');
+})->name('userProfile');
+
 //******************* MOVIE PAGES *************************//
 
 Route::resource('/movie', 'MovieController');
