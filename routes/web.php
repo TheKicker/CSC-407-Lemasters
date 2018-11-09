@@ -39,7 +39,9 @@ Route::get('/', function () {
 })->name('welcome');
 
 // Library Page
-Route::resource('/library', 'MovieController');
+Route::get('/library', function () {
+    return view('library');
+})->name('library');
 
 // Project Page
 Route::get('/project', function () {
@@ -63,13 +65,6 @@ Route::resource('/kiosk', 'KioskController');
 
 Route::resource('/inventory', 'InventoryController');
 
-//Route::get('indexInventory', function () {
-//    return view('indexInventory');
-//})->name('indexInventory');
-//
-//Route::get('addInventory', function () {
-//    return view('addInventory');
-//})->name('addInventory');
 
 //******************* AUTH PAGES *************************//
 
