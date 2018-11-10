@@ -4,14 +4,10 @@
 
 <div class="container" style="margin-bottom: 120px;">
 
-        <div class="row">
-            <div class="pb-1 text-right">
-
-                <a href="{{ route('user.update') }}" class="btn btn-small btn-success" style="margin:30px;">Edit Profile</a>
-
+        <div>
+            <div class="text-left">
+                <h2>My Profile:</h2>
             </div>
-            <h2> <strong>{{ Auth::user()-> firstName }} {{ Auth::user()-> middleName }} {{ Auth::user()-> lastName }} </strong></h2>
-            <h2>User Profile:</h2>
         </div>
 
     <div class="row">
@@ -20,7 +16,6 @@
         </div>
         <div class="profileBox">
             <div style="margin:15px;">
-                {{--<h4><strong></strong></h4>--}}
                 <h2 id="indentHard"><strong>{{ Auth::user()-> firstName }} {{ Auth::user()-> middleName }} {{ Auth::user()-> lastName }} </strong></h2>
             </div>
             <hr>
@@ -43,6 +38,9 @@
             <div style="margin:15px;">
                 <h6><strong>State & Zip:</strong></h6>
                 <h4 id="indentHard"> {{ Auth::user()-> state }}, {{ Auth::user()-> zip }}</h4>
+            </div>
+            <div align="right">
+                <a href="#" class="btn btn-small btn-primary" style="margin:15px;">Edit Profile</a>
             </div>
         </div>
     </div>
