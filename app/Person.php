@@ -2,11 +2,13 @@
 
 namespace App;
 
+use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 
 class Person extends Model
 {
     //
+
     protected $fillable = [
         'firstName', 'middleName', 'lastName', 'cellNumber', 'email', 'password', 'street', 'city', 'state', 'zip'
     ];

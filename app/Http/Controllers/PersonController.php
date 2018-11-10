@@ -38,6 +38,12 @@ class PersonController extends Controller
     public function store(Request $request)
     {
         //
+        $input = $request->all();
+
+        $person = new Person($input);
+        $person->save();
+
+        return redirect()->route('User.index');
     }
 
     /**
@@ -49,6 +55,7 @@ class PersonController extends Controller
     public function show(Person $person)
     {
         //
+        return view('User.updateProfile');
     }
 
     /**
@@ -60,6 +67,8 @@ class PersonController extends Controller
     public function edit(Person $person)
     {
         //
+        dd($person->toArray());
+        //return view('User.updateProfile')->with('User', $person);
     }
 
     /**
@@ -72,6 +81,19 @@ class PersonController extends Controller
     public function update(Request $request, Person $person)
     {
         //
+        $person->firstName = $request['firstName'];
+        $person->lastName = $request['lastName'];
+        $person->email = $request['email'];
+        $person->cellNumber = $request['cellNumber'];
+        $person->password = $request['password'];
+        $person->street = $request['street'];
+        $person->city = $request['city'];
+        $person->state = $request['state'];
+        $person->zip = $request['zip'];
+
+        $person->save();
+        return redirect()->route('User.index');
+
     }
 
     /**

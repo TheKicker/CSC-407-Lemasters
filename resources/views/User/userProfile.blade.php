@@ -40,7 +40,7 @@
                 <h4 id="indentHard"> {{ Auth::user()-> state }}, {{ Auth::user()-> zip }}</h4>
             </div>
             <div align="right">
-                <a href="#" class="btn btn-small btn-primary" style="margin:15px;">Edit Profile</a>
+                <a href="{{route('User.edit') }}" class="btn btn-small btn-primary" style="margin:15px;">Edit Profile</a>
             </div>
         </div>
     </div>

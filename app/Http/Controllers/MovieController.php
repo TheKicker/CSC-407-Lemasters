@@ -102,7 +102,6 @@ class MovieController extends Controller
         }
         $Movie->coverPhoto = $request['coverPhoto'];
         $Movie->save();
-        session()->flash('success', 'Film wurde erfolgreich Editiert!');
         return redirect()->route('movie.index');
     }
 
