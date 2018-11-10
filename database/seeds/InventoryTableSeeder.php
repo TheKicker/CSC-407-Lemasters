@@ -56,5 +56,11 @@ class InventoryTableSeeder extends Seeder
             'dvdInventory' => 19,
             'blurayInventory' => 21,
         ));
+
+        Inventory::create(array(
+            'movieID' => 7,
+            'dvdInventory' => 19,
+            'blurayInventory' => 21,
+        ));
     }
 }

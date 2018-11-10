@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Person;
 
 class PeopleTableSeeder extends Seeder
 {
@@ -14,7 +15,7 @@ class PeopleTableSeeder extends Seeder
         //
         DB::table('people')->delete();
 
-        Person::create([
+        Person::create(array(
             'firstName' => 'Haylee',
             'middleName' => 'Nicole',
             'lastName' => 'Heaton',
@@ -25,6 +26,6 @@ class PeopleTableSeeder extends Seeder
             'city' => 'Hollidaysburg',
             'state' => 'Pennsylvania',
             'zip' => '16648'
-        ]);
+        ));
     }
 }
