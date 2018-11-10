@@ -5,6 +5,11 @@
 <div class="container">
 
         <div class="row">
+            <div class="pb-1 text-right">
+
+                <a href="{{ route('user.update') }}" class="btn btn-small btn-success" style="margin:30px;">Edit Profile</a>
+
+            </div>
             <h2> <strong>{{ Auth::user()-> firstName }} {{ Auth::user()-> middleName }} {{ Auth::user()-> lastName }} </strong></h2>
         </div>
 
