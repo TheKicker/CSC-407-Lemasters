@@ -53,23 +53,22 @@
                     <strong>Customer Management</strong>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><a href="#" class="#">List of Customers</a></li>
-                    <li class="list-group-item"><a href="#" class="#">Add Customers</a></li>
+                    <li class="list-group-item"><a href="{{ route('User.index') }}" class="#">List of People</a></li>
                     <li class="list-group-item" style="height:48px;"><a href="#" class="#"></a></li>
-
+                    <li class="list-group-item" style="height:48px;"><a href="#" class="#"></a></li>
                 </ul>
             </div>
-            <div class="card" style="width: 18rem; margin: 35px;">
-                <div class="card-header">
-                    <strong>User Management</strong>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><a href="#" class="#">List of Users</a></li>
-                    <li class="list-group-item"><a href="#" class="#">Add User</a></li>
-                    <li class="list-group-item" style="height:48px;"><a href="#" class="#"></a></li>
+            {{--<div class="card" style="width: 18rem; margin: 35px;">--}}
+                {{--<div class="card-header">--}}
+                    {{--<strong>User Management</strong>--}}
+                {{--</div>--}}
+                {{--<ul class="list-group list-group-flush">--}}
+                    {{--<li class="list-group-item"><a href="#" class="#">List of Users</a></li>--}}
+                    {{--<li class="list-group-item"><a href="#" class="#">Add User</a></li>--}}
+                    {{--<li class="list-group-item" style="height:48px;"><a href="#" class="#"></a></li>--}}
 
-                </ul>
-            </div>
+                {{--</ul>--}}
+            {{--</div>--}}
         </div>
     </div>
 @endsection

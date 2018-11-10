@@ -15,6 +15,8 @@ class PersonController extends Controller
     public function index()
     {
         //
+        $people = Person::get()->toArray();
+        return view('User.indexUser')->with('people', $people);
     }
 
     /**

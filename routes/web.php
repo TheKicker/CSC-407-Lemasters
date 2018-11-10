@@ -65,6 +65,10 @@ Route::resource('/kiosk', 'KioskController');
 
 Route::resource('/inventory', 'InventoryController');
 
+//******************* USER PAGES *************************//
+
+Route::resource('/User', 'PersonController');
+
 
 //******************* AUTH PAGES *************************//
 
