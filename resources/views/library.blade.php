@@ -8,7 +8,6 @@
     <div>
 
         {{--begin the at for each statement--}}
-@foreach($movies as $movie)
 
 <div class="grid-container" style="display: grid; grid-template-columns: auto auto auto auto; padding: 10px;">
                 <!-- individual movie card -->
@@ -25,11 +24,11 @@
                                 <!-- Card content -->
                                 <div class="card-body">
                                     <!-- Title -->
-                                    <h4 class="card-title"><a>{{ $movie['title'] }}</a></h4>
+                                    <h4 class="card-title"><a>Title</a></h4>
                                     <!-- Length & Genre -->
                                     <div>
                                         <h6>
-                                        <i>({{ $movie['length'] }} )</i>
+                                        <i>Length</i>
                                         <strong> &nbsp; | &nbsp; </strong>
                                         <i>Action</i>
                                         </h6>
@@ -40,7 +39,6 @@
                                 </div>
                             </div>
                     </div>
-@endforeach
                     <!-- End Card -->
 
 </div>

@@ -23,6 +23,7 @@
             #indentHard{text-indent:40px;}
             .footer{position: fixed; right: 0; bottom: 0; left: 0; padding: 1rem; background-color: #efefef; text-align: right;}
             .profileBox{outline: 3px solid #3d4852; padding:15px; background-color: white; width: 45%; margin: 25px;}
+            .profileBlock{outline: 3px solid #3d4852; padding:15px; background-color: white; width: 94%; margin: 25px;}
             .movieCard{width: 100%; height: 100%; padding: 15px; box-shadow: 10px 10px 25px #3d4852}
     </style>
 
