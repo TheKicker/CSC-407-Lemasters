@@ -50,10 +50,10 @@
         <div class="container row">
             <div class="card" style="width: 18rem; margin: 35px;">
                 <div class="card-header">
-                    <strong>Customer Management</strong>
+                    <strong>People Management</strong>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><a href="{{ route('User.index') }}" class="#">List of People</a></li>
+                    <li class="list-group-item"><a href="{{ route('User.index') }}" class="#">List of Users</a></li>
                     <li class="list-group-item" style="height:48px;"><a href="#" class="#"></a></li>
                     <li class="list-group-item" style="height:48px;"><a href="#" class="#"></a></li>
                 </ul>

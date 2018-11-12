@@ -13,7 +13,7 @@
 
 // To be used as a placeholder on site
 Route::get('/status', function(){
-    return '<div align="center"><h1>Well, your site works but this aint it chief. </h1><br><img src="https://media.giphy.com/media/tLql6mMHC6wvK/giphy.gif">';
+    return '<div align="center"><h1>Well, your site works but we know what you were looking for and this aint it chief. </h1><br><img src="https://media.giphy.com/media/tLql6mMHC6wvK/giphy.gif">';
 })->name('status');
 
 //******************* STATIC PAGES *************************//
@@ -68,7 +68,6 @@ Route::resource('/inventory', 'InventoryController');
 //******************* USER PAGES *************************//
 
 Route::resource('/User', 'PersonController');
-
 
 //******************* AUTH PAGES *************************//
 
