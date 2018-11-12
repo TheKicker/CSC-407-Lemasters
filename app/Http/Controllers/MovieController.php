@@ -100,7 +100,7 @@ class MovieController extends Controller
         if(array_key_exists('isDisc', $request)){
             $Movie->isDisc = $request['isDisc'];
         }
-        $Movie->coverPhoto = $request['coverPhoto'];
+        $Movie->cover = $request['cover'];
         $Movie->save();
         return redirect()->route('movie.index');
     }
