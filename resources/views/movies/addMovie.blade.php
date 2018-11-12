@@ -73,9 +73,9 @@
 
                             <div class="form-group row" style="margin:25px;">
                                 <div class="form-group row">
-                                    <label class="col-md-4 col-form-label text-md-right" for="cover">Upload image</label>
+                                    <label class="col-md-4 col-form-label text-md-right" for="coverPhoto">Upload image</label>
                                     <div class="col-md-4">
-                                        <input id="cover" name="cover" class="input-file" type="file">
+                                        <input id="coverPhoto" name="coverPhoto" class="input-file" type="file">
                                     </div>
                                 </div>
 

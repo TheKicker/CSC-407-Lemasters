@@ -10,7 +10,7 @@ class Movie extends Model
     //
     //use SoftDeletes;
     protected $fillable = [
-        'title', 'length','description', 'genreID', 'isDisc','isBlueRay','cover',
+        'title', 'length','description', 'genreID', 'isDisc','isBlueRay','coverPhoto',
     ];
 }
     // use SoftDeletes;
