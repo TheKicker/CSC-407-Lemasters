@@ -33,7 +33,7 @@
 
               <tr>
                 <td>{{ $movie['id'] }}</td>
-                  <td>{{ $movie['cover'] }}</td>
+                  <td>{{ $movie['coverPhoto'] }}</td>
                   <td>{{ $movie['title'] }}</td>
                   <td>{{ $movie['length'] }}</td>
                   <td>{{ $movie['genreID'] }}</td>
