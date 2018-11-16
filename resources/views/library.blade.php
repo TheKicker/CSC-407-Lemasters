@@ -1,14 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container" style="margin-bottom: 96px;">
-    <h2> Explore Whole New Worlds on DVD or BluRay</h2>
-    <hr>
-    <p><strong> These are the current products within our library. Find something you like! </strong></p>
-    <div>
 
-        {{--begin the at for each statement--}}
-@foreach($movies as $movie)
+
 
 <div class="grid-container" style="display: grid; grid-template-columns: auto auto auto auto; padding: 10px;">
                 <!-- individual movie card -->
@@ -46,7 +40,7 @@
 @endforeach
 
             {{--the at end for each would go here--}}
-    </div>
+    {{--</div>--}}
 
-</div>
-@endsection
+{{--</div>--}}
+{{--@endsection--}}

@@ -39,12 +39,19 @@ Route::get('/', function () {
 })->name('welcome');
 
 // Library Page
+<<<<<<< HEAD
 Route::get('/library', 'MovieController@library')->name('library');
+=======
+Route::resource('/library', 'LibraryController');
+>>>>>>> ca7c08cad4cd13c818606610940a0cdbc24394f9
 
 // Project Page
 Route::get('/project', function () {
     return view('project');
 })->name('project');
+
+//Rental Page
+Route::resource('/rentals', 'RentalController');
 
 // User Profile Page
 Route::get('User/userProfile', function () {
