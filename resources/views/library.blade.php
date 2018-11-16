@@ -30,7 +30,7 @@
                                     </div>
 
                                     <!-- Button -->
-                                    <!-- <a href="#" class="btn btn-primary" style="margin: 5px;">Add to Cart</a> -->
+                                    <a href="#" class="btn btn-primary" style="margin: 5px;">Rent</a>
                                 </div>
                             </div>
                     </div>
