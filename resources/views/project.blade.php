@@ -54,16 +54,16 @@
                     <p id="indentHard"> Created Balsamiq layouts, 4 Personas </p>
 
             <h5 id="indentSoft"> Deliverable 2 </h5>
-                    <p id="indentHard"> Lorem Ipsum...</p>
+                    <p id="indentHard"> DB Implement, edited routes </p>
 
             <h5 id="indentSoft"> Deliverable 3 </h5>
-                    <p id="indentHard"> Lorem Ipsum...</p>
+                    <p id="indentHard"> Created index pages for movies and kiosks, implemented database for index pages, edited routes, worked on update and delete functions </p>
 
             <h5 id="indentSoft"> Deliverable 4 </h5>
-                    <p id="indentHard"> Lorem ipsum...</p>
+                    <p id="indentHard"> Worked on views, library listing, and single movie selection pages </p>
 
             <h5 id="indentSoft"> Deliverable 5 </h5>
-                    <p id="indentHard"> Lorem Ipsum...</p>
+                    <p id="indentHard"> Worked on views, library listing, and single movie selection pages </p>
 
             <h5 id="indentSoft"> Deliverable 6 </h5>
                     <p id="indentHard"> Lorem Ipsum... </p>
