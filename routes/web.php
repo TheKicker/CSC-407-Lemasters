@@ -39,14 +39,15 @@ Route::get('/', function () {
 })->name('welcome');
 
 // Library Page
-Route::get('/library', function () {
-    return view('library');
-})->name('library');
+Route::resource('/library', 'LibraryController');
 
 // Project Page
 Route::get('/project', function () {
     return view('project');
 })->name('project');
+
+//Rental Page
+Route::resource('/rentals', 'RentalController');
 
 // User Profile Page
 Route::get('User/userProfile', function () {
