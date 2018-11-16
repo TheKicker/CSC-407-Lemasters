@@ -2,7 +2,7 @@
 
 @section('content')
 
-
+@foreach($movies as $movie)
 
 <div class="grid-container" style="display: grid; grid-template-columns: auto auto auto auto; padding: 10px;">
                 <!-- individual movie card -->
@@ -23,7 +23,7 @@
                                     <!-- Length & Genre -->
                                     <div>
                                         <h6>
-                                        <i>Length</i>
+                                        <i>{{ $movie['length'] }} min</i>
                                         <strong> &nbsp; | &nbsp; </strong>
                                         <i>Action</i>
                                         </h6>
