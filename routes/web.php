@@ -39,9 +39,7 @@ Route::get('/', function () {
 })->name('welcome');
 
 // Library Page
-Route::get('/library', function () {
-    return view('library');
-})->name('library');
+Route::get('/library', 'MovieController@library')->name('library');
 
 // Project Page
 Route::get('/project', function () {
