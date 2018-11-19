@@ -15,8 +15,8 @@
           <thead>
           <tr>
             <th>ID</th>
-              <th>Cover</th>
               <th>Title</th>
+              <th>Cover</th>
               <th>Length</th>
               <th>GenreID</th>
               <th>Description</th>
@@ -33,8 +33,8 @@
 
               <tr>
                 <td>{{ $movie['id'] }}</td>
-                  <td>{{ $movie['coverPhoto'] }}</td>
                   <td>{{ $movie['title'] }}</td>
+                  <td>movie_{{$movie['id']}}.jpg</td>
                   <td>{{ $movie['length'] }}</td>
                   <td>{{ $movie['genreID'] }}</td>
                   <td>{{ $movie['description'] }}</td>

@@ -107,7 +107,7 @@ class MovieTableSeeder extends Seeder
         Movie::create(array(
             'title' => 'Harry Potter & Sorcerers Stone (2001)',
             'length' => 152,
-            'description' => 'An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world.',
+            'description' => 'An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world. Harry is snatched away from his mundane existence by Rubeus Hagrid, the grounds keeper for Hogwarts, and quickly thrown into a world completely foreign to both him and the viewer. Famous for an incident that happened at his birth, Harry makes friends easily at his new school. He soon finds, however, that the wizarding world is far more dangerous for him than he would have imagined, and he quickly learns that not all wizards are ones to be trusted.',
             'genreID' => 6,
             'coverPhoto' => 'Harry_Potter.jpg',
             'isDISC' => rand(1,1),
