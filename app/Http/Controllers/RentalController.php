@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Movie;
 use App\Rental;
 use Illuminate\Http\Request;
 
@@ -26,6 +27,7 @@ class RentalController extends Controller
      */
     public function create()
     {
+
         return view('movies.rentMovie');
     }
 

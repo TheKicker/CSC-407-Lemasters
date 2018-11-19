@@ -10,7 +10,7 @@
                         <div class="card" align="center">
                             <!-- Card image -->
                             <div class="view overlay">
-                                <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/en/1/10/The_Chronicles_of_Narnia_-_The_Lion%2C_the_Witch_and_the_Wardrobe.jpg" alt="Card image cap">
+                                <img class="card-img-top" src="../public/images/movie_{{$movie['id']}}.jpg" alt="Card image cap">
                                 <a href="#">
                                     <div class="mask rgba-white-slight"></div>
                                 </a>
