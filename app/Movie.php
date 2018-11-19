@@ -12,6 +12,13 @@ class Movie extends Model
     protected $fillable = [
         'title', 'length','description', 'genreID', 'isDisc','isBlueRay','coverPhoto',
     ];
+
+
+    public function genre()
+    {
+        return $this->belongsTo('App\Genre','genreID');
+    }
+
 }
     // use SoftDeletes;
 //    protected $table='movies';
@@ -23,10 +30,7 @@ class Movie extends Model
 //    public function Movie()
 //        return $this->belongsTo('App\Update');
 //
-//    public function genre()
-//    {
-//       return $this->belongsTo('App\Genre');
-//    }
+
 //    public function reviews()
 //    {
 //       return $this->hasMany('\App\Review');

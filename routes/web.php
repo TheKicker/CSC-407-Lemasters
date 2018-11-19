@@ -61,8 +61,9 @@ Route::get('User/userProfile', function () {
 Route::resource('/movie', 'MovieController');
 
 //******************* MOVIE PAGES *************************//
+Route::get('/rent/create/{movie}','RentalController@create')->name('rent.create');
 
-Route::resource('/rent', 'RentalController');
+Route::resource('/rent', 'RentalController')->except("create");
 
 //******************* KIOSK PAGES *************************//
 

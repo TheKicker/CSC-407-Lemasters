@@ -22,7 +22,8 @@ class MovieController extends Controller
 
     public function library()
     {
-      $Movie = Movie::get()->toArray();
+      $Movie = Movie::with('genre')->get()->toArray();
+//      dd($Movie);
       return view('library')->with('movies', $Movie);
     }
 
@@ -148,16 +149,16 @@ class MovieController extends Controller
         Storage::disk('web')->put($filename, $image->getEncoded());
     }
 
-    /**
-     * Rent the specified movie
-     *
-     *
-     */
-    private function rentMovie(Request $request, Movie $movie)
-    {
-
-
-        return redirect()->route('rentMovie');
-
-    }
+//    /**
+//     * Rent the specified movie
+//     *
+//     *
+//     */
+//    private function rentMovie(Request $request, Movie $movie)
+//    {
+//
+//
+//        return redirect()->route('rentMovie');
+//
+//    }
 }

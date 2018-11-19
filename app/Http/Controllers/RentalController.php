@@ -25,10 +25,10 @@ class RentalController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Movie $movie)
     {
-
-        return view('movies.rentMovie');
+//        dd($movie);
+        return view('movies.rentMovie')->with('movie', $movie);
     }
 
     /**
