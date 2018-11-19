@@ -60,6 +60,10 @@ Route::get('User/userProfile', function () {
 
 Route::resource('/movie', 'MovieController');
 
+//******************* MOVIE PAGES *************************//
+
+Route::resource('/rent', 'RentalController');
+
 //******************* KIOSK PAGES *************************//
 
 Route::resource('/kiosk', 'KioskController');

@@ -19,7 +19,7 @@ class RentalTable extends Migration
             $table->string('userID');
             $table->integer('movieID');
             $table->dateTime('rentalDate');
-            $table->dateTime('returnDate');
+            $table->dateTime('returnDate')->nullable();
         });
     }
 

@@ -26,7 +26,7 @@ class RentalController extends Controller
      */
     public function create()
     {
-        //
+        return view('movies.rentMovie');
     }
 
     /**
@@ -84,4 +84,5 @@ class RentalController extends Controller
     {
         //
     }
+
 }

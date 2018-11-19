@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Movie;
+use App\Rental;
 use Illuminate\Http\Request;
 
 class MovieController extends Controller
@@ -94,13 +95,21 @@ class MovieController extends Controller
         $Movie->title = $request['title'];
         $Movie->length = $request['length'];
         $Movie->description = $request['description'];
-        if(array_key_exists('onBluRay', $request)){
+
+        if(array_key_exists('onBluRay', $request))
+        {
             $Movie->onBluRay = $request['onBluRay'];
         }
+
         if(array_key_exists('isDisc', $request)){
             $Movie->isDisc = $request['isDisc'];
         }
-        $Movie->cover = $request['coverPhoto'];
+
+        if ($request->file('coverPhoto'))
+        {
+            $this->savePicture($request, $Movie);
+        }
+
         $Movie->save();
         return redirect()->route('movie.index');
     }
@@ -122,6 +131,33 @@ class MovieController extends Controller
             return redirect()->route('status');
         }
 
+
+    }
+
+    private function savePicture(Request $request, Movie $movie)
+    {
+        $original = $request->file('coverPhoto');
+        $image = Image::make($original)->resize(250, null, function ($constraint) {
+            $constraint->aspectRatio();
+        })->encode('jpg', 75);
+
+        $filename = 'movie_' . $movie->id . '.jpg';
+        if (Storage::disk('web')->exists($filename)) {
+            Storage::disk('web')->delete($filename);
+        }
+        Storage::disk('web')->put($filename, $image->getEncoded());
+    }
+
+    /**
+     * Rent the specified movie
+     *
+     *
+     */
+    private function rentMovie(Request $request, Movie $movie)
+    {
+
+
+        return redirect()->route('rentMovie');
 
     }
 }

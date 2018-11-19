@@ -8,6 +8,6 @@ class Rental extends Model
 {
     //
     protected $fillable = [
-        'title', 'length','description', 'genreID', 'isDisc','isBlueRay','coverPhoto',
+        'userID', 'movieID', 'rentalDate', 'returnDate',
     ];
 }
