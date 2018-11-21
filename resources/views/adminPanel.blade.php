@@ -11,7 +11,7 @@
         <div class="container row">
 
             <div class="card" style="width: 18rem; margin: 35px;">
-                <div class="card-header">
+                <div class="card-header" style="text-shadow: 1px 1px yellow">
                     <strong>Movie Management</strong>
                 </div>
                 <ul class="list-group list-group-flush">
@@ -23,7 +23,7 @@
             </div>
 
             <div class="card" style="width: 18rem; margin: 35px;">
-                <div class="card-header">
+                <div class="card-header" style="text-shadow: 1px 1px yellow">
                     <strong>Kiosk Management</strong>
                 </div>
                 <ul class="list-group list-group-flush">
@@ -36,7 +36,7 @@
             </div>
 
             <div class="card" style="width: 18rem; margin: 35px;">
-                <div class="card-header">
+                <div class="card-header" style="text-shadow: 1px 1px yellow">
                     <strong>Inventory Management</strong>
                 </div>
                 <ul class="list-group list-group-flush">
@@ -49,7 +49,7 @@
         </div>
         <div class="container row">
             <div class="card" style="width: 18rem; margin: 35px;">
-                <div class="card-header">
+                <div class="card-header" style="text-shadow: 1px 1px yellow">
                     <strong>People Management</strong>
                 </div>
                 <ul class="list-group list-group-flush">

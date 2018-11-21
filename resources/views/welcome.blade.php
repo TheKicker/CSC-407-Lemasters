@@ -9,7 +9,7 @@
     </div>
 
     <div>
-        <h2>Welcome to the Future of Entertainment </h2>
+        <h2 style="text-shadow: 1px 1px yellow">Welcome to the Future of Entertainment </h2>
             <br>
                 <p> &nbsp; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <strong> This is example text until we work on the page </strong>  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 <p> &nbsp; Tincidunt dui ut ornare lectus. Nullam non nisi est sit amet facilisis magna etiam tempor. Donec et odio pellentesque diam volutpat commodo sed egestas egestas. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris. Cras adipiscing enim eu turpis egestas pretium aenean. Tristique senectus et netus et malesuada fames ac turpis. Viverra nam libero justo laoreet.
@@ -20,9 +20,10 @@
     <div>
 
         <div style="margin-top: 48px;">
-            <h2> Recommended Titles</h2>
+            <h2 style="text-shadow: 1px 1px yellow"> Recommended Titles</h2>
                 <hr>
                 <div align="right">
+
                 <a href="{{ route('library') }}">Browse More ></a>
                 </div>
         </div>

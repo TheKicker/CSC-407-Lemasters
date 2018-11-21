@@ -6,7 +6,7 @@
 
         <div>
             <div class="text-left">
-                <h2>My Profile:</h2>
+                <h2></h2>
             </div>
         </div>
 
@@ -16,7 +16,7 @@
         </div>
         <div class="profileBox">
             <div style="margin:15px;">
-                <h2 id="indentHard"><strong>{{ Auth::user()-> firstName }} {{ Auth::user()-> middleName }} {{ Auth::user()-> lastName }} </strong></h2>
+                <h2 id="indentHard" style="text-shadow: 1px 1px yellow"><strong>{{ Auth::user()-> firstName }} {{ Auth::user()-> middleName }} {{ Auth::user()-> lastName }} </strong></h2>
             </div>
             <hr>
             <div style="margin:15px;">
@@ -42,14 +42,14 @@
         </div>
     </div>
     <div class="profileBlock">
-        <h2>Rental History:</h2>
+        <h2 style="text-shadow: 1px 1px yellow">Rental History:</h2>
         <hr>
         <strong> This is merely a placeholder for the upcoming rental history function. You can totally ignore this until it works.  </strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mattis porta risus nec facilisis. Donec aliquam elit vel massa ultricies iaculis. Suspendisse elementum urna eget nisi tempus fringilla. Aenean eu tellus nibh. Sed suscipit eu ligula id tincidunt. Sed pretium, sapien a fermentum lobortis, odio justo dapibus velit, non fringilla dolor neque eu lorem. Nunc leo dui, vestibulum sit amet condimentum at, egestas vel arcu.
 
         Nullam tincidunt facilisis tristique. Donec vestibulum malesuada massa, quis convallis odio egestas nec. Curabitur ac accumsan mi. Quisque dictum congue mauris, non sodales quam euismod a. Nam mi velit, mattis nec interdum id, tristique vitae dui. Etiam interdum risus convallis lorem aliquet sollicitudin. Pellentesque pretium justo metus, sit amet fringilla quam luctus et. Nunc sit amet elementum lectus. Vestibulum ac augue vel justo vestibulum vehicula. Curabitur posuere risus imperdiet urna congue, in ornare dolor congue. Sed aliquam risus ut nisi lobortis, ac gravida lorem elementum. Cras suscipit convallis odio, id placerat enim. Sed dapibus, enim eget imperdiet ullamcorper, lacus tellus molestie lacus, sed venenatis mauris tellus in libero. Donec scelerisque lobortis mattis.
     </div>
     <div class="profileBlock">
-        <h2>Review History:</h2>
+        <h2 style="text-shadow: 1px 1px yellow">Review History:</h2>
         <hr>
         <strong> This is merely a placeholder for the upcoming review history function. You can totally ignore this until it works.  </strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mattis porta risus nec facilisis. Donec aliquam elit vel massa ultricies iaculis. Suspendisse elementum urna eget nisi tempus fringilla. Aenean eu tellus nibh. Sed suscipit eu ligula id tincidunt. Sed pretium, sapien a fermentum lobortis, odio justo dapibus velit, non fringilla dolor neque eu lorem. Nunc leo dui, vestibulum sit amet condimentum at, egestas vel arcu.
 
