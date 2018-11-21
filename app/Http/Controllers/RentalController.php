@@ -23,6 +23,7 @@ class RentalController extends Controller
     /**
      * Show the form for creating a new resource.
      *
+     * @param \App\Kiosk $kiosk
      * @return \Illuminate\Http\Response
      */
     public function create(Movie $movie)

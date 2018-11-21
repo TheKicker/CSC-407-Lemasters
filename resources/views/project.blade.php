@@ -21,7 +21,7 @@
                     <p id="indentHard"> Created inventory CRD functions and web routing. Update is not yet functional but working on it. </p>
 
             <h5 id="indentSoft"> Deliverable 6 </h5>
-                    <p id="indentHard"> Installed Image Intervention framework -- working on functionality. </p>
+                    <p id="indentHard"> Installed Image Intervention framework -- created select movie screen, updated to Kiosk selection, working on funtionality. </p>
 
    </div>
         <hr>

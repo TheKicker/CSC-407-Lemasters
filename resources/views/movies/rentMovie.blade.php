@@ -9,7 +9,7 @@
         <hr>
         <div style="outline: 3px solid #3d4852;;">
 
-            <h2 align="center" style="margin: 25px 0px 0px 0px; padding: 25px;">{{$movie['title']}}</h2>
+            <h2 align="center" style="margin: 25px 0 0 0; padding: 25px;">{{$movie['title']}}</h2>
 
             <div class="row">
 
@@ -54,6 +54,9 @@
                             <label class="col-md-4 control-label" for="kioskSelect">Kiosk</label>
                             <div class="col-md-10" style="padding-left: 35px;">
                                 <select id="kioskSelect" name="kioskSelect" class="form-control">
+                                    {{--@foreach($kiosks as $kiosk)--}}
+                                    {{--<option value="{{$kiosk['id']}}">{{$kiosk['location']}}</option>--}}
+                                    {{--@endforeach--}}
                                     <option value="1">Geneva College S&amp;E</option>
                                     <option value="2">Chippewa Walmart</option>
                                     <option value="3">PPG Paints Arena</option>
