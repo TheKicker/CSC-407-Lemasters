@@ -6,10 +6,9 @@
     <div class="container" style="margin-bottom: 96px;">
 
         <h2> Great choice {{ Auth::user()-> firstName }}! </h2>
-        <hr>
         <div style="outline: 3px solid #3d4852;;">
 
-            <h2 align="center" style="margin: 25px 0 0 0; padding: 25px;">{{$movie['title']}}</h2>
+            <h2 align="center" style="margin: 25px 0 0 0; padding-top: 25px;">{{$movie['title']}}</h2>
 
             <div class="row">
 

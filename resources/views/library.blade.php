@@ -2,11 +2,11 @@
 
 @section('content')
 
-<div class="container row">
+<div class="container row" style="margin-bottom: 96px;">
 
 @foreach($movies as $movie)
 
-                    <div class="flex-item movieCard" align="center" style="background-color: #d3d3d3">
+                    <div class="flex-item movieCard" align="center" style="background-color: #e0e0e0">
                         <div class="card">
                             <!-- Card image -->
                             <div class="view overlay">
