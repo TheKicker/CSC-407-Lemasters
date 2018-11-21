@@ -27,7 +27,7 @@
                                 </div>
 
                                 <!-- Button -->
-                                <a href="{{ route('rent.create', $movie['id']) }}" class="btn btn-primary" style="margin: 5px;">Rent</a>
+                                <a href="{{ route('rent.create', $movie['id']) }}" class="btn btn-primary" style="margin: 5px;">Select</a>
                             </div>
                         </div>
                     </div>

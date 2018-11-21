@@ -87,4 +87,10 @@ class RentalController extends Controller
         //
     }
 
+    public function rent(Rental $rental)
+    {
+        //
+
+    }
+
 }
