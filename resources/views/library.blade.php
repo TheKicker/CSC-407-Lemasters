@@ -13,7 +13,7 @@
                                 <img class="card-img-top" src="images/movie_{{$movie['id']}}.jpg" alt="Card image cap">
 
                             </div>
-                            <!-- Card content -->
+
                             <div class="card-body">
                                 <!-- Title -->
                                 <h5 class="card-title"><a>{{ $movie['title'] }}</a></h5>
