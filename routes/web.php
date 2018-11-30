@@ -52,7 +52,7 @@ Route::resource('/rentals', 'RentalController');
 // User Profile Page
 Route::get('User/userProfile', function () {
     return view('User/userProfile');
-})->name('userProfile');
+})->name('userProfile')->middleware('auth');
 
 //******************* MOVIE PAGES *************************//
 
