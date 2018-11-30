@@ -34,7 +34,7 @@
               <tr>
                 <td>{{ $movie['id'] }}</td>
                   <td>{{ $movie['title'] }}</td>
-                  <td><img class="img-thumbnail" src="images/movie_{{$movie['id']}}.jpg"></td>
+                  <td><img class="img-thumbnails" src="images/movie_{{$movie['id']}}.jpg"></td>
                   <td>{{ $movie['length'] }}</td>
                   <td>{{ $movie['genreID'] }}</td>
                   <td>{{ $movie['description'] }}</td>

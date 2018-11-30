@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Movie;
+use App\Kiosk;
 use App\Rental;
 use Illuminate\Http\Request;
 
@@ -29,7 +30,8 @@ class RentalController extends Controller
     public function create(Movie $movie)
     {
 //        dd($movie);
-        return view('movies.rentMovie')->with('movie', $movie);
+        $kiosks = Kiosk::get();
+        return view('movies.rentMovie')->with('movie', $movie)->with('kiosks', $kiosks);
     }
 
     /**

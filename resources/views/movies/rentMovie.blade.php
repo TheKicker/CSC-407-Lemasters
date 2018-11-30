@@ -53,19 +53,21 @@
                             <label class="col-md-4 control-label" for="kioskSelect">Kiosk</label>
                             <div class="col-md-10" style="padding-left: 35px;">
                                 <select id="kioskSelect" name="kioskSelect" class="form-control">
-                                    {{--@foreach($kiosks as $kiosk)--}}
-                                    {{--<option value="{{$kiosk['id']}}">{{$kiosk['location']}}</option>--}}
-                                    {{--@endforeach--}}
-                                    <option value="1">Geneva College S&amp;E</option>
-                                    <option value="2">Chippewa Walmart</option>
-                                    <option value="3">PPG Paints Arena</option>
-                                    <option value="4">Long Branch Saloon</option>
-                                    <option value="5">Cafe Kolache</option>
-                                    <option value="6">Beaver Valley Mall</option>
-                                    <option value="7">Cranberry Field &amp; Stream</option>
-                                    <option value="8">Boardman Barnes &amp; Noble</option>
-                                    <option value="9">Narcisi Winery</option>
-                                    <option value="10">Wheeling Cabelas</option>
+
+                                    @foreach($kiosks as $kiosk)
+                                    <option value="{{$kiosk['id']}}">{{$kiosk['location']}}</option>
+                                    @endforeach
+
+                                    {{--<option value="1">Geneva College S&amp;E</option>--}}
+                                    {{--<option value="2">Chippewa Walmart</option>--}}
+                                    {{--<option value="3">PPG Paints Arena</option>--}}
+                                    {{--<option value="4">Long Branch Saloon</option>--}}
+                                    {{--<option value="5">Cafe Kolache</option>--}}
+                                    {{--<option value="6">Beaver Valley Mall</option>--}}
+                                    {{--<option value="7">Cranberry Field &amp; Stream</option>--}}
+                                    {{--<option value="8">Boardman Barnes &amp; Noble</option>--}}
+                                    {{--<option value="9">Narcisi Winery</option>--}}
+                                    {{--<option value="10">Wheeling Cabelas</option>--}}
                                 </select>
                             </div>
                         </div>
