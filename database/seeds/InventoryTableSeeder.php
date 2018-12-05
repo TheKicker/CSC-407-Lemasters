@@ -17,50 +17,92 @@ class InventoryTableSeeder extends Seeder
 
         Inventory::create(array(
             'movieID' => 1,
-            'dvdInventory' => 27,
-            'blurayInventory' => 10,
+            'dvdInventory' => 55,
+            'blurayInventory' => 55,
         ));
 
         Inventory::create(array(
             'movieID' => 2,
-            'dvdInventory' => 17,
-            'blurayInventory' => 8,
+            'dvdInventory' => 55,
+            'blurayInventory' => 55,
         ));
 
         Inventory::create(array(
             'movieID' => 3,
-            'dvdInventory' => 11,
-            'blurayInventory' => 16,
+            'dvdInventory' => 55,
+            'blurayInventory' => 55,
         ));
 
         Inventory::create(array(
             'movieID' => 4,
-            'dvdInventory' => 15,
-            'blurayInventory' => 19,
+            'dvdInventory' => 55,
+            'blurayInventory' => 55,
         ));
 
         Inventory::create(array(
             'movieID' => 5,
-            'dvdInventory' => 20,
-            'blurayInventory' => 10,
+            'dvdInventory' => 55,
+            'blurayInventory' => 55,
         ));
 
         Inventory::create(array(
             'movieID' => 6,
-            'dvdInventory' => 6,
-            'blurayInventory' => 7,
+            'dvdInventory' => 55,
+            'blurayInventory' => 55,
         ));
 
         Inventory::create(array(
             'movieID' => 7,
-            'dvdInventory' => 19,
-            'blurayInventory' => 21,
+            'dvdInventory' => 55,
+            'blurayInventory' => 55,
         ));
 
         Inventory::create(array(
-            'movieID' => 7,
-            'dvdInventory' => 19,
-            'blurayInventory' => 21,
+            'movieID' => 8,
+            'dvdInventory' => 55,
+            'blurayInventory' => 55,
+        ));
+
+        Inventory::create(array(
+            'movieID' => 9,
+            'dvdInventory' => 55,
+            'blurayInventory' => 55,
+        ));
+
+        Inventory::create(array(
+            'movieID' => 10,
+            'dvdInventory' => 55,
+            'blurayInventory' => 55,
+        ));
+
+        Inventory::create(array(
+            'movieID' => 11,
+            'dvdInventory' => 55,
+            'blurayInventory' => 55,
+        ));
+
+        Inventory::create(array(
+            'movieID' => 12,
+            'dvdInventory' => 55,
+            'blurayInventory' => 55,
+        ));
+
+        Inventory::create(array(
+            'movieID' => 13,
+            'dvdInventory' => 55,
+            'blurayInventory' => 55,
+        ));
+
+        Inventory::create(array(
+            'movieID' => 14,
+            'dvdInventory' => 55,
+            'blurayInventory' => 55,
+        ));
+
+        Inventory::create(array(
+            'movieID' => 15,
+            'dvdInventory' => 55,
+            'blurayInventory' => 55,
         ));
     }
 }

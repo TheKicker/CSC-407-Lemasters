@@ -27,6 +27,13 @@ class MovieController extends Controller
       return view('library')->with('movies', $Movie);
     }
 
+    public function welcome()
+    {
+        $Movie = Movie::with('genre')->get()->toArray();
+//      dd($Movie);
+        return view('welcome')->with('movies', $Movie);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

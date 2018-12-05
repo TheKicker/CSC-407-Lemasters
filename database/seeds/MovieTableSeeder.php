@@ -35,13 +35,13 @@ class MovieTableSeeder extends Seeder
         ));
 
         Movie::create(array(
-            'title' => 'Forrest Gump',
-            'length' => 144,
-            'description' => 'A 1994 American romantic comedy-drama film based on the 1986 novel of the same name by Winston Groom. It was directed by Robert Zemeckis and written by Eric Roth, and stars Tom Hanks, Robin Wright, Gary Sinise, Mykelti Williamson, and Sally Field. The story depicts several decades in the life of Forrest Gump (Hanks), a slow-witted but kind-hearted man from Alabama who witnesses several defining historical events in the 20th century in the United States.',
-            'genreID' => 3,
+            'title' => 'American Sniper',
+            'length' => 132,
+            'description' => 'A 2014 movie loosely based on the memoir American Sniper: The Autobiography of the Most Lethal Sniper in U.S. Military History (2012) by Chris Kyle, with Scott McEwen and Jim DeFelice. The film follows the life of Kyle, who became the deadliest marksman in U.S. military history with 255 kills from four tours in the Iraq War, 160 of which were officially confirmed by the Department of Defense. While Kyle was celebrated for his military successes, his tours of duty took a heavy toll on his personal and family life. ',
+            'genreID' => 1,
             'coverPhoto' => 'images/movie_3.jpg',
             'isDISC' => rand(1,1),
-            'isBLURAY' => rand(0,1),
+            'isBLURAY' => rand(1,1),
         ));
 
         Movie::create(array(
@@ -115,11 +115,41 @@ class MovieTableSeeder extends Seeder
         ));
 
         Movie::create(array(
-            'title' => 'The Godfather',
-            'length' => 177,
-            'description' => 'A 1972 film starring Marlon Brando and Al Pacino as the leaders of a fictional New York crime family -- the story spanning 1945 to 1955, chronicles the family under the patriarch Vito Corleone (Brando), focusing on the transformation of Michael Corleone (Pacino) from reluctant family outsider to ruthless mafia boss.',
+        'title' => 'The Godfather',
+        'length' => 177,
+        'description' => 'A 1972 film starring Marlon Brando and Al Pacino as the leaders of a fictional New York crime family -- the story spanning 1945 to 1955, chronicles the family under the patriarch Vito Corleone (Brando), focusing on the transformation of Michael Corleone (Pacino) from reluctant family outsider to ruthless mafia boss.',
+        'genreID' => 4,
+        'coverPhoto' => 'images/movie_11.jpg',
+        'isDISC' => rand(1,1),
+        'isBLURAY' => rand(1,1),
+        ));
+
+        Movie::create(array(
+            'title' => 'Forrest Gump',
+            'length' => 144,
+            'description' => 'A 1994 American romantic comedy-drama film based on the 1986 novel of the same name by Winston Groom. It was directed by Robert Zemeckis and written by Eric Roth, and stars Tom Hanks, Robin Wright, Gary Sinise, Mykelti Williamson, and Sally Field. The story depicts several decades in the life of Forrest Gump (Hanks), a slow-witted but kind-hearted man from Alabama who witnesses several defining historical events in the 20th century in the United States.',
+            'genreID' => 3,
+            'coverPhoto' => 'images/movie_12.jpg',
+            'isDISC' => rand(1,1),
+            'isBLURAY' => rand(0,1),
+        ));
+
+        Movie::create(array(
+            'title' => 'Zootopia',
+            'length' => 108,
+            'description' => 'A 2016 animated film that details the unlikely partnership between a rabbit police officer and a red fox con artist, as they uncover a conspiracy involving the disappearance of savage predator inhabitants of a mammalian metropolis.  Starring the voices of Ginnifer Goodwin, Jason Bateman, Idris Elba, Jenny Slate, Nate Torrence, Bonnie Hunt, Don Lake, Tommy Chong, J. K. Simmons, Octavia Spencer, Alan Tudyk, and Shakira.',
+            'genreID' => 3,
+            'coverPhoto' => 'images/movie_13.jpg',
+            'isDISC' => rand(1,1),
+            'isBLURAY' => rand(1,1),
+        ));
+
+        Movie::create(array(
+            'title' => 'The Italian Job',
+            'length' => 110,
+            'description' => 'It is an American remake of the 1969 British film of the same name, and is about a team of thieves who plan to steal gold from a former associate who double-crossed them. Despite the shared title, the plot and characters of this film differ from those of its source material; Gray described the film as "an homage to the original."',
             'genreID' => 4,
-            'coverPhoto' => 'images/movie_11.jpg',
+            'coverPhoto' => 'images/movie_14.jpg',
             'isDISC' => rand(1,1),
             'isBLURAY' => rand(1,1),
         ));

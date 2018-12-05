@@ -22,6 +22,7 @@
         <div style="margin-top: 48px;">
             <h2 style="text-shadow: 1px 1px yellow"> Recommended Titles</h2>
                 <hr>
+
                 <div align="right">
 
                 <a href="{{ route('library') }}">Browse More ></a>

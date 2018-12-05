@@ -59,16 +59,10 @@ Route::get('User/userProfile', function () {
 Route::resource('/movie', 'MovieController');
 
 //******************* MOVIE PAGES *************************//
+
 Route::get('/rent/create/{movie}','RentalController@create')->name('rent.create')->middleware('auth');
 
 Route::resource('/rent', 'RentalController')->except("create");
-
-//Route::group(['before' => 'auth'], function () {
-//
-//    Route::get('/rent/create/{movie}','RentalController@create')->name('rent.create');
-//    Route::resource('/rent', 'RentalController')->except("create");
-//
-//});
 
 //******************* KIOSK PAGES *************************//
 
