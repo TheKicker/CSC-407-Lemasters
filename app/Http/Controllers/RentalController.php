@@ -43,6 +43,16 @@ class RentalController extends Controller
     public function store(Request $request)
     {
         //
+        $data= $request->all();
+        //short way to do an if then statement (:
+        $data['format'] = ($data['radios'] == 1 ? 'DVD' : 'BluRay');
+        $data['rentalDate'] = date('Y-m-d H:i:s');
+        //dd($data);
+        $rental = new Rental($data);
+        $rental->save();
+
+        //$rental['returnDate'] = date('Y-m-d H:i:s');
+
     }
 
     /**
@@ -88,12 +98,6 @@ class RentalController extends Controller
     public function destroy(Rental $rental)
     {
         //
-    }
-
-    public function rent(Rental $rental)
-    {
-        //
-
     }
 
 }

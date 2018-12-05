@@ -18,8 +18,11 @@ class RentalTable extends Migration
             $table->increments('id');
             $table->string('userID');
             $table->integer('movieID');
+            $table->integer('kisokID');
+            $table->string('format,8');
             $table->dateTime('rentalDate');
             $table->dateTime('returnDate')->nullable();
+            $table->timestamps();
         });
     }
 

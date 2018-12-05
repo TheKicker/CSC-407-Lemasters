@@ -8,6 +8,6 @@ class Rental extends Model
 {
     //
     protected $fillable = [
-        'userID', 'movieID', 'rentalDate', 'returnDate',
+        'userID', 'movieID', 'kioskID', 'format', 'rentalDate', 'returnDate',
     ];
 }

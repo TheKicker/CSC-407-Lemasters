@@ -26,8 +26,11 @@
                         {{$movie['description']}}
                     </p>
                     <div>
-                        <form method="POST" class="form-horizontal" action="" enctype="multipart/form-data">
-                            <fieldset>
+                        <form method="POST" class="form-horizontal" action="{{route('rent.store')}}" enctype="multipart/form-data">
+                            @csrf
+                            <input type="hidden" name="userID" value="{{ Auth::user()-> id }}">
+
+                            <input type="hidden" name="movieID" value="{{$movie['id']}}">
 
                         <!-- Multiple Radios -->
                         <div class="form-group">
@@ -50,9 +53,9 @@
 
                         <!-- Select Basic -->
                         <div class="form-group">
-                            <label class="col-md-4 control-label" for="kioskSelect">Kiosk</label>
+                            <label class="col-md-4 control-label" for="kioskID">Kiosk</label>
                             <div class="col-md-10" style="padding-left: 35px;">
-                                <select id="kioskSelect" name="kioskSelect" class="form-control">
+                                <select id="kioskSelect" name="kioskID" class="form-control">
 
                                     @foreach($kiosks as $kiosk)
                                     <option value="{{$kiosk['id']}}">{{$kiosk['location']}}</option>
@@ -63,21 +66,24 @@
                         </div>
 
                         </fieldset>
+
+                            <div align="center" style="padding: 48px;">
+                                <!-- Button (Double) -->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="button1id"></label>
+                                    <div class="col-md-8">
+                                        <button id="button1id" name="button1id" class="btn btn-success">Submit</button>
+                                        <a href="{{route('library')}}" class="btn btn-danger">Cancel</a>
+                                    </div>
+                                </div>
+
+                            </div>
                         </form>
                     </div>
                 </div>
 
             </div>
-            <div align="center" style="padding: 48px;">
-                    <!-- Button (Double) -->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="button1id"></label>
-                        <div class="col-md-8">
-                            <button id="button1id" name="button1id" class="btn btn-success">Submit</button>
-                            <a href="{{route('library')}}" class="btn btn-danger">Cancel</a>
-                        </div>
-                    </div>
-            </div>
+
         </div>
     </div>
 
