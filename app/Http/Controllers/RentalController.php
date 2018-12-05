@@ -6,6 +6,7 @@ use App\Movie;
 use App\Kiosk;
 use App\Rental;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class RentalController extends Controller
 {
@@ -51,6 +52,7 @@ class RentalController extends Controller
         $rental = new Rental($data);
         $rental->save();
 
+        return redirect('/library');
         //$rental['returnDate'] = date('Y-m-d H:i:s');
 
     }
@@ -87,6 +89,14 @@ class RentalController extends Controller
     public function update(Request $request, Rental $rental)
     {
         //
+        $id = $request->id;
+        $r = Rental::find($id);
+        $r->update(['returnDate' => date('Y-m-d H:i:s')]);
+
+        $url = '/user/' . Auth::user() ->id;
+
+        return redirect ($url);
+
     }
 
     /**

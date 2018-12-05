@@ -73,7 +73,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('userProfile') }}"> My Profile</a>
+                                    <a class="dropdown-item" href="{{ route('user.show', Auth::user()->id) }}"> My Profile</a>
 
                                     <a class="dropdown-item" href="{{ route('adminPanel') }}"> Admin Panel</a>
 

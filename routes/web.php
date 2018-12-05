@@ -50,9 +50,10 @@ Route::get('/project', function () {
 Route::resource('/rentals', 'RentalController');
 
 // User Profile Page
-Route::get('User/userProfile', function () {
-    return view('User/userProfile');
-})->name('userProfile')->middleware('auth');
+Route::resource('/user', 'UserController');
+//Route::get('User/userProfile', function () {
+//    return view('User/userProfile');
+//})->name('userProfile')->middleware('auth');
 
 //******************* MOVIE PAGES *************************//
 
