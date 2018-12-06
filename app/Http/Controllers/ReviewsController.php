@@ -25,9 +25,12 @@ class ReviewsController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function create()
+    public function create(Reviews $reviews)
     {
-        return view('movies.reviewMovie');
+        dd($reviews);
+        $movie = Movie::get();
+        return view('movies.reviewMovie'-with('movies', $movie));
+
     }
 
     /**
@@ -49,7 +52,7 @@ class ReviewsController extends Controller
      */
     public function show(Movie $Movie)
     {
-
+        //dd($review);
     }
 
 

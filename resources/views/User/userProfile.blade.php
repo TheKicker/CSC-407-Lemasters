@@ -84,7 +84,6 @@
                     <th>Kiosk</th>
                     <th>Rental Date</th>
                     <th>Review</th>
-                    <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -92,15 +91,9 @@
                     <td> {{$rental['movie']['title']}} </td>
                     <td> {{$rental['kiosk']['location']}} </td>
                     <td> {{$rental['rentalDate']}} </td>
-                    <td> This is my great review about how great this stupid movie was. I found this movie to be just fantastic to the point where I could not leave my seat -- covered in cheese sauce and coca cola I have never been better.</td>
-                    <td>
-                        <form action="{{route('rent.update', $rental['id'])}}" method="POST">
-                            @csrf
-                            <input name="_method" type = "hidden" value="PUT">
-                            <input type = "hidden" name = "id" value="{{$rental['id']}}">
-                            <button type="submit" class="btn btn-danger">Delete Review</button>
+                    {{--<td> {{$rental['review']}} </td>--}}
+                        <td> This is my great review about how great this stupid movie was. I found this movie to be just fantastic to the point where I could not leave my seat -- covered in cheese sauce and coca cola I have never been better.</td>
 
-                        </form>
                     </td>
                 </tbody>
                 @endforeach

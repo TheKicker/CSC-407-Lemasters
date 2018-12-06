@@ -18,8 +18,4 @@ class Reviews extends Model
     public function movie(){
         return $this->belongsTo('App\Movie', 'movieID');
     }
-
-    public function kiosk(){
-        return $this->belongsTo('App\Kiosk', 'kioskID');
-    }
 }
