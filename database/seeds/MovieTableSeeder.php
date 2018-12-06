@@ -154,5 +154,45 @@ class MovieTableSeeder extends Seeder
             'isBLURAY' => rand(1,1),
         ));
 
+        Movie::create(array(
+            'title' => 'ELF',
+            'length' => 97,
+            'description' => 'A 2003 American Christmas fantasy comedy film, directed by Jon Favreau and written by David Berenbaum. The story is about one of Santa\'s elves (Ferrell) who learns he is actually a human and goes to New York City to meet his biological father (Caan), spreading Christmas cheer in a world of cynics. Buddy grows up at the North Pole believing he is an elf, but due to his human size is unable to keep up with the other elves and demoted to the demeaning job of toy testing. When Buddy overhears that he is a human, Papa Elf explains that Buddy was born to Walter Hobbs and Susan Wells, and given up for adoption. Susan subsequently died and Walter, who now works for a children\'s book publisher at the Empire State Building in New York City, is unaware of Buddy\'s existence. Santa reveals, to Buddy\'s horror, that Walter is on the naughty list due to his selfishness, but suggests Buddy could help redeem him.  ',
+            'genreID' => 17,
+            'coverPhoto' => 'images/movie_15.jpg',
+            'isDISC' => rand(1,1),
+            'isBLURAY' => rand(1,1),
+        ));
+
+        Movie::create(array(
+            'title' => 'Home Alone',
+            'length' => 103,
+            'description' => 'A 1990 American Christmas comedy film written and produced by John Hughes and directed by Chris Columbus. The film stars Macaulay Culkin as Kevin McCallister, a boy who is mistakenly left behind when his family flies to Paris for their Christmas vacation. Kevin initially relishes being home alone, but is faced to contend with burglars. Kevin must rig the house with booby traps to protect his families honor and their property. Harry and Marv break in, spring the traps and suffer various injuries. While the duo pursues Kevin around the house, he calls the police and flees, luring the duo into a neighboring home which they previously broke into. Harry and Marv subdue him, but Marley sneaks in and knocks them unconscious with his shovel before they can harm Kevin.',
+            'genreID' => 17,
+            'coverPhoto' => 'images/movie_16.jpg',
+            'isDISC' => rand(1,1),
+            'isBLURAY' => rand(1,1),
+        ));
+
+        Movie::create(array(
+            'title' => 'The Grinch',
+            'length' => 86,
+            'description' => 'A 2018 American 3D computer-animated Christmas comedy film produced by Illumination. Based on the 1957 Dr. Seuss book How the Grinch Stole Christmas! It follows the Grinch, a grouchy, solitary creature who attempts to put an end to Christmas by stealing Christmas-themed items from the homes of the nearby town Whoville on Christmas Eve.',
+            'genreID' => 17,
+            'coverPhoto' => 'images/movie_17.jpg',
+            'isDISC' => rand(1,1),
+            'isBLURAY' => rand(1,1),
+        ));
+
+        Movie::create(array(
+            'title' => 'A Charlie Brown Christmas',
+            'length' => 25,
+            'description' => 'A 1965 animated television special based on the comic strip Peanuts, by Charles M. Schulz. In the special, lead character Charlie Brown finds himself depressed despite the onset of the cheerful holiday season. Lucy suggests he direct a neighborhood Christmas play, but his best efforts are ignored and mocked by his peers. After Linus tells Charlie Brown about the true meaning of Christmas, Charlie Brown cheers up, and the Peanuts gang unites to celebrate the Christmas season.',
+            'genreID' => 17,
+            'coverPhoto' => 'images/movie_18.jpg',
+            'isDISC' => rand(1,1),
+            'isBLURAY' => rand(1,1),
+        ));
+
     }
 }

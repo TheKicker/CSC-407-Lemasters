@@ -24,20 +24,27 @@
                 @foreach($inventory as $inventory)
                     <tr>
                         <th>{{ $inventory['id'] }}</th>
-                        <th>{{ $inventory['movieID']}}</th>
+                        <th style="text-shadow: 1px 1px yellow"><i>{{ $inventory['movie']['title']}}</i></th>
                         <th>{{ $inventory['dvdInventory'] }}</th>
                         <th>{{ $inventory['blurayInventory'] }}</th>
                         <th>{{ $inventory['created_at'] }}</th>
-                        <th>{{ $inventory['updated_at'] }}</th>
+
+                        @if($inventory['updated_at'] == null)
+                            <th>[ No Changes Made ] </th>
+                        @else
+                           {{--<th> [ Hey it works ]</th>--}}
+                            <th>{{ $inventory['updated_at'] }}</th>
+                        @endIf
+
                         <td>
-                            <button class="alert-dark" style="margin:5px;"><a href="{{ route('inventory.edit', $inventory['id']) }}">Update</a></button>
+                            <button class="btn-outline-primary btn-sm" style="margin:5px;"><a href="{{ route('inventory.edit', $inventory['id']) }}">Update</a></button>
                         </td>
                         <td>
                             <form method="POST" action="{{route('inventory.destroy' , $inventory['id'])}}">
                                 @method('DELETE')
                                 @csrf
                                 <fieldset>
-                                    <button class="alert-danger" style="margin:5px;">Delete</button>
+                                    <button class="btn-danger btn-sm" style="margin:5px;">Delete</button>
                                 </fieldset>
                             </form>
                         </td>

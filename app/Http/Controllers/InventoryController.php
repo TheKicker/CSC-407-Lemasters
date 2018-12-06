@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Movie;
 use App\Inventory;
 use Illuminate\Http\Request;
 
@@ -16,7 +17,7 @@ class InventoryController extends Controller
     public function index()
     {
         //
-        $Inventory = Inventory::get()->toArray();
+        $Inventory = Inventory::with('movie')->get()->toArray();
         return view('inventory.indexInventory')->with('inventory', $Inventory);
     }
 

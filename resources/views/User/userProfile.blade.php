@@ -51,7 +51,7 @@
                         <th>Movie</th>
                         <th>Kiosk</th>
                         <th>Rental Date</th>
-                        <th>Review Option </th>
+                        <th>Optional </th>
                         <th>Return </th>
                     </tr>
                     </thead>
@@ -60,7 +60,7 @@
                         <td> {{$rental['movie']['title']}} </td>
                         <td> {{$rental['kiosk']['location']}} </td>
                         <td> {{$rental['rentalDate']}} </td>
-                        <td> <a href="{{route('reviews.create')}}" class="btn btn-success">Review</a></td>
+                        <td> <a href="{{route('reviews.create')}}" class="btn btn-primary btn-sm">Review</a></td>
                         <td>
                             @if($rental['returnDate'] == null)
 
@@ -68,7 +68,7 @@
                                     @csrf
                                     <input name="_method" type = "hidden" value="PUT">
                                     <input type = "hidden" name = "id" value="{{$rental['id']}}">
-                                    <button type="submit" class="btn btn-primary" onclick="returnFunction()">Return</button>
+                                    <button type="submit" class="btn btn-success btn-sm" onclick="returnFunction()">Return</button>
                                     <script>
                                         function returnFunction() {
                                             alert("Successfully Returned.  Return to the library to browse new movies!");
@@ -101,15 +101,14 @@
                     <td> {{$rental['movie']['title']}} </td>
                     <td> {{$rental['kiosk']['location']}} </td>
                     <td> {{$rental['rentalDate']}} </td>
-                    {{--<td> {{$rental['review']}} </td>--}}
-                        <td> This is my great review about how great this stupid movie was. I found this movie to be just fantastic to the point where I could not leave my seat -- covered in cheese sauce and coca cola I have never been better.</td>
+                    <td> [ No Review Given ] </td>
 
                     <td>
                         <form method="POST" action="{{route('reviews.destroy' , $rental['id'])}}">
                             @method('DELETE')
                             @csrf
                             <fieldset>
-                                <button class="alert-danger" style="margin:5px;">Delete</button>
+                                <button class="btn btn-danger btn-sm" style="margin:5px;">Delete</button>
                             </fieldset>
                         </form>
                     </td>

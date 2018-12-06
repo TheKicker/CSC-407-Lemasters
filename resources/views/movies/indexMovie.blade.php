@@ -33,22 +33,27 @@
 
               <tr>
                 <td>{{ $movie['id'] }}</td>
-                  <td>{{ $movie['title'] }}</td>
-                  <td><img class="img-thumbnail" src="images/movie_{{$movie['id']}}.jpg"></td>
+                  <td style="text-shadow: 1px 1px yellow"><i>{{ $movie['title'] }}</i></td>
+                  <td><a href="images/movie_{{$movie['id']}}.jpg" target="new"><img class="img-thumbnail" src="images/movie_{{$movie['id']}}.jpg" width="600" height="900"></a></td>
                   <td>{{ $movie['length'] }}</td>
                   <td>{{ $movie['genreID'] }}</td>
                   <td>{{ $movie['description'] }}</td>
                   <td>{{ $movie['isDISC'] }}</td>
                   <td>{{ $movie['isBLURAY'] }}</td>
                   <td>
-                      <button class="alert-dark" style="margin:5px;"><a href="{{ route('movie.edit', $movie['id']) }}">Update</a></button>
+                      <button class="btn-outline-primary btn-sm" style="margin:5px;"><a href="{{ route('movie.edit', $movie['id']) }}">Update</a></button>
                   </td>
                   <td>
                       <form method="POST" action="{{route('movie.destroy' , $movie['id'])}}">
                           @method('DELETE')
                           @csrf
                           <fieldset>
-                                <button class="alert-danger" style="margin:5px;">Delete</button>
+                                <button class="btn-danger btn-sm" style="margin:5px;" onclick = "myFunction()">Delete</button>
+                                      <script>
+                                          function myFunction() {
+                                              alert("Successfully Deleted.");
+                                          }
+                                      </script>
                           </fieldset>
                       </form>
                   </td>

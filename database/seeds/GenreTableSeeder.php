@@ -95,5 +95,10 @@ class GenreTableSeeder extends Seeder
             'description' => 'Stories in the Western genre are set in the American West, between the time of the Civil war and the early twentieth century.[15] The setting of a wilderness or uncivilized area is especially important to the genre, and the setting is often described richly and in-depth. They focus on the adventure of the main character(s) and the contrast between civilization or society and the untamed wilderness, often featuring the characters working to bring civilization to the wilderness.[15][16] This genre periodically overlaps with historical fiction, and while a more traditional definition of westerns is that of stories about lone men facing the frontier, more modern definitions and writings are often expanded to include any person or persons in this time period that feature a strong tone of the contrast between civilization and wilderness and emphasize the independence of the main character(s).',
         ));
 
+        Genre::create(array(
+            'name' => 'Christmas',
+            'description' => 'A Christmas movie is a story about the popular holiday featuring stories of tidings and good cheer.',
+        ));
+
     }
 }

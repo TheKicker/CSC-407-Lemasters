@@ -20,7 +20,7 @@
                                         The old('firstname') will holld the value of the field to populate the form if there is an error and
                                         you need to fix an error before resubmitting
                                     --}}
-                                    <input id="movieID" name="movieID" type="text" value="{{ $inventory['movieID'] }}" class="form-control here @if ($errors->has('movieID')) is-invalid @endif">
+                                    <input id="movieID" name="movieID" type="text" value="{{ $inventory['movie']['title'] }}" class="form-control here @if ($errors->has('movieID')) is-invalid @endif">
                                     @if ($errors->has('movieID'))
                                         <div>
                                             <small id="movieID" class="text-danger">{{ $errors->first('movieID') }}</small>  </div>

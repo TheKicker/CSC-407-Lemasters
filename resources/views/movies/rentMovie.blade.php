@@ -8,7 +8,7 @@
         <h2> Great choice {{ Auth::user()-> firstName }}! </h2>
         <div style="outline: 3px solid #3d4852;;">
 
-            <h2 align="center" style="margin: 25px 0 0 0; padding-top: 25px;">{{$movie['title']}}</h2>
+            <h2 align="center" style="margin: 25px 0 0 0; padding-top: 25px; text-shadow: 1px 1px yellow"><strong><i>{{$movie['title']}}</i></strong></h2>
 
             <div class="row">
 
@@ -72,7 +72,7 @@
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="button1id"></label>
                                     <div class="col-md-12">
-                                        <button id="button1id" name="button1id" class="btn btn-success"onclick = "myFunction()">Submit</button>
+                                        <button id="button1id" name="button1id" class="btn btn-success" onclick = "myFunction()">Submit</button>
                                         <script>
                                             function myFunction() {
                                                 alert("Successfully Rented.  Enjoy your movie!");
