@@ -3,6 +3,19 @@
 @section('content')
 
 <div class="container" style="margin-bottom: 96px;">
+
+    <div>
+        <h3><strong>General Notes</strong></h3>
+
+        <h5 id="indentSoft"> Seeding Issues </h5>
+            <p id="indentHard"> Make sure everything is typed correctly then run <strong>php artisan cache:clear</strong> followed by <strong>composer dumpautoload</strong></p>
+
+        <h5 id="indentSoft"> Routes </h5>
+            <p id="indentHard"> Be careful in how you write routing -- dynamic pages should always be directed to controllers while it is okay for static pages to be hardcoded. </p>
+            <p id="indentHard"> And when necessary <strong>->middleware('auth')</strong> at the end will force the user to login before using feature.</p>
+
+    </div>
+    <hr>
    <div>
        <h3><strong>Cav Lemasters</strong></h3>
             <h5 id="indentSoft"> Deliverable 1 </h5>
@@ -27,6 +40,7 @@
                     <p id="indentHard"> Various fixes, reviews MVC, general cosmetic updates and changes.  </p>
 
    </div>
+
         <hr>
     <div>
         <h3><strong>Haylee Heaton</strong></h3>

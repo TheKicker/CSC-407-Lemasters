@@ -45,12 +45,13 @@
     <div class="profileBlock">
         <h2 style="text-shadow: 1px 1px yellow">Rental History:</h2>
 
-        <table class="table">
-            <thead>
+                <table class="table">
+                    <thead>
                     <tr>
-                        <th>Title</th>
+                        <th>Movie</th>
                         <th>Kiosk</th>
                         <th>Rental Date</th>
+                        <th>Review Option </th>
                         <th>Return Option </th>
                     </tr>
                     </thead>
@@ -59,16 +60,19 @@
                         <td> {{$rental['movie']['title']}} </td>
                         <td> {{$rental['kiosk']['location']}} </td>
                         <td> {{$rental['rentalDate']}} </td>
-                    <td><form action="{{route('rent.update', $rental['id'])}}" method="POST">
-                        @csrf
-                        <input name="_method" type = "hidden" value="PUT">
-                        <input type = "hidden" name = "id" value="{{$rental['id']}}">
-                        <button type="submit" class="btn btn-primary">Return</button>
+                        <td> <a href="{{route('reviews.create')}}" class="btn btn-success">Review</a></td>
+                        <td>
+                            <form action="{{route('rent.update', $rental['id'])}}" method="POST">
+                                @csrf
+                                <input name="_method" type = "hidden" value="PUT">
+                                <input type = "hidden" name = "id" value="{{$rental['id']}}">
+                                <button type="submit" class="btn btn-primary">Return</button>
 
-                        </form></td>
+                            </form>
+                        </td>
                     </tbody>
-                @endforeach
-            </table>
+                    @endforeach
+                </table>
     </div>
 
     <div class="profileBlock">
@@ -79,7 +83,8 @@
                     <th>Movie</th>
                     <th>Kiosk</th>
                     <th>Rental Date</th>
-                    <th>Return Option </th>
+                    <th>Review</th>
+                    <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -87,13 +92,16 @@
                     <td> {{$rental['movie']['title']}} </td>
                     <td> {{$rental['kiosk']['location']}} </td>
                     <td> {{$rental['rentalDate']}} </td>
-                    <td><form action="{{route('rent.update', $rental['id'])}}" method="POST">
+                    <td> This is my great review about how great this stupid movie was. I found this movie to be just fantastic to the point where I could not leave my seat -- covered in cheese sauce and coca cola I have never been better.</td>
+                    <td>
+                        <form action="{{route('rent.update', $rental['id'])}}" method="POST">
                             @csrf
                             <input name="_method" type = "hidden" value="PUT">
                             <input type = "hidden" name = "id" value="{{$rental['id']}}">
-                            <button type="submit" class="btn btn-primary">Return</button>
+                            <button type="submit" class="btn btn-danger">Delete Review</button>
 
-                        </form></td>
+                        </form>
+                    </td>
                 </tbody>
                 @endforeach
             </table>

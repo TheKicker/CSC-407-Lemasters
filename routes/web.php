@@ -51,31 +51,44 @@ Route::resource('/rentals', 'RentalController');
 
 // User Profile Page
 Route::resource('/user', 'UserController');
-//Route::get('User/userProfile', function () {
-//    return view('User/userProfile');
-//})->name('userProfile')->middleware('auth');
 
 //******************* MOVIE PAGES *************************//
 
 Route::resource('/movie', 'MovieController');
 
-//******************* MOVIE PAGES *************************//
+
+
+//******************* RENTAL PAGES *************************//
 
 Route::get('/rent/create/{movie}','RentalController@create')->name('rent.create')->middleware('auth');
 
 Route::resource('/rent', 'RentalController')->except("create");
 
+
+
 //******************* KIOSK PAGES *************************//
 
 Route::resource('/kiosk', 'KioskController');
+
+
 
 //******************* INVENTORY PAGES *************************//
 
 Route::resource('/inventory', 'InventoryController');
 
+
+
 //******************* USER PAGES *************************//
 
-Route::resource('/User', 'PersonController');
+Route::resource('/person', 'PersonController');
+
+
+
+//******************* REVIEW PAGES *************************//
+
+Route::resource('/reviews', 'ReviewsController');
+
+
 
 //******************* AUTH PAGES *************************//
 
