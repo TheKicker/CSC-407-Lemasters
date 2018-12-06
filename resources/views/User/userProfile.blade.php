@@ -68,14 +68,16 @@
                                     @csrf
                                     <input name="_method" type = "hidden" value="PUT">
                                     <input type = "hidden" name = "id" value="{{$rental['id']}}">
-                                    <button type="submit" class="btn btn-primary">Return</button>
-
+                                    <button type="submit" class="btn btn-primary" onclick="returnFunction()">Return</button>
+                                    <script>
+                                        function returnFunction() {
+                                            alert("Successfully Returned.  Return to the library to browse new movies!");
+                                        }
+                                    </script>
                                 </form>
-
                             @else
                                     {{$rental['returnDate']}}
                             @endIf
-
                         </td>
                     </tbody>
                     @endforeach
