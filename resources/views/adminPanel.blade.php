@@ -12,7 +12,7 @@
 
             <div class="card" style="width: 18rem; margin: 35px;">
                 <div class="card-header" style="text-shadow: 1px 1px yellow">
-                    <strong>Movie Management</strong>
+                    <strong><i>Movie Management</i></strong>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><a href="{{route('movie.index')}}" class="#">List of Movies</a></li>
@@ -24,7 +24,7 @@
 
             <div class="card" style="width: 18rem; margin: 35px;">
                 <div class="card-header" style="text-shadow: 1px 1px yellow">
-                    <strong>Kiosk Management</strong>
+                    <strong><i>Kiosk Management</i></strong>
                 </div>
                 <ul class="list-group list-group-flush">
 
@@ -37,7 +37,7 @@
 
             <div class="card" style="width: 18rem; margin: 35px;">
                 <div class="card-header" style="text-shadow: 1px 1px yellow">
-                    <strong>Inventory Management</strong>
+                    <strong><i>Inventory Management</i></strong>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><a href="{{ route('inventory.index') }}" class="#">List of Inventory</a></li>
@@ -50,7 +50,7 @@
         <div class="container row">
             <div class="card" style="width: 18rem; margin: 35px;">
                 <div class="card-header" style="text-shadow: 1px 1px yellow">
-                    <strong>People Management</strong>
+                    <strong><i>People Management</i></strong>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><a href="{{ route('person.index') }}" class="#">List of Users</a></li>

@@ -10,7 +10,7 @@
 <div class="container" style="margin-bottom: 96px;">
 
         <div style="margin-bottom: 36px">
-            <h2 style="text-shadow: 1px 1px yellow">Welcome to the Future of Entertainment </h2>
+            <h2 style="text-shadow: 1px 1px yellow"><strong><i>Welcome to the Future of Entertainment</i></strong></h2>
                 <hr>
                     <p> &nbsp; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <strong> This is example text until we work on the page </strong>  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     <p> &nbsp; Tincidunt dui ut ornare lectus. Nullam non nisi est sit amet facilisis magna etiam tempor. Donec et odio pellentesque diam volutpat commodo sed egestas egestas. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris. Cras adipiscing enim eu turpis egestas pretium aenean. Tristique senectus et netus et malesuada fames ac turpis. Viverra nam libero justo laoreet. </p>
@@ -19,7 +19,7 @@
         </div>
 
         <div style="margin-bottom: 36px">
-            <h2 style="text-shadow: 1px 1px yellow"> Yellow Bucket Recognized </h2>
+            <h2 style="text-shadow: 1px 1px yellow"><strong><i>Yellow Bucket Recognized </i></strong></h2>
             <hr>
                 <div align="center" style="margin: 24px;">
                     <img src="https://media.bizj.us/view/img/10143921/boylogogen.jpg">
@@ -32,7 +32,7 @@
         </div>
 
         <div style="margin-bottom: 36px">
-            <h2 style="text-shadow: 1px 1px yellow"> News & Announcements  </h2>
+            <h2 style="text-shadow: 1px 1px yellow"><strong><i>News & Announcements</i></strong></h2>
             <hr>
             <div align="center" style="margin: 24px;">
                 <img src="https://www.fintechnews.org/wp-content/uploads/2018/08/mundo-1.jpg">

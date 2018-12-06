@@ -16,7 +16,7 @@
         </div>
         <div class="profileBox">
             <div style="margin:15px;">
-                <h2 id="indentHard" style="text-shadow: 1px 1px yellow"><strong>{{ Auth::user()-> firstName }} {{ Auth::user()-> middleName }} {{ Auth::user()-> lastName }} </strong></h2>
+                <h2 id="indentHard" style="text-shadow: 1px 1px yellow"><strong><i>{{ Auth::user()-> firstName }} {{ Auth::user()-> middleName }} {{ Auth::user()-> lastName }} </i></strong></h2>
             </div>
             <hr>
             <div style="margin:15px;">
@@ -43,7 +43,7 @@
     </div>
 
     <div class="profileBlock">
-        <h2 style="text-shadow: 1px 1px yellow">Rental History:</h2>
+        <h3 style="text-shadow: 1px 1px yellow"><strong><i>Rental History:</i></strong></h3>
 
                 <table class="table">
                     <thead>
@@ -76,7 +76,7 @@
     </div>
 
     <div class="profileBlock">
-        <h2 style="text-shadow: 1px 1px yellow">Review History:</h2>
+        <h3 style="text-shadow: 1px 1px yellow"><strong><i>Review History:</i></strong></h3>
             <table class="table">
                 <thead>
                 <tr>
