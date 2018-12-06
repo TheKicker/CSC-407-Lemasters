@@ -69,7 +69,7 @@
                 <p id="indentHard">Helped with functionality for updating and deleting movies.  Added the correct routing. </p>
 
             <h5 id="indentSoft"> Deliverable 4 </h5>
-                    <p id="indentHard"> Lorem Ipsum...</p>
+                    <p id="indentHard"> </p>
 
             <h5 id="indentSoft"> Deliverable 5 </h5>
                     <p id="indentHard"> Lorem Ipsum...</p>

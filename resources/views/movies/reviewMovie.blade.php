@@ -9,7 +9,13 @@
             <fieldset>
 
                 <h2 align="center" style="margin: 25px 0 0 0; padding-top: 25px;">{{$movie['title']}}</h2>
-
+                @foreach ($rentals as $rental)
+                    @foreach($movies as $movie)
+                        @if ($rental['movie_id']== $movie['id'])
+                        <td style =""> {{$movie['title']}}</td>
+                        @endif
+                    @endforeach
+                @endforeach
                 <div class="form-group">
                     <div class="col-md-4">
                         <textarea class="form-control" id="textarea" name="textarea">Review a Movie</textarea>

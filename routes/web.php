@@ -48,6 +48,7 @@ Route::get('/project', function () {
 
 //Rental Page
 Route::resource('/rentals', 'RentalController');
+//->name('rentals')->middleware('auth');
 
 // User Profile Page
 Route::resource('/user', 'UserController');

@@ -28,9 +28,11 @@ class ReviewsController extends Controller
 
     public function create(Reviews $reviews)
     {
-        dd($reviews);
+       // dd($reviews);
         $movie = Movie::get();
-        return view('movies.reviewMovie'-with('movies', $movie));
+       // dd($movie);
+        return view('movies.reviewMovie')
+            ->with('movies', $movie);
 
     }
 
