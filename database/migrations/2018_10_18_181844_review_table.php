@@ -14,6 +14,15 @@ class ReviewTable extends Migration
     public function up()
     {
         //
+        Schema::create('reviews', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('userID');
+            $table->integer('movieID');
+            $table->integer('kioskID');
+            $table->longText('review');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
+        });
     }
 
     /**
@@ -24,5 +33,6 @@ class ReviewTable extends Migration
     public function down()
     {
         //
+        Schema::dropIfExists('reviews');
     }
 }

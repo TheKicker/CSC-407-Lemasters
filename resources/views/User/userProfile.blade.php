@@ -41,29 +41,62 @@
             </div>
         </div>
     </div>
+
     <div class="profileBlock">
         <h2 style="text-shadow: 1px 1px yellow">Rental History:</h2>
-        <hr>
-        @foreach($rentals as $rental)
-            <p>{{$rental['movie']['title']}} - {{$rental['kiosk']['location']}} - {{$rental['rentalDate']}}</p>
-            <form action="{{route('rent.update', $rental['id'])}}" method = "POST">
-                @csrf
-                <input name="_method" type = "hidden" value="PUT">
-                <input type = "hidden" name = "id" value="{{$rental['id']}}">
-                <button type="submit" class="btn-sm">Return</button>
 
-            </form>
-        @endforeach
-        <strong> This is merely a placeholder for the upcoming rental history function. You can totally ignore this until it works.  </strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mattis porta risus nec facilisis. Donec aliquam elit vel massa ultricies iaculis. Suspendisse elementum urna eget nisi tempus fringilla. Aenean eu tellus nibh. Sed suscipit eu ligula id tincidunt. Sed pretium, sapien a fermentum lobortis, odio justo dapibus velit, non fringilla dolor neque eu lorem. Nunc leo dui, vestibulum sit amet condimentum at, egestas vel arcu.
+        <table class="table">
+            <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Kiosk</th>
+                        <th>Rental Date</th>
+                        <th>Return Option </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($rentals as $rental)
+                        <td> {{$rental['movie']['title']}} </td>
+                        <td> {{$rental['kiosk']['location']}} </td>
+                        <td> {{$rental['rentalDate']}} </td>
+                    <td><form action="{{route('rent.update', $rental['id'])}}" method="POST">
+                        @csrf
+                        <input name="_method" type = "hidden" value="PUT">
+                        <input type = "hidden" name = "id" value="{{$rental['id']}}">
+                        <button type="submit" class="btn btn-primary">Return</button>
 
-        Nullam tincidunt facilisis tristique. Donec vestibulum malesuada massa, quis convallis odio egestas nec. Curabitur ac accumsan mi. Quisque dictum congue mauris, non sodales quam euismod a. Nam mi velit, mattis nec interdum id, tristique vitae dui. Etiam interdum risus convallis lorem aliquet sollicitudin. Pellentesque pretium justo metus, sit amet fringilla quam luctus et. Nunc sit amet elementum lectus. Vestibulum ac augue vel justo vestibulum vehicula. Curabitur posuere risus imperdiet urna congue, in ornare dolor congue. Sed aliquam risus ut nisi lobortis, ac gravida lorem elementum. Cras suscipit convallis odio, id placerat enim. Sed dapibus, enim eget imperdiet ullamcorper, lacus tellus molestie lacus, sed venenatis mauris tellus in libero. Donec scelerisque lobortis mattis.
+                        </form></td>
+                    </tbody>
+                @endforeach
+            </table>
     </div>
+
     <div class="profileBlock">
         <h2 style="text-shadow: 1px 1px yellow">Review History:</h2>
-        <hr>
-        <strong> This is merely a placeholder for the upcoming review history function. You can totally ignore this until it works.  </strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mattis porta risus nec facilisis. Donec aliquam elit vel massa ultricies iaculis. Suspendisse elementum urna eget nisi tempus fringilla. Aenean eu tellus nibh. Sed suscipit eu ligula id tincidunt. Sed pretium, sapien a fermentum lobortis, odio justo dapibus velit, non fringilla dolor neque eu lorem. Nunc leo dui, vestibulum sit amet condimentum at, egestas vel arcu.
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Movie</th>
+                    <th>Kiosk</th>
+                    <th>Rental Date</th>
+                    <th>Return Option </th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach($rentals as $rental)
+                    <td> {{$rental['movie']['title']}} </td>
+                    <td> {{$rental['kiosk']['location']}} </td>
+                    <td> {{$rental['rentalDate']}} </td>
+                    <td><form action="{{route('rent.update', $rental['id'])}}" method="POST">
+                            @csrf
+                            <input name="_method" type = "hidden" value="PUT">
+                            <input type = "hidden" name = "id" value="{{$rental['id']}}">
+                            <button type="submit" class="btn btn-primary">Return</button>
 
-        Nullam tincidunt facilisis tristique. Donec vestibulum malesuada massa, quis convallis odio egestas nec. Curabitur ac accumsan mi. Quisque dictum congue mauris, non sodales quam euismod a. Nam mi velit, mattis nec interdum id, tristique vitae dui. Etiam interdum risus convallis lorem aliquet sollicitudin. Pellentesque pretium justo metus, sit amet fringilla quam luctus et. Nunc sit amet elementum lectus. Vestibulum ac augue vel justo vestibulum vehicula. Curabitur posuere risus imperdiet urna congue, in ornare dolor congue. Sed aliquam risus ut nisi lobortis, ac gravida lorem elementum. Cras suscipit convallis odio, id placerat enim. Sed dapibus, enim eget imperdiet ullamcorper, lacus tellus molestie lacus, sed venenatis mauris tellus in libero. Donec scelerisque lobortis mattis.
+                        </form></td>
+                </tbody>
+                @endforeach
+            </table>
     </div>
 
 </div>

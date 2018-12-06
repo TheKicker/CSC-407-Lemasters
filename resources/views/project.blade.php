@@ -23,6 +23,9 @@
             <h5 id="indentSoft"> Deliverable 6 </h5>
                     <p id="indentHard"> Installed Image Intervention framework -- created select movie screen, updated to Kiosk selection, working on funtionality. </p>
 
+            <h5 id="indentSoft"> Deliverable 7 </h5>
+                    <p id="indentHard"> Various fixes, reviews MVC, general cosmetic updates and changes.  </p>
+
    </div>
         <hr>
     <div>
@@ -46,6 +49,9 @@
             <h5 id="indentSoft"> Deliverable 6 </h5>
                     <p id="indentHard"> Lorem Ipsum... </p>
 
+            <h5 id="indentSoft"> Deliverable 7 </h5>
+                    <p id="indentHard"> Various bug fixes, rental MVC, last minute touches </p>
+
     </div>
         <hr>
     <div>
@@ -57,13 +63,13 @@
                     <p id="indentHard"> DB Implement, edited routes </p>
 
             <h5 id="indentSoft"> Deliverable 3 </h5>
-                    <p id="indentHard"> Created index pages for movies and kiosks, implemented database for index pages, edited routes, worked on update and delete functions </p>
+                    <p id="indentHard"> Lorem Ipsum... </p>
 
             <h5 id="indentSoft"> Deliverable 4 </h5>
-                    <p id="indentHard"> Worked on views, library listing, and single movie selection pages </p>
+                    <p id="indentHard"> Lorem Ipsum... </p>
 
             <h5 id="indentSoft"> Deliverable 5 </h5>
-                    <p id="indentHard"> Worked on views, library listing, and single movie selection pages </p>
+                    <p id="indentHard"> Lorem Ipsum... </p>
 
             <h5 id="indentSoft"> Deliverable 6 </h5>
                     <p id="indentHard"> Lorem Ipsum... </p>
