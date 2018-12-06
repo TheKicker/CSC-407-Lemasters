@@ -16,7 +16,7 @@ class PeopleTableSeeder extends Seeder
         DB::table('people')->delete();
 
         Person::create(array(
-            'firstName' => 'Cavan',
+            'firstName' => 'Cav',
             'middleName' => 'L',
             'lastName' => 'LeMasters',
             'email' => 'Cav.Lemasters@geneva.edu',

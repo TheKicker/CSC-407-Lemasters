@@ -45,48 +45,64 @@
     <div class="profileBlock">
         <h3 style="text-shadow: 1px 1px yellow"><strong><i>Rental History:</i></strong></h3>
 
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th>Movie</th>
-                        <th>Kiosk</th>
-                        <th>Rental Date</th>
-                        <th>Optional </th>
-                        <th>Return </th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($rentals as $rental)
-                        <td> {{$rental['movie']['title']}} </td>
-                        <td> {{$rental['kiosk']['location']}} </td>
-                        <td> {{$rental['rentalDate']}} </td>
-                        <td> <a href="{{route('reviews.create')}}" class="btn btn-primary btn-sm">Review</a></td>
-                        <td>
-                            @if($rental['returnDate'] == null)
+                @if($rentals == null)
+                    <hr>
+                    <div align="center">
+                    <h3>What are you waiting for?</h3>
+                        <h5><a href="{{route('library')}}">Find a Movie</a></h5>
+                    </div>
+                @else
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Movie</th>
+                                <th>Kiosk</th>
+                                <th>Rental Date</th>
+                                <th>Optional </th>
+                                <th>Return </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($rentals as $rental)
+                                <td> {{$rental['movie']['title']}} </td>
+                                <td> {{$rental['kiosk']['location']}} </td>
+                                <td> {{$rental['rentalDate']}} </td>
+                                <td> <a href="{{route('reviews.create')}}" class="btn btn-primary btn-sm">Review</a></td>
+                                <td>
+                                    @if($rental['returnDate'] == null)
 
-                                <form action="{{route('rent.update', $rental['id'])}}" method="POST">
-                                    @csrf
-                                    <input name="_method" type = "hidden" value="PUT">
-                                    <input type = "hidden" name = "id" value="{{$rental['id']}}">
-                                    <button type="submit" class="btn btn-success btn-sm" onclick="returnFunction()">Return</button>
-                                    <script>
-                                        function returnFunction() {
-                                            alert("Successfully Returned.  Return to the library to browse new movies!");
-                                        }
-                                    </script>
-                                </form>
-                            @else
-                                    {{$rental['returnDate']}}
-                            @endIf
-                        </td>
-                    </tbody>
-                    @endforeach
-                </table>
+                                        <form action="{{route('rent.update', $rental['id'])}}" method="POST">
+                                            @csrf
+                                            <input name="_method" type = "hidden" value="PUT">
+                                            <input type = "hidden" name = "id" value="{{$rental['id']}}">
+                                            <button type="submit" class="btn btn-success btn-sm" onclick="returnFunction()">Return</button>
+                                            <script>
+                                                function returnFunction() {
+                                                    alert("Successfully Returned.  Return to the library to browse new movies!");
+                                                }
+                                            </script>
+                                        </form>
+                                    @else
+                                            {{$rental['returnDate']}}
+                                    @endIf
+                                </td>
+                            </tbody>
+                            @endforeach
+                        </table>
+                    @endIf
     </div>
 
     <div class="profileBlock">
         <h3 style="text-shadow: 1px 1px yellow"><strong><i>Review History:</i></strong></h3>
-            <table class="table">
+            @if($rentals == null)
+            <hr>
+                <div align="center">
+                    <h3>Nothing to review</h3>
+                    <h5><a href="{{route('library')}}">Rent a Movie</a></h5>
+                </div>
+            @else
+
+                <table class="table">
                 <thead>
                 <tr>
                     <th>Movie</th>
@@ -115,6 +131,7 @@
                 </tbody>
                 @endforeach
             </table>
+        @endIf
     </div>
 
 </div>

@@ -29,8 +29,8 @@ class UserTableSeeder extends Seeder
         ]);
 
         User::create([
-            'firstName' => 'Cav',
-            'middleName' => 'Lee',
+            'firstName' => 'Cavan',
+            'middleName' => 'L',
             'lastName' => 'LeMasters',
             'email' => 'Cav.Lemasters@geneva.edu',
             'cellNumber' => '234-736-6808',
