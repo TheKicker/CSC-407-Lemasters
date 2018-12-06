@@ -72,7 +72,12 @@
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="button1id"></label>
                                     <div class="col-md-12">
-                                        <button id="button1id" name="button1id" class="btn btn-success">Submit</button>
+                                        <button id="button1id" name="button1id" class="btn btn-success"onclick = "myFunction()">Submit</button>
+                                        <script>
+                                            function myFunction() {
+                                                alert("Successfully Rented.  Enjoy your movie!");
+                                            }
+                                        </script>
                                         <a href="{{route('library')}}" class="btn btn-danger">Cancel</a>
                                     </div>
                                 </div>

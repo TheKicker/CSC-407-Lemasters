@@ -66,7 +66,12 @@
                                 @csrf
                                 <input name="_method" type = "hidden" value="PUT">
                                 <input type = "hidden" name = "id" value="{{$rental['id']}}">
-                                <button type="submit" class="btn btn-primary">Return</button>
+                                <button type="submit" class="btn btn-primary" onclick="returnFunction()">Return</button>
+                                <script>
+                                    function returnFunction() {
+                                        alert("Successfully Returned.  Return to the library to browse new movies!");
+                                    }
+                                </script>
 
                             </form>
                         </td>
@@ -93,8 +98,6 @@
                     <td> {{$rental['rentalDate']}} </td>
                     {{--<td> {{$rental['review']}} </td>--}}
                         <td> This is my great review about how great this stupid movie was. I found this movie to be just fantastic to the point where I could not leave my seat -- covered in cheese sauce and coca cola I have never been better.</td>
-
-                    </td>
                 </tbody>
                 @endforeach
             </table>
