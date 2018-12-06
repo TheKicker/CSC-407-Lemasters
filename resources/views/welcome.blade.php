@@ -12,9 +12,11 @@
         <div style="margin-bottom: 48px">
             <h2 style="text-shadow: 1px 1px yellow"><strong><i>Welcome to the Future of Entertainment</i></strong></h2>
                 <hr>
-                    <p> &nbsp; <strong> All your Favorites... </strong> in one place.<br>
-                        Yellow Bucket strives to have all of your favorite movies available in one place.  Explore the Library Page to find
-                        that perfect movie.
+                    <p> &nbsp; <strong> All your Favorites... </strong> in one place. Yellow Bucket strives to have all of your favorite movies available in one place.  Explore the Library Page to find
+                        that perfect movie. </p>
+                    <p> One movie in particular is a favorite of ours at Yellow Bucket.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <strong>Ut enim ad minim veniam, </strong>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
         </div>
 
         <div style="margin-bottom: 48px">
