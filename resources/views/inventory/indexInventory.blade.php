@@ -24,7 +24,7 @@
                 @foreach($inventory as $inventory)
                     <tr>
                         <th>{{ $inventory['id'] }}</th>
-                        <th>{{ $inventory['movieID'] }}</th>
+                        <th>{{ $inventory['movieID']}}</th>
                         <th>{{ $inventory['dvdInventory'] }}</th>
                         <th>{{ $inventory['blurayInventory'] }}</th>
                         <th>{{ $inventory['created_at'] }}</th>

@@ -40,9 +40,15 @@ class ReviewsController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Movie $movie)
+    public function store(Request $request, Reviews $review)
     {
+        //
+        $input = $request->all();
 
+        $review = new Reviews($input);
+        $review->save();
+
+        return redirect()->route('user.userProfile');
     }
 
     /**
