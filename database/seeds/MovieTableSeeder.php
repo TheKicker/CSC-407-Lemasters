@@ -147,7 +147,7 @@ class MovieTableSeeder extends Seeder
         Movie::create(array(
             'title' => 'The Italian Job',
             'length' => 110,
-            'description' => 'It is an American remake of the 1969 British film of the same name, and is about a team of thieves who plan to steal gold from a former associate who double-crossed them. Despite the shared title, the plot and characters of this film differ from those of its source material; Gray described the film as "an homage to the original."',
+            'description' => 'A 2003 American remake of the 1969 British film of the same name, and is about a team of thieves who plan to steal gold from a former associate who double-crossed them. Despite the shared title, the plot and characters of this film differ from those of its source material; Gray described the film as "an homage to the original."',
             'genreID' => 4,
             'coverPhoto' => 'images/movie_14.jpg',
             'isDISC' => rand(1,1),
