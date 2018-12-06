@@ -3,13 +3,15 @@
 @section('content')
     <div class="container" style="margin-bottom: 96px;">
     <h2 style="text-shadow: 1px 1px yellow">New Review</h2>
-        <form class="form-horizontal">
+        <form method="POST" action="{{ route('reviews.store') }}" enctype="multipart/form-data">
+            @csrf
+
             <fieldset>
                 {{--@foreach($review as $reviews)--}}
                     {{--<td> {{$reviews['movie']['title']}} </td>--}}
                 {{--@endforeach--}}
                 <h2 align="center" style="margin: 25px 0 0 0; padding-top: 25px;">{{$movie['title']}}</h2>
-                <!-- Textarea -->
+
                 <div class="form-group">
                     <div class="col-md-4">
                         <textarea class="form-control" id="textarea" name="textarea">Review a Movie</textarea>

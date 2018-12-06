@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Movie;
+use App\Kiosk;
 use App\Reviews;
 use Illuminate\Http\Request;
 
@@ -39,7 +40,7 @@ class ReviewsController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Movie $movie)
     {
 
     }
@@ -82,12 +83,19 @@ class ReviewsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Movie $Movie
+     * @param  \App\Reviews $reviews
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Movie $Movie)
+    public function destroy(Reviews $reviews)
     {
 
+        $selected = Reviews::find($reviews['id']);
+        if ( $selected->delete()) {
+            return redirect()->route('user.userProfile');
+        }
+        else {
+            return redirect()->route('status');
+        }
 
     }
 }
