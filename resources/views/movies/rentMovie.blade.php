@@ -6,7 +6,7 @@
     <div class="container" style="margin-bottom: 96px;">
 
         <h2> Great choice {{ Auth::user()-> firstName }}! </h2>
-        <div style="outline: 3px solid #3d4852;;">
+        <div style="outline: 8px solid #D3D3D3; box-shadow: 10px 10px 25px #3d4852;">
 
             <h2 align="center" style="margin: 25px 0 0 0; padding-top: 25px; text-shadow: 1px 1px yellow"><strong><i>{{$movie['title']}}</i></strong></h2>
 

@@ -31,9 +31,9 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel" style="background-color: #D3D3D3;">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}" style="text-shadow: 1px 1px yellow">
+                <a class="navbar-brand" href="{{ url('/') }}" style=" text-shadow: 1px 1px yellow">
                     <strong><i>{{ config('app.name', 'Laravel') }}</i></strong>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

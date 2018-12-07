@@ -2,11 +2,11 @@
 
 @section('content')
 
-    <div>
-            <div align=right><h4>"It's only a flesh wound! The Black Knight always triumphs!"</h4></div>
-            <div align=right><h6><strong> The Black Knight -- </strong><i> Monty Python and the Holy Grail (1975)</i></h6></div>
-        <hr>
-    </div>
+    {{--<div>--}}
+            {{--<div align=right><h4>"It's only a flesh wound! The Black Knight always triumphs!"</h4></div>--}}
+            {{--<div align=right><h6><strong> The Black Knight -- </strong><i> Monty Python and the Holy Grail (1975)</i></h6></div>--}}
+        {{--<hr>--}}
+    {{--</div>--}}
 <div class="container" style="margin-bottom: 96px;">
 
         <div style="margin-bottom: 48px">
@@ -20,14 +20,14 @@
         </div>
 
         <div style="margin-bottom: 48px">
-            <h2 style="text-shadow: 1px 1px yellow"><strong><i>Christmas Movies Added </i></strong></h2>
+            <h2 style="text-shadow: 1px 1px yellow"><strong><i>Christmas Movies Added to Library</i></strong></h2>
             <hr>
             <div align="center" style="margin: 24px;">
                 <img src="http://insufficientscotty.com/wp-content/uploads/2014/12/Christmas-Movies.png">
             </div>
 
-            <p> <strong> &nbsp; Don't be a scrooge, grab a cup of hot cocoa and gather around! Christmas movies are now released on Yellow Bucket's
-                    Platform.</strong> We have everything from Elf to Charlie Brown, so find your nearest Kiosk and grab one today! </p>
+            <p> <strong> &nbsp; Don't be a scrooge, grab a cup of hot cocoa and gather around! Christmas movies are now released on Yellow Bucket's Platform.</strong> We have everything from Elf to Charlie Brown, so find your nearest Kiosk and grab one today! </p>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <strong>Ut enim ad minim veniam, </strong>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
         </div>
 
@@ -38,9 +38,8 @@
                     <img src="https://media.bizj.us/view/img/10143921/boylogogen.jpg">
                 </div>
 
-                    <p> <strong> &nbsp; We are proud to announce that Yellow Bucket finished 1st in Geneva's yearly Business of the Year
-                            Awards.</strong> Yellow Bucket is owned by Mr. Lemasters, Mrs. Heaton and Mr.York and proudly offers hundreds of
-                        popular films sure to make the whole family excited. </p>
+                    <p> <strong> &nbsp; We are proud to announce that Yellow Bucket finished 1st in Geneva's yearly Business of the Year Awards.</strong> Yellow Bucket is owned by Mr. Lemasters, Mrs. Heaton and Mr.York and proudly offers hundreds of popular films sure to make the whole family excited. </p>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <strong>Ut enim ad minim veniam, </strong>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
 
         <div style="margin-bottom: 48px">

@@ -6,7 +6,7 @@
 
 @foreach($movies as $movie)
 
-                    <div class="flex-item movieCard" align="center" style="background-color: #e0e0e0">
+                    <div class="flex-item movieCard" align="center" style="background-color: #D3D3D3">
                         <div class="card">
                             <!-- Card image -->
                             <div class="view overlay">
