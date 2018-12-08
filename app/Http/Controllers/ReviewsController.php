@@ -28,10 +28,10 @@ class ReviewsController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function create(Reviews $reviews)
+    public function create(Reviews $review, Movie $movie)
     {
        // dd($reviews);
-        $movie = Movie::get();
+        $review = Reviews::get();
        // dd($movie);
         return view('movies.reviewMovie')
             ->with('movies', $movie);
@@ -62,7 +62,7 @@ class ReviewsController extends Controller
      * @param  \App\Movie $Movie
      * @return \Illuminate\Http\Response
      */
-    public function show(Movie $Movie)
+    public function show(Reviews $review)
     {
         //dd($review);
     }
@@ -74,7 +74,7 @@ class ReviewsController extends Controller
      * @param  \App\Movie $Movie
      * @return \Illuminate\Http\Response
      */
-    public function edit(Movie $Movie)
+    public function edit(Reviews $review)
     {
 
     }
@@ -86,7 +86,7 @@ class ReviewsController extends Controller
      * @param  \App\Movie $Movie
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Reviews $reviews)
+    public function update(Request $request, Reviews $review)
     {
         $id = $request->id;
         $r = Reviews::find($id);
@@ -103,10 +103,10 @@ class ReviewsController extends Controller
      * @param  \App\Reviews $reviews
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Reviews $reviews)
+    public function destroy(Reviews $review)
     {
 
-        $selected = Reviews::find($reviews['id']);
+        $selected = Reviews::find($review['id']);
         if ( $selected->delete()) {
             return redirect()->route('user.userProfile');
         }
