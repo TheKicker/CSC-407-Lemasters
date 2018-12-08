@@ -17,6 +17,8 @@ class ReviewsController extends Controller
     public function index()
     {
         //
+        $reviews = Reviews::get()->toArray();
+        return view('userProfile')->with('reviews', $reviews);
     }
 
 
@@ -45,6 +47,7 @@ class ReviewsController extends Controller
     public function store(Request $request, Reviews $review)
     {
         //
+        dd($review);
         $input = $request->all();
 
         $review = new Reviews($input);
@@ -83,9 +86,15 @@ class ReviewsController extends Controller
      * @param  \App\Movie $Movie
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Movie $Movie)
+    public function update(Request $request, Reviews $reviews)
     {
+        $id = $request->id;
+        $r = Reviews::find($id);
+        $r->update(['updated_at' => date('Y-m-d H:i:s')]);
 
+        $url = '/user/' . Auth::user() ->id;
+
+        return redirect ($url);
     }
 
     /**
