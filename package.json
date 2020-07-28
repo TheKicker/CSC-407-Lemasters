@@ -18,5 +18,8 @@
         "lodash": "^4.17.19",
         "popper.js": "^1.12",
         "vue": "^2.5.7"
+    },
+    "dependencies": {
+        "yargs-parser": "^18.1.3"
     }
 }
